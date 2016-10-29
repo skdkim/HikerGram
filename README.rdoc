@@ -1,5 +1,2 @@
 This app is still in development.
 
-Refer to (../master/google.com) to see my progress!
-
-* [View Wireframes](../master/docs)
