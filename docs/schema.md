@@ -12,9 +12,9 @@
 |column name| data type | details |
 | --- | --- | --- |
 | id | integer | not null, primary key |
-| image_url | string | not null | 
 | user_id | integer | not null, indexed |
-| liked | boolean | |
+| image_url | string | not null | 
+| liked | boolean | default: false |
 | title | string | |
 | description | text | |
 
@@ -38,3 +38,11 @@
 | id | integer | not null, primary key |
 | user_id | integer | not null, indexed |
 | photo_id | integer | not null, indexed |
+
+## comments
+|column name| data type | details |
+| --- | --- | --- |
+| id | integer | not null, primary key |
+| user_id | integer | not null, indexed |
+| photo_id | integer | not null, indexed |
+| body | text | |
