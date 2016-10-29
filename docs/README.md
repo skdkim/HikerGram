@@ -89,7 +89,7 @@
 - [ ] Touch-up styling
 - [ ] Bonus Features!
 
-### Bonus Features
+#### Bonus Features
 - [ ] Discover Page
 - [ ] Expanding image on hover
 - [ ] Mouse directed vertical scroll
