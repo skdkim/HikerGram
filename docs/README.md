@@ -20,7 +20,7 @@
 
 
 <h2>Design Docs</h2>
-* [View Wireframes] (../blob/master/docs/wireframes)
+* [View Wireframes] (../docs/wireframes)
 * [React Components] ()
 * [API endpoints] ()
 * [DB schema] ()
