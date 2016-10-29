@@ -46,3 +46,10 @@
 | user_id | integer | not null, indexed |
 | photo_id | integer | not null, indexed |
 | body | text | |
+
+## hashtags
+|column name| data type | details |
+| --- | --- | --- |
+| id | integer | not null, primary key |
+| tag | string | not null |
+| photo_id | integer | not null |
