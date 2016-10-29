@@ -18,7 +18,21 @@
       * User Profile Picture
       * User Info
     * Users's Photos
-
+    * <h4>PhotoViewContainer</h4>
+      * Photo
+      * <h4>PhotoInfoContainer</h4>
+        * User Photo / Username
+        * Photo description
+        * Comments
+  * <h3>DiscoverContainer</h3>
+    * Discover header
+    * <h4>SimpleUserInfoContainer</h4>
+      * User Profile Picture
+      * Simplified User Info
+    * User Images
+    
+    
+    
 # Routes
 
 | Path        | Component       |
@@ -26,4 +40,6 @@
 | "/"     | "HomeContainer" | 
 | "/sign-up"      | "AuthFormContainer"      |  
 | "/sign-in"  | "AuthFormContainer"       |  
-| "/user/:userId" | "Profile Container" |
+| "/user/:userId" | "ProfileContainer" |
+| "/user/:userId/photo" | "PhotoViewContainer" |
+| "/discover" | "DiscoverContainer" |
