@@ -1,7 +1,11 @@
 {
+
   currentUser: {
+
     id: 1,
+
     username: "Guest"
+
   },
   forms: {
     signUp: {errors: []},
