@@ -1,7 +1,8 @@
-Instagram
+<h1>Instagram</h1>
 
-Heroku link
-Trello link
+<a href="www.heroku.com">Heroku Link</a>
+<br>
+<a href="www.trello.com">Trello link</a>
 
 Design Docs
 -links go down here to .md files
