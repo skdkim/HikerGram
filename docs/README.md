@@ -21,13 +21,8 @@
 
 <h2>Design Docs</h2>
 * [View Wireframes] (../docs/wireframes)
-* [React Components] ()
-* [API endpoints] ()
-* [DB schema] ()
-* [Sample State] ()
+* [React Components] (../docs/component-hierarchy.md)
+* [API endpoints] (../docs/api-endpoints.md)
+* [DB schema] (../docs/schema.md)
+* [Sample State] (../docs/sample-state.md)
 
--links go down here to .md files
-
-I will soon describe all the features.
-
-I will soon outline a development timeline.
