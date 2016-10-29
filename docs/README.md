@@ -20,7 +20,11 @@
 
 
 <h2>Design Docs</h2>
-* 
+* [View Wireframes] (../blob/master/docs/wireframes)
+* [React Components] ()
+* [API endpoints] ()
+* [DB schema] ()
+* [Sample State] ()
 
 -links go down here to .md files
 
