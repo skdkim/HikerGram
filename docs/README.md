@@ -1,6 +1,6 @@
 <h1>Instagram</h1>
 
-[Heroku Link](www.heroku.com)
+[Heroku Link](https://hikergram.herokuapp.com/)
 <br>
 [Trello Link](https://trello.com/b/9Rn9u5mH/instagramclone)
 
