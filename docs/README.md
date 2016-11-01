@@ -32,6 +32,7 @@
 - [X] Users/Session Controllers
 - [X] Backend Authentication
 - [X] API requests
+- [X] Connect Middlewares
 - [ ] React/Redux Containers and Components
 - [ ] "Welcome" landing page
 - [ ] User session persists upon refresh
