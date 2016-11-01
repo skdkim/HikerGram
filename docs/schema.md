@@ -7,6 +7,7 @@
 | username | integer | not null, indexed, unique |
 | session_token | integer | not null, indexed, unique |
 | password_digest | integer | not null |
+| icon_url | string | |
 
 ## photos
 |column name| data type | details |
@@ -14,16 +15,8 @@
 | id | integer | not null, primary key |
 | user_id | integer | not null, indexed |
 | image_url | string | not null | 
-| liked | boolean | default: false |
 | title | string | |
 | description | text | |
-
-## profiles
-|column name| data type | details |
-| --- | --- | --- |
-| id | integer | not null, primary key |
-| user_id | integer | not null |
-| photos_id | integer | |
 
 ## follows
 |column name| data type | details |
@@ -45,11 +38,17 @@
 | id | integer | not null, primary key |
 | user_id | integer | not null, indexed |
 | photo_id | integer | not null, indexed |
-| body | text | |
+| body | text | not null |
 
 ## hashtags
 |column name| data type | details |
 | --- | --- | --- |
 | id | integer | not null, primary key |
 | tag | string | not null |
-| photo_id | integer | not null |
+
+## hashtaggings
+|column name| data type | details |
+| --- | --- | --- |
+| id | integer | not null, indexd |
+| tag_id | integer | not null, indexed |
+| photo_id | integer | not null, indexed |
