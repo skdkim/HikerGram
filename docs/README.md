@@ -29,6 +29,7 @@
 #### Objective: Create a working rails project with front-end Authentication
 - [X] new project
 - [ ] User model
+- [ ] Users/Session Controllers
 - [ ] Backend Authentication
 - [ ] React/Redux Containers and Components
 - [ ] "Welcome" landing page
