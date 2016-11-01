@@ -1,6 +1,6 @@
 <h1>Instagram</h1>
 
-[Heroku Link](https://hikergram.herokuapp.com/)
+[Heroku Link](https://hikergram.com/)
 <br>
 [Trello Link](https://trello.com/b/9Rn9u5mH/instagramclone)
 
@@ -27,7 +27,7 @@
 
 ## Phase 1: Backend Setup/Authentication (2 days)
 #### Objective: Create a working rails project with front-end Authentication
-- [ ] new project
+- [X] new project
 - [ ] User model
 - [ ] Backend Authentication
 - [ ] React/Redux Containers and Components
