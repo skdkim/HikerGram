@@ -28,9 +28,10 @@
 ## Phase 1: Backend Setup/Authentication (2 days)
 #### Objective: Create a working rails project with front-end Authentication
 - [X] new project
-- [ ] User model
-- [ ] Users/Session Controllers
-- [ ] Backend Authentication
+- [X] User model
+- [X] Users/Session Controllers
+- [X] Backend Authentication
+- [X] API requests
 - [ ] React/Redux Containers and Components
 - [ ] "Welcome" landing page
 - [ ] User session persists upon refresh
