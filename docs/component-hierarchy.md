@@ -13,22 +13,18 @@
     * Photo
     * Description
     * Comments
-  * <h3>ProfileContainer</h3>
-    * <h4>UserInfoContainer</h4>
-      * User Profile Picture
-      * User Info
-    * Users's Photos
-    * <h4>PhotoViewContainer</h4>
-      * Photo
-      * <h4>PhotoInfoContainer</h4>
-        * User Photo / Username
-        * Photo description
-        * Comments
+  * <h3>UserInfoContainer</h3>
+    * User Profile Picture
+    * User Info
+  * Users's Photos
+  * <h3>PhotoViewContainer</h3>
+    * Photo
+    * <h3>PhotoInfoContainer</h3>
+      * User Photo / Username
+      * Photo description
+      * Comments
   * <h3>DiscoverContainer</h3>
     * Discover header
-    * <h4>SimpleUserInfoContainer</h4>
-      * User Profile Picture
-      * Simplified User Info
     * User Images
     
     
@@ -40,6 +36,7 @@
 | "/"     | "HomeContainer" | 
 | "/sign-up"      | "AuthFormContainer"      |  
 | "/sign-in"  | "AuthFormContainer"       |  
-| "/user/:userId" | "ProfileContainer" |
-| "/user/:userId/photo" | "PhotoViewContainer" |
+| "/photo/:photoId" | "PhotoViewContainer |
+| "/photo/:photoId/info" | "PhotoInfoContainer |
+| "/user/:userId/photo/:photoId" | "PhotoViewContainer" |
 | "/discover" | "DiscoverContainer" |
