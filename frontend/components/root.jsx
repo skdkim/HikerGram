@@ -7,6 +7,7 @@ import AuthContainer from './auth/auth_container';
 import FeedContainer from './feed/feed_container';
 
 const Root = (props) => {
+  
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = props.store.getState().session.currentUser;
     if (currentUser) {
