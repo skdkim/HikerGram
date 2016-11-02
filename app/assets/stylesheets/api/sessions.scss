@@ -1,3 +1,153 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  // border: 1px solid;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.html {
+  height: 100%;
+  display: flex;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
+  padding: 0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: 0 -400px;}
+}
+
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position:  0 -400px;}
+}
+
+.main {
+  background: url(/assets/background/background.jpeg);
+  background-size: cover;
+  justify-content: center;
+  -webkit-animation: backgroundScroll 20s linear infinite;
+  animation: backgroundScroll 20s linear infinite;
+  height: 100%;
+  display: block;
+  border: 1px solid black;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+form {
+  display: block;
+  justify-content: center;
+  margin: 0;
+}
+
+.auth-form{
+  background: transparent;
+  height: 500px;
+  max-width: 500px;
+  width: 100%;
+  margin: 30px auto 0;
+  border: 5px solid;
+}
+
+.username {
+  display: inherit;
+  text-align: center;
+}
+
+.password {
+  display: inherit;
+  text-align: center;
+}
+
+.station-buttons {
+  display: flex;
+  text-align: center;
+  position: relative;
+  top: 219px;
+  justify-content: center;
+}
+
+.guest-button {
+  display: flex;
+  text-align: center;
+  position: relative;
+  top: 218px;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  line-height: 29px;
+  padding: 0 11px;
+  font-size: 16px;
+  background: rgba(0, 0, 231, 0.4);
+  margin-top: 5px;
+  margin: 5px 5px;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  font-weight: 600;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+  -webkit-appearance: none;
+}
+
+.form-welcome-title {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  opacity: .95;
+}
+
+.footer {
+  display: block;
+  position: fixed;
+  bottom: 5px;
+  left: 17px;
+  text-align: center;
+  text-shadow: 0 1px rgb(156, 156, 156);
+}
+
+.inputs {
+  display: block;
+  position: relative;
+  top: 40px;
+}
+
+ input {
+  background: 0 0;
+  border: 1px solid #525254;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #15151b;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  -webkit-appearance: none;
+  width: 90%;
+  margin-top: 5px;
+ }
