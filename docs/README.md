@@ -37,7 +37,7 @@
 - [X] "Welcome" landing page
 - [X] Logout landing page
 - [X] User session persists upon refresh
-- [ ] Seed Users
+- [X] Seed Users
 - [X] Style Sign In/ Sign Up page
 
 ## Phase 2: Photos Model, API, and Components (2 days)

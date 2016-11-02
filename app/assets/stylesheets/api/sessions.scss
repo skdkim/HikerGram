@@ -84,7 +84,7 @@ form {
   display: flex;
   text-align: center;
   position: relative;
-  top: 219px;
+  top: 213px;
   justify-content: center;
 }
 
@@ -92,7 +92,7 @@ form {
   display: flex;
   text-align: center;
   position: relative;
-  top: 218px;
+  top: 208px;
   justify-content: center;
 }
 
@@ -139,9 +139,25 @@ button {
   top: 40px;
 }
 
+::-webkit-input-placeholder {
+   color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;
+}
+
+:-ms-input-placeholder {
+   color: black;
+}
+
  input {
   background: 0 0;
-  border: 1px solid #525254;
+  border: 3px solid #525254;
   border-radius: 3px;
   box-sizing: border-box;
   color: #15151b;

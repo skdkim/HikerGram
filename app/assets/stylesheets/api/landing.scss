@@ -1,0 +1,25 @@
+.landing-msg {
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 73px;
+  font-size: 50px;
+}
+
+.landing-link {
+  border: 1px solid black;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 80px;
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  outline: chartreuse;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  cursor: pointer;
+  max-width: 500px;
+  width: 100%;
+  margin: 30px auto 0;
+}

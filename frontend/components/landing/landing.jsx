@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 
 class Landing extends React.Component {
   constructor(props){
@@ -14,8 +14,8 @@ class Landing extends React.Component {
   render(user){
     return(
       <div>
-        <h1>In the Landing</h1>
-        <h2>See you soon {this.state.username}!</h2>
+        <h1 className="landing-msg">See you soon {this.state.username}!</h1>
+        <Link className="landing-link" to={"/"}>Back to HikerGram</Link>
       </div>
     );
   }
