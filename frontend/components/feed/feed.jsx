@@ -2,10 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 class Feed extends React.Component {
-  handleLogout(e){
-    e.preventDefault();
+  handleLogout(){
     this.props.logout();
-    this.props.router.push("/");
+    this.props.router.push("/landing");
   }
 
   render(){
@@ -14,8 +13,8 @@ class Feed extends React.Component {
     return(
       <div>
         <h1>In the Feed</h1>
-        <h2>Hello! {user.username}</h2>
-        <button onClick={this.props.logout}>Log Out</button>
+        <h2>Hello!</h2>
+        <button onClick={this.handleLogout.bind(this)}>Log Out</button>
       </div>
 
     );

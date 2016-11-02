@@ -5,9 +5,10 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from "./app";
 import AuthContainer from './auth/auth_container';
 import FeedContainer from './feed/feed_container';
+import LandingContainer from './landing/landing_container';
 
 const Root = (props) => {
-  
+
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = props.store.getState().session.currentUser;
     if (currentUser) {
@@ -29,6 +30,7 @@ const Root = (props) => {
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>
         </Route>
+        <Route path="/landing" component={LandingContainer} />
       </Router>
     </Provider>
   );
