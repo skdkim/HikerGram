@@ -35,6 +35,8 @@ class Auth extends React.Component {
     e.preventDefault();
     if (this.type === "login"){
       this.props.login(this.state);
+    } else if (this.type === "guest"){
+      this.props.login({username: "guest", password: "123123"});
     } else {
       this.props.signup(this.state);
     }
@@ -66,6 +68,7 @@ class Auth extends React.Component {
           <label>Password<input onChange={this.handlePassword.bind(this)} type="password" value={this.state.password}/></label>
           <button onClick={() => this.type = "login"}>Log In</button>
           <button onClick={() => this.type = "signup"}>Sign Up</button>
+          <button onClick={() => this.type = "guest"}>Guest Login</button>
           {this.renderErrors()}
         </form>
         <h1>Inside Auth</h1>

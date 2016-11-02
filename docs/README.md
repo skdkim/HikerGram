@@ -33,9 +33,10 @@
 - [X] Backend Authentication
 - [X] API requests
 - [X] Connect Middlewares
-- [ ] React/Redux Containers and Components
-- [ ] "Welcome" landing page
-- [ ] User session persists upon refresh
+- [X] React/Redux Containers and Components
+- [X] "Welcome" landing page
+- [X] Logout landing page
+- [X] User session persists upon refresh
 - [ ] Seed Users
 - [ ] Style Sign In/ Sign Up page
 

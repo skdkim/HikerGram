@@ -29,8 +29,8 @@ const Root = (props) => {
         <Route path="/" component={App}>
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>
+          <Route path="/landing" component={LandingContainer} />
         </Route>
-        <Route path="/landing" component={LandingContainer} />
       </Router>
     </Provider>
   );

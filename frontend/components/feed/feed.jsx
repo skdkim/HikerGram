@@ -13,7 +13,7 @@ class Feed extends React.Component {
     return(
       <div>
         <h1>In the Feed</h1>
-        <h2>Hello!</h2>
+        <h2>Hello! {this.props.user.username}</h2>
         <button onClick={this.handleLogout.bind(this)}>Log Out</button>
       </div>
 
