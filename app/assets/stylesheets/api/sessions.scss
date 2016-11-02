@@ -44,8 +44,8 @@ to {background-position:  0 -400px;}
   background: url(http://res.cloudinary.com/skdkim/image/upload/v1478125050/background_et6hc5.jpg);
   background-size: cover;
   justify-content: center;
-  -webkit-animation: backgroundScroll 20s linear infinite;
-  animation: backgroundScroll 20s linear infinite;
+  -webkit-animation: backgroundScroll 15s linear infinite;
+  animation: backgroundScroll 15s linear infinite;
   height: 100%;
   display: block;
   border: 1px solid black;
@@ -151,3 +151,9 @@ button {
   width: 90%;
   margin-top: 5px;
  }
+
+.errors {
+  position: relative;
+  top: -4px;
+  left: 44px;
+}
