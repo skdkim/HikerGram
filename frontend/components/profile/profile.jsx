@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 
 import HeaderContainer from '../header/header_container';
-import PhotosContainer from '../photos/photos_container';
+import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_container';
 
 class Profile extends React.Component {
   constructor(props){
@@ -48,7 +48,7 @@ class Profile extends React.Component {
 
             </div>
             <body className="all-photos">
-              <PhotosContainer />
+              <UserPhotoIndexContainer />
             </body>
           </article>
         </main>

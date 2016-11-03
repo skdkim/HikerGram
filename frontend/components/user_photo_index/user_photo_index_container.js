@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Photos from './photos';
+import UserPhotoIndex from './user_photo_index';
 
 import { logout } from '../../actions/session_actions';
 
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   null
-)(Photos);
+)(UserPhotoIndex);
