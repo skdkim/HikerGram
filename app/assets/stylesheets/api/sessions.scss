@@ -18,16 +18,9 @@ main {
   width: 100%;
 }
 
-.main {
-  height: 100%;
-  width: 100%;
-}
-
 body {
   height: 100%;
   width: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 @-webkit-keyframes scrollBgGridLinks {
@@ -44,8 +37,6 @@ to {background-position:  0 -400px;}
   background: url(http://res.cloudinary.com/skdkim/image/upload/v1478125050/background_et6hc5.jpg);
   background-size: cover;
   justify-content: center;
-  // -webkit-animation: backgroundScroll 15s linear;
-  // animation: backgroundScroll 15s linear;
   animation: scrollBgGridLinks 35s linear;
   -webkit-animation: scrollBgGridLinks 35s linear;
   animation-fill-mode: forwards;
@@ -145,36 +136,37 @@ button {
 }
 
 ::-webkit-input-placeholder {
-   color: black;
+   color: grey;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: black;
+   color: grey;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: black;
+   color: grey;
 }
 
 :-ms-input-placeholder {
-   color: black;
+   color: grey;
 }
 
  input {
-  background: 0 0;
-  border: 3px solid #525254;
-  border-radius: 3px;
-  box-sizing: border-box;
-  color: #15151b;
-  font-size: 14px;
-  padding: 9px 8px 7px;
-  -webkit-appearance: none;
-  width: 90%;
-  margin-top: 5px;
+   background: rgba(255, 255, 255, 0.44);
+   border: 3px solid #525254;
+   border-radius: 3px;
+   box-sizing: border-box;
+   color: #15151b;
+   font-size: 14px;
+   padding: 9px 8px 7px;
+   -webkit-appearance: none;
+   width: 90%;
+   margin-top: 5px;
  }
 
-.errors {
+ul.errors {
   position: relative;
+  text-decoration: initial;
   top: -4px;
   left: 44px;
 }

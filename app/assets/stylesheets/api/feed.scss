@@ -3,10 +3,59 @@
   width: 176px;
 }
 
+.feed-page {
+  display: block;
+  height: 100%
+}
+
+header {
+  display: flex;
+  height: 31px;
+  width: 930px;
+  padding: 20px 40px;
+  max-width: 1010px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+a#hikerGram-text {
+  position: relative;
+  top: -7px;
+  left: -111px;
+  background: white;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+input#search-input {
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  color: #262626;
+  font-size: 14px;
+  outline: none;
+  padding: 3px 10px 3px 26px;
+  z-index: 2;
+}
+
+.small-icon {
+  height: 28px;
+  width: 28px;
+  align-self: flex-end;
+  display: flex;
+}
+
 nav {
   display: flex;
-  height: 100px;
-  max-width: 1010px;
-  margin: 30px auto 0;
   justify-content: space-between;
+  width: 122px;
+  align-items: flex-end;
+}
+
+.border-top {
+  border-top: 1px solid;
+}
+
+.feed {
+  background-color: #fafafa;
 }
