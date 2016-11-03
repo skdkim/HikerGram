@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 
+import Header from '../header/header';
+
 class Profile extends React.Component {
   constructor(props){
     super(props);
@@ -8,8 +10,11 @@ class Profile extends React.Component {
 
   render(){
     return(
-      <div>
-        <h1>Profile Container!</h1>
+      <div className="main-container">
+        <Header />
+        <main className="feed border-top">
+          <h1>Where the profile goes</h1>
+        </main>
       </div>
     );
   }

@@ -36,7 +36,7 @@ class Auth extends React.Component {
     if (this.type === "login"){
       this.props.login(this.state);
     } else if (this.type === "guest"){
-      this.props.login({username: "guest", password: "123123"});
+      this.props.login({username: "johnmuir", password: "hiking4life"});
     } else {
       this.props.signup(this.state);
     }

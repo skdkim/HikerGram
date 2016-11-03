@@ -42,7 +42,7 @@
 
 ## Phase 2: Photos Model, API, and Components (2 days)
 #### Objective: Photos can be created, read, edited, and destroyed through the API
-- [ ] Photo model
+- [ ] Photos model
 - [ ] Seed database
 - [ ] CRUD API for PhotosController
 - [ ] JBuilder view for photos
