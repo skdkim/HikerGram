@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 class Feed extends React.Component {
   handleLogout(){
     this.props.logout();
-    this.props.router.push("/landing");
+    this.props.router.push("/");
   }
 
   render(){
