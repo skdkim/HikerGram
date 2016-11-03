@@ -24,10 +24,17 @@
       }
     }
   }
-  user: {
-    userId: 2,
-    username: "Guest2",
-    icon_url: "sample.png"
+  userDetail: {
+    1: {
+      userId: 2,
+      username: "Guest2",
+      icon_url: "sample.png"
+    },
+    2: {
+      userId: 2,
+      username: "Guest2",
+      icon_url: "sample.png"
+    }
   }
 }
 
