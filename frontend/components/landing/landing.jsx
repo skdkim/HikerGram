@@ -11,7 +11,7 @@ class Landing extends React.Component {
     this.setState({username});
   }
 
-  render(user){
+  render(){
     return(
       <div className="splash">
         <h1 className="landing-msg">See you soon {this.state.username}!</h1>

@@ -6,6 +6,7 @@ import App from "./app";
 import AuthContainer from './auth/auth_container';
 import FeedContainer from './feed/feed_container';
 import LandingContainer from './landing/landing_container';
+import ProfileContainer from './profile/profile_container';
 
 const Root = (props) => {
 
@@ -28,8 +29,9 @@ const Root = (props) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
-          <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>
+          <Route path="/user" component={ProfileContainer} />
           <Route path="/landing" component={LandingContainer} />
+          <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>
         </Route>
       </Router>
     </Provider>
