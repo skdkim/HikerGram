@@ -31,7 +31,6 @@ const Root = (props) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
-          <Route path="/" component={HeaderContainer} />
           <Route path="/profile" component={ProfileContainer} />
           <Route path="/landing" component={LandingContainer} />
           <Route path="/discover" component={DiscoverContainer} />

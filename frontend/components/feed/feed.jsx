@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import Header from '../header/header';
+import HeaderContainer from '../header/header_container';
 
 class Feed extends React.Component {
   handleLogout(){
@@ -18,7 +18,7 @@ class Feed extends React.Component {
 
     return(
       <div className="main-container">
-        <Header />
+        <HeaderContainer />
         <main className="feed border-top">
           <h1>Where the feed goes</h1>
             <a href="/" id="logout-link" >

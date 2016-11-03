@@ -2,8 +2,11 @@ import React from 'react';
 import { withRouter } from 'react-router';
 
 class Header extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
   handleLogout(){
-    debugger
     this.props.logout();
     this.props.router.push("/landing");
   }

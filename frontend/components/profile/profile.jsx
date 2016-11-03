@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 
-import Header from '../header/header';
+import HeaderContainer from '../header/header_container';
+import PhotosContainer from '../photos/photos_container';
 
 class Profile extends React.Component {
   constructor(props){
@@ -14,14 +15,15 @@ class Profile extends React.Component {
   }
 
   render(){
+
     return(
       <div className="main-container">
-        <Header />
+        <HeaderContainer />
         <main className="feed border-top">
           <article>
             <div className="profile-top">
               <div className="profile-img-container">
-                <img className="profile-image" src="http://res.cloudinary.com/skdkim/image/upload/v1478193569/profile_images/johnmuirprofile.jpg"></img>
+                <img className="profile-image" src={this.props.user.image_url}></img>
               </div>
 
               <div className="profile-top-info">
@@ -44,12 +46,10 @@ class Profile extends React.Component {
                 </div>
               </div>
 
-
             </div>
-
-            <a href="/" id="logout-link" >
-              <img onClick={this.handleLogout.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478197868/hikergram_assets/settings.png"/>
-            </a>
+            <body className="all-photos">
+              <PhotosContainer />
+            </body>
           </article>
         </main>
       </div>
