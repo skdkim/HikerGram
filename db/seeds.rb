@@ -11,5 +11,5 @@ User.create(username: "david", password: "123123sdfsdf");
 User.create(username: "steve", password: "curryman24");
 User.create(username: "jackie", password: "cakeislife");
 User.create(username: "missholldoll", password: "theoutbound");
-User.create(username: "johnmuir", password: "hiking4life");
+User.create(username: "johnmuir", password: "hiking4life", image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478193569/profile_images/johnmuirprofile.jpg");
 User.create(username: "mattwheat", password: "livinglife");

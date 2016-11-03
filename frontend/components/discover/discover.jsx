@@ -8,11 +8,6 @@ class Discover extends React.Component {
     this.props.router.push("/landing");
   }
 
-  handleProfile(){
-    this.props.logout();
-    this.props.router.push("/user");
-  }
-
   render(){
     const {user} = this.props;
 
