@@ -62,23 +62,25 @@ class Auth extends React.Component {
 
   render(){
     return(
-      <div className="auth-form">
-        <h3 className="form-welcome-title">Welcome to HikerGram</h3>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <div className="inputs">
-            <label className="username"><input onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
-            <label className="password"><input onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
-          </div>
+      <div className="splash">
+        <div className="auth-form">
+          <h3 className="form-welcome-title">Welcome to HikerGram</h3>
+          <form onSubmit={this.handleSubmit.bind(this)}>
+            <div className="inputs">
+              <label className="username"><input onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
+              <label className="password"><input onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
+            </div>
 
-          <div className="station-buttons">
-            <button className="login" onClick={() => this.type = "login"}>Log In</button>
-            <button className="signup" onClick={() => this.type = "signup"}>Sign Up</button>
-          </div>
-          <div className="guest-button">
-            <button className="guest" onClick={() => this.type = "guest"}>Guest Login</button>
-          </div>
-          {this.renderErrors()}
-        </form>
+            <div className="station-buttons">
+              <button className="login" onClick={() => this.type = "login"}>Log In</button>
+              <button className="signup" onClick={() => this.type = "signup"}>Sign Up</button>
+            </div>
+            <div className="guest-button">
+              <button className="guest" onClick={() => this.type = "guest"}>Guest Login</button>
+            </div>
+            {this.renderErrors()}
+          </form>
+        </div>
       </div>
     );
   }

@@ -13,7 +13,7 @@ class Landing extends React.Component {
 
   render(user){
     return(
-      <div>
+      <div className="splash">
         <h1 className="landing-msg">See you soon {this.state.username}!</h1>
         <Link className="landing-link" to={"/"}>Back to HikerGram</Link>
       </div>

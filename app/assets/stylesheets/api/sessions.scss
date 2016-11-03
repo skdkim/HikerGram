@@ -3,22 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
-  // border: 1px solid;
   padding: 0;
   margin: 0;
 }
 
-
-
 .html {
   height: 100%;
   display: flex;
-  -webkit-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out;
   padding: 0;
 }
 
 main {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
   height: 100%;
   width: 100%;
 }
@@ -30,22 +30,27 @@ body {
   margin: 0;
 }
 
-@-webkit-keyframes backgroundScroll {
+@-webkit-keyframes scrollBgGridLinks {
 from {background-position: 0 0;}
 to {background-position: 0 -400px;}
 }
 
-@keyframes backgroundScroll {
+@keyframes scrollBgGridLinks {
 from {background-position: 0 0;}
 to {background-position:  0 -400px;}
 }
 
-.main {
+.splash {
   background: url(http://res.cloudinary.com/skdkim/image/upload/v1478125050/background_et6hc5.jpg);
   background-size: cover;
   justify-content: center;
-  -webkit-animation: backgroundScroll 15s linear infinite;
-  animation: backgroundScroll 15s linear infinite;
+  // -webkit-animation: backgroundScroll 15s linear;
+  // animation: backgroundScroll 15s linear;
+  animation: scrollBgGridLinks 35s linear;
+  -webkit-animation: scrollBgGridLinks 35s linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
   height: 100%;
   display: block;
   border: 1px solid black;

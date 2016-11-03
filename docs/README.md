@@ -44,7 +44,7 @@
 #### Objective: Photos can be created, read, edited, and destroyed through the API
 - [ ] Photo model
 - [ ] Seed database
-- [ ] CRUD API for PhotosConroller
+- [ ] CRUD API for PhotosController
 - [ ] JBuilder view for photos
 - [ ] APIUtil for User and Database interaction
 - [ ] Make everything a component
