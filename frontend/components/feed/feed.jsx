@@ -13,7 +13,7 @@ class Feed extends React.Component {
     return(
       <div className="feed-page">
         <header>
-          <div>
+          <div className="header-image">
             <a href="/">
               <img id="logo-link" src="http://res.cloudinary.com/skdkim/image/upload/v1478135475/nav-bar-logo_e04zmb.png"/>
             </a>
@@ -22,7 +22,8 @@ class Feed extends React.Component {
             </a>
           </div>
           <div>
-            <input id="search-input" placeholder="search"></input>
+            <input id="search-input" placeholder="Search"></input>
+              <img id="search-glass" src="http://res.cloudinary.com/skdkim/image/upload/v1478145918/magnifying-glass_bu4geg.png"/>
           </div>
           <div>
             <nav>

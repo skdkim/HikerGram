@@ -15,6 +15,7 @@ header {
   padding: 20px 40px;
   max-width: 1010px;
   margin: 0 auto;
+  margin-bottom: 5px;
   justify-content: space-between;
 }
 
@@ -36,6 +37,10 @@ input#search-input {
   outline: none;
   padding: 3px 10px 3px 26px;
   z-index: 2;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  font-weight: 300;
 }
 
 .small-icon {
@@ -48,14 +53,23 @@ input#search-input {
 nav {
   display: flex;
   justify-content: space-between;
-  width: 122px;
+  width: 127px;
   align-items: flex-end;
+  margin-left: 180px;
 }
 
 .border-top {
-  border-top: 1px solid;
+  border-top: 1px solid #e4d3d3;
 }
 
 .feed {
   background-color: #fafafa;
+}
+
+#search-glass {
+  height: 10px;
+  width: 10px;
+  position: relative;
+  top: -24px;
+  left: 9px;
 }
