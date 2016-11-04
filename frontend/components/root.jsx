@@ -10,6 +10,8 @@ import LandingContainer from './landing/landing_container';
 import ProfileContainer from './profile/profile_container';
 import DiscoverContainer from './discover/discover_container';
 
+import {fetchUserDetail} from '../actions/user_actions';
+
 const Root = (props) => {
 
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -26,12 +28,17 @@ const Root = (props) => {
     }
   };
 
+  const fetchUserInfo = () => {
+    const currentUser = props.store.getState().session.currentUser;
+    props.store.dispatch(fetchUserDetail(currentUser.id));
+  };
+
   return (
     <Provider store={props.store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
-          <Route path="/profile" component={ProfileContainer} />
+          <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
           <Route path="/landing" component={LandingContainer} />
           <Route path="/discover" component={DiscoverContainer} />
           <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>

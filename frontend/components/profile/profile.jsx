@@ -47,9 +47,9 @@ class Profile extends React.Component {
               </div>
 
             </div>
-            <body className="all-photos">
+            <div className="all-photos">
               <UserPhotoIndexContainer />
-            </body>
+            </div>
           </article>
         </main>
       </div>

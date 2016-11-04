@@ -7,9 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(username: "guest", password: "123123");
-User.create(username: "david", password: "123123sdfsdf", image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478205508/profile_images/Sung_Kim.jpg");
+User.create(username: "skdkim", password: "123123sdfsdf", image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478205508/profile_images/Sung_Kim.jpg");
 User.create(username: "steve", password: "curryman24");
 User.create(username: "jackie", password: "cakeislife");
-User.create(username: "missholldoll", password: "theoutbound");
-User.create(username: "johnmuir", password: "hiking4life", image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478193569/profile_images/johnmuirprofile.jpg");
+User.create(username: "missholldoll", password: "pnwalways");
+User.create(username: "johnmuir", password: "hiking4life", image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478193569/profile_images/johnmuirprofile.jpg",
+            description: "I love the outdoors!!!");
 User.create(username: "mattwheat", password: "livinglife");
+
+# for John Muir
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);

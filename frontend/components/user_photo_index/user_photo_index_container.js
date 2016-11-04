@@ -4,7 +4,7 @@ import UserPhotoIndex from './user_photo_index';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  user: state.session.currentUser
+  user: state.userDetail,
 });
 
 const mapDispatchToProps = dispatch => ({

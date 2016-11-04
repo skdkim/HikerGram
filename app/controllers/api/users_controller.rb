@@ -9,6 +9,10 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+  
   def edit
   end
 
@@ -17,6 +21,6 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password, :image_url)
+    params.require(:user).permit(:username, :password, :image_url, :firstname, :lastname, :description)
   end
 end

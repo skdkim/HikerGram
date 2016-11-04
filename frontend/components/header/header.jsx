@@ -46,7 +46,7 @@ class Header extends React.Component {
               <a id="profile-link" >
                 <img onClick={this.handleProfile.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/profile-icon_w41e7q.png"/>
               </a>
-              <a href="/" id="logout-link" >
+              <a id="logout-link" >
                 <img onClick={this.handleLogout.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/logout-icon_zh94cc.png"/>
               </a>
             </nav>

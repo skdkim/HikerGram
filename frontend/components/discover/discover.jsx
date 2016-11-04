@@ -17,7 +17,7 @@ class Discover extends React.Component {
         <main className="feed border-top">
           <h1>Where the discover page goes</h1>
             <a href="/" id="logout-link" >
-              <img onClick={this.handleLogout.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/logout-icon_zh94cc.png"/>
+              <img onClick={this.handleLogout.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/logout-icon_zh94cc.png"/>
             </a>
         </main>
       </div>

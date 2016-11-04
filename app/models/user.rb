@@ -9,6 +9,9 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  image_url       :string
+#  description     :string
+#  firstname       :string
+#  lastname        :string
 #
 
 class User < ActiveRecord::Base
@@ -19,6 +22,8 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   after_initialize :ensure_session_token
+
+  has_many :photos
 
   def self.find_by_credentials(username, password)
     @user = User.find_by(username: username)
