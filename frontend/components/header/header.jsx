@@ -8,7 +8,6 @@ class Header extends React.Component {
 
   handleLogout(){
     this.props.logout();
-    this.props.router.push("/landing");
   }
 
   handleProfile(){

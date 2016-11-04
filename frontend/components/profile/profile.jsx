@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
+var Masonry = require('react-masonry-component');
 
 import HeaderContainer from '../header/header_container';
 import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_container';
@@ -47,7 +48,8 @@ class Profile extends React.Component {
 
             </div>
             <div className="all-photos">
-              <UserPhotoIndexContainer />
+                <UserPhotoIndexContainer />
+
             </div>
           </article>
         </main>

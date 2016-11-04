@@ -76,14 +76,27 @@ article {
 }
 
 .photos-container {
-  max-width: 293px;
-  display: flex;
-  li{
-    text-decoration: none;
-  }
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // max-width: 935px;
+  width: 1500px;
+  list-style-type: none;
 }
 
 .square-box {
-  max-width: 293px;
-  max-height: 293px;
+  // max-width: 293px;
+  // max-height: 293px;
+  height: 100%;
+}
+
+.photos-container img {
+  margin-right: 28px;
+  margin-bottom: 28px;
+  height: 293px;
+}
+
+.photos-container img:nth-of-type(3n){
+  margin-right: 0;
 }
