@@ -25,3 +25,11 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v14782089
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478208904/profile_images/all-photos/jmt1.jpg", user_id: 6);

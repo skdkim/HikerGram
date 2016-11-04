@@ -7,20 +7,21 @@
   margin: 0;
 }
 
-.html {
-  height: 100%;
-  display: flex;
-  padding: 0;
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+	margin-bottom: 0;
 }
-
-main {
-  height: 100%;
-  width: 100%;
+.page-wrap:after {
+  content: "";
+  display: block;
 }
-
-body {
-  height: 100%;
-  width: 100%;
+.footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+	height: 18px;
+}
+.footer {
+  background: rgba(80, 41, 41, 0.44);
 }
 
 @-webkit-keyframes scrollBgGridLinks {
@@ -122,14 +123,7 @@ button {
   opacity: .95;
 }
 
-.footer {
-  display: block;
-  position: fixed;
-  bottom: 5px;
-  left: 17px;
-  text-align: center;
-  text-shadow: 0 1px rgb(156, 156, 156);
-}
+
 
 .inputs {
   display: block;

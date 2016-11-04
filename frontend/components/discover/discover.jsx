@@ -7,12 +7,12 @@ class Discover extends React.Component {
     const {user} = this.props;
 
     return(
-      <div className="main-container">
+      <main className="main-container">
         <HeaderContainer />
         <main className="feed border-top">
           <h1>Where the discover page goes</h1>
         </main>
-      </div>
+      </main>
 
     );
   }

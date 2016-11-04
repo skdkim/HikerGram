@@ -19,10 +19,9 @@ class UserPhotoIndex extends React.Component {
   render(){
     let childElements = this.props.photos.map((photo, idx) => {
         return (
-            <img key={idx} className="square-box" src={photo.image_url} />
+          <img key={idx} className="square-box" src={photo.image_url} />
         );
       });
-
 
     return (
           <Masonry elementType={"div"} className={"photos-container"} style={style}>

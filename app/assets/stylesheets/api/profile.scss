@@ -81,13 +81,13 @@ article {
   flex-wrap: wrap;
   justify-content: space-between;
   // max-width: 935px;
-  width: 1500px;
+  width: 1200px;
   list-style-type: none;
 }
 
 .square-box {
-  // max-width: 293px;
-  // max-height: 293px;
+  max-width: 293px;
+  max-height: 293px;
   height: 100%;
 }
 
@@ -95,6 +95,8 @@ article {
   margin-right: 28px;
   margin-bottom: 28px;
   height: 293px;
+  object-fit: cover;
+
 }
 
 .photos-container img:nth-of-type(3n){

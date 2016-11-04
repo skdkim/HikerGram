@@ -9,6 +9,7 @@ section, p, footer, small {
   outline: 0;
   font: inherit;
   color: inherit;
+  height: inherit;
   text-align: inherit;
   text-decoration: inherit;
   vertical-align: inherit;
@@ -19,6 +20,10 @@ section, p, footer, small {
 header, nav, main, section,
 footer, small {
   display: block;
+}
+
+html, body {
+  height: 100%;
 }
 
 /*ul {
