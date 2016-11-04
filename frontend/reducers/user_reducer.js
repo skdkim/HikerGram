@@ -13,7 +13,6 @@ const UserReducer = (oldState = _nullUser, action) => {
   let newState = merge({}, _nullUser);
   switch(action.type){
     case RECEIVE_USER_DETAIL:
-    debugger
       newState = action.user;
       return newState;
     default:

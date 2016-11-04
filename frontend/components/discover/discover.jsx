@@ -3,11 +3,6 @@ import { withRouter } from 'react-router';
 import HeaderContainer from '../header/header_container';
 
 class Discover extends React.Component {
-  handleLogout(){
-    this.props.logout();
-    this.props.router.push("/landing");
-  }
-
   render(){
     const {user} = this.props;
 
@@ -16,9 +11,6 @@ class Discover extends React.Component {
         <HeaderContainer />
         <main className="feed border-top">
           <h1>Where the discover page goes</h1>
-            <a href="/" id="logout-link" >
-              <img onClick={this.handleLogout.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/logout-icon_zh94cc.png"/>
-            </a>
         </main>
       </div>
 

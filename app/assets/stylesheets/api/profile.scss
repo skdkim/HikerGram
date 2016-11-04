@@ -25,6 +25,7 @@ article {
   max-width: 935px;
   max-height: 152px;
   justify-content: space-between;
+  margin-bottom: 44px;
 }
 
 .profile-img-container {
@@ -72,4 +73,17 @@ article {
 
 .bm20 {
   margin-bottom: 20px;
+}
+
+.photos-container {
+  max-width: 293px;
+  display: flex;
+  li{
+    text-decoration: none;
+  }
+}
+
+.square-box {
+  max-width: 293px;
+  max-height: 293px;
 }

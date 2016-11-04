@@ -52,7 +52,7 @@
 
 ## Phase 3: User Profile Page (1.5 days)
 #### Objective: Page displays all of User's photos
-- [ ] Profile component
+- [X] Profile component
 - [ ] Create many components for piecing together User information bar
 - [ ] Render all user's photos on page with Masonry
 - [ ] More seeding if needed

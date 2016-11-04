@@ -5,10 +5,9 @@ import { receiveUserDetail,
 import { showUser } from '../util/user_api_util';
 
 export default (store) => next => action => {
-  const successCallback = user => {
-    debugger
-    store.dispatch(receiveUserDetail(user));
-  }
+  const successCallback = user => (
+    store.dispatch(receiveUserDetail(user))
+  );
   // const errorCallback = xhr => store.dispatch(receiveErrors(xhr.responseJSON));
 
   switch(action.type) {
