@@ -54,7 +54,7 @@
 - [X] Profile component
 - [ ] Render all user's photos on page with Masonry
 - [ ] More seeding if needed
-- [ ] Style Page
+- [X] Style Page
 
 ## Phase 4: Likes (0.4 days)
 #### Objective: Users can like any photo
