@@ -30,7 +30,7 @@ class Profile extends React.Component {
                 <div className="profile-top-info">
                   <div className="user-nav bm20">
                     <h1 className="username">{this.props.user.username}</h1>
-                    <img onClick={this.handleLogout.bind(this)} className="small-icon settings-button" src="http://res.cloudinary.com/skdkim/image/upload/v1478197868/hikergram_assets/settings.png"/>
+                    <img className="small-icon settings-button" src="http://res.cloudinary.com/skdkim/image/upload/v1478197868/hikergram_assets/settings.png"/>
                   </div>
                   <div className="user-data bm20">
                     <h1 className="data-num username">121</h1>
