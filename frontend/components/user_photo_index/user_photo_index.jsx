@@ -23,25 +23,23 @@ class UserPhotoIndex extends React.Component {
         );
       });
 
-    return (
-          <Masonry elementType={"div"} className={"photos-container"} style={style}>
-              {childElements}
-          </Masonry>
-    );
-
     // return (
-    //   <ul className="photos-container">
-    //     {
-    //       this.props.photos.map((photo, idx) => {
-    //         return (
-    //           <li key={idx}>
-    //             <img className="square-box" src={photo.image_url} />
-    //           </li>
-    //         );
-    //       })
-    //     }
-    //   </ul>
+    //       <Masonry elementType={"div"} className={"photos-container"} style={style}>
+    //           {childElements}
+    //       </Masonry>
     // );
+
+    return (
+      <div className="photos-container">
+        {
+          this.props.photos.map((photo, idx) => {
+            return (
+              <img key={idx} className="square-box" src={photo.image_url} />
+            );
+          })
+        }
+      </div>
+    );
 
     // return (
     //   <MasonryInfiniteScroller elementType={"ul"} className={"photos-container"}>
