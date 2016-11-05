@@ -82,7 +82,7 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v14783245
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324540/philh.lee/photo-1475592339713-a05582419983_vczjie.jpg",
   user_id: User.find_by(username: "philh.lee").id, description: "");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324563/philh.lee/till-the-cows-come-home_dnygyb.jpg",
-  user_id: User.find_by(username: "philh.lee".id, description: "Nothing quite like the golden hour.");
+  user_id: User.find_by(username: "philh.lee").id, description: "Nothing quite like the golden hour.");
 
 # photos for beargrylls
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324262/beargrylls/03_djdxcw.jpg",
