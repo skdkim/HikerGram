@@ -179,3 +179,160 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v14783245
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324521/johnmuir/photo-1474576142067-3d38a82550b2_wm9zxi.jpg",
   user_id: User.find_by(username: "johnmuir").id,
   description: "Snack breaks are just as important as a good pace.");
+
+# photos for elon.musk
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324285/elon.musk/photo-1419717567666-6e559d5e0339_ndsyhz.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Should have brought some snow-shoes... darn");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324318/elon.musk/photo-1420582282039-a6d11404cb66_ajoknc.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Beautiful path!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324297/elon.musk/photo-1420802320972-ac173d873ed2_tikkdt.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Foggy day...");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324289/elon.musk/photo-1420802839049-174a867e426c_ehgkou.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Through the eyes of men it seems like there so much.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324351/elon.musk/photo-1424169292451-7c28a6053189_mfsvwe.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "We know there is victory with every ray of sunlight");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324314/elon.musk/photo-1436918671239-a2b72ace4",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Find the trail on the map!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324302/elon.musk/photo-1436919831943-52437d8d9bfd_m99anl.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Come alive!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324314/elon.musk/photo-1440431261965-1df24284dcff_jazcq8.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "The air is really different up here.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324313/elon.musk/photo-1440965514975-4b4c4f29a39e_k7id0o.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Everyone needs to visit this beach.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324315/elon.musk/photo-1441441247730-d09529166668_dh4vte.jpg",
+  user_id: User.find_by(username: "elon.musk").id,
+  description: "Breathe breathe breathe!");
+
+#photos for expedLewis
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324324/expedLewis/photo-1442422502730-a90f72460717_dvrrxd.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "What a reflection this is.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324329/expedLewis/photo-1443888548620-2a0262884145_ptoa5g.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "The sound of the mountains are calling.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324337/expedLewis/photo-1443915816136-7afd8c380512_iv2jfd.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "How great is this view?!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324350/expedLewis/photo-1444360150727-329ab2c260a0_ql2uq3.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "Anything you need a expedition friend let me know, I love this.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324383/expedLewis/photo-1444676143642-ca2104ba97e1_nk1sqf.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "I'm on the move today!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324359/expedLewis/photo-1444998440789-3ab1f73d29c9_jxo9qz.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "Today was a great day. Enjoy this awesome view.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324393/expedLewis/photo-1445096154391-3d01c0dfcfbc_bo0ikv.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "Send me here! Here I go!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324415/expedLewis/photo-1446714276218-bd84d334af98_uqkzro.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "Best place for a nap. Watch out for the ants!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324420/expedLewis/photo-1446728392359-c05fd6bb10f5_xktuni.jpg",
+  user_id: User.find_by(username: "expedLewis").id,
+  description: "Moments before the storm hit us.");
+
+#photos for withaHachet
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324322/withaHatchet/photo-1443521156453-f82c842b6e7f_vnfeei.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "Nothing quite like what's around a foggy corner.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324358/withaHatchet/photo-1444075107151-b2090be89337_i3ofgn.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "Gotta take one step at a time.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324395/withaHatchet/photo-1444405406630-ac78b6e0b1fb_trsntn.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "No words I say can git the view I saw justice");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324356/withaHatchet/photo-1444492417251-9c84a5fa18e0_gg9thv.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "Sit down an enjoy the view here, great scenic spot.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324355/withaHatchet/photo-1444663837429-d2d894a77c77_cpxjiq.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324388/withaHatchet/photo-1445122734110-5ccd170eded6_vlsmey.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "Walking walking walking");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324369/withaHatchet/photo-1445207966278-0a0a65a2047b_ach9dw.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "My life song is a journey with no end.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324389/withaHatchet/photo-1445264718234-a623be589d37_llrhha.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "There really is no end to exploration");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324377/withaHatchet/photo-1445283142063-f4802ea5aac3_rkvesl.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "Thought you guys might like my back so I blurred out the landscape so you could focus.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324383/withaHatchet/photo-1445308240527-1ef72b1e2a93_pl4guy.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "Blazin red... I want some cheetos");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324429/withaHatchet/photo-1445308394109-4ec2920981b1_mmfuj3.jpg",
+  user_id: User.find_by(username: "withaHachet").id,
+  description: "Met some cool folks who I shared a campfire with. This was our homebase.");
+
+#photos for StephHikes
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324388/StephHikes/photo-1445968660880-120e2f7b8c33_sgubop.jpg",
+  user_id: User.find_by(username: "StephHikes").id,
+  description: "Just as refreshing as a 3 point swish.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324394/StephHikes/photo-1446210050316-7c556e3aade0_agdkev.jpg",
+  user_id: User.find_by(username: "StephHikes").id,
+  description: "A hard journey up here but worth every second of sweat.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324419/StephHikes/photo-1446483155710-0e8a261f4213_muzk7t.jpg",
+  user_id: User.find_by(username: "StephHikes").id,
+  description: "Flawless... flawless");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324408/StephHikes/photo-1446539020262-2eb0d2f63dfb_oaobos.jpg",
+  user_id: User.find_by(username: "StephHikes").id,
+  description: "No matter the bumps or bruises I won't be stopped!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324411/StephHikes/photo-1447615673434-6af7f3fdb78a_u3j2ue.jpg",
+  user_id: User.find_by(username: "StephHikes").id,
+  description: "Two beauties in one photo, I'm such a lucky guy.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324419/StephHikes/photo-1447637901058-b83bea0e56c5_vavomc.jpg",
+  user_id: User.find_by(username: "StephHikes").id,
+  description: "Praise the Lord for such amazing landscape!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324445/StephHikes/photo-1447752875215-b2761acb3c5d_n5jeoa.jpg",
+  user_id: User.find_by(username: "StephHikes").id,
+  description: "Structure as it's own beauty in a place of such natural wonder.");
+
+#photos for REI
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324376/REI/photo-1445307806294-bff7f67ff225_zdct3f.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Loving the new hammock and the view!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324389/REI/photo-1445888834731-95b3d5539bf9_mj1sp0.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Look a pincone!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324390/REI/photo-1446432161848-4389328a28af_edbsrd.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Sunrise or sunset? Take a guess!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324410/REI/photo-1446483050676-bd2fdf3ac2d6_kz4htw.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Clouds fade away fast in these high winds.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324445/REI/photo-1447687643809-e05fd462f350_ky5mhg.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "No mountain is too high to climb.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324433/REI/photo-1447767961238-038617b84a2b_u5vtxh.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "I wonder how tall this tree is.. any guesses?");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324447/REI/photo-1448320886379-a090c93f3de9_v90ubr.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Islands on islands! Watchout don't slip!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324450/REI/photo-1448749927985-5565d99c10ae_n8w6t5.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Not part of the 10 essentials but a trip is so much better with a friend.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324458/REI/photo-1463805371341-15514bfd3b7f_ezdmft.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Morning hike anyone?");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324457/REI/photo-1464198016405-33fd4527b89d_pboqw0.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "A group of many can conquer anything.");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324487/REI/photo-1464278860589-b2ed64f87e22_hezska.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "Make sure you have good boots!");
+Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324484/REI/photo-1467106015942-a0ea2960655a_h5bg4v.jpg",
+  user_id: User.find_by(username: "REI").id,
+  description: "How many lumens do you need to light up the night sky?");
