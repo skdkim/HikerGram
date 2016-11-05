@@ -42,23 +42,23 @@ User.create(username: "REI", password: "stopreturningstuff",
 
 # photos for david
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478302843/userphotos/12445913_490524357799429_469348427_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"On the hike to Tokopah falls it was snowing.");
+  user_id: User.find_by(username: "johnmuir").id, description:"On the hike to Tokopah falls it was snowing.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303211/userphotos/12797644_1576456229348399_1088834079_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"Sun kissing the General Sherman.");
+  user_id: User.find_by(username: "johnmuir").id, description:"Sun kissing the General Sherman.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303262/userphotos/12783372_1006052939430702_767488707_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"");
+  user_id: User.find_by(username: "johnmuir").id, description:"");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303314/userphotos/12317913_1638157426466196_387457046_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"Definitely coming back here to do a night.");
+  user_id: User.find_by(username: "johnmuir").id, description:"Definitely coming back here to do a night.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303396/userphotos/11379899_1188115341214546_1604071009_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"Never quite quite know whats around the bend.");
+  user_id: User.find_by(username: "johnmuir").id, description:"Never quite quite know whats around the bend.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303442/userphotos/11324346_833921383364664_1594056613_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"The first hike we went on!");
+  user_id: User.find_by(username: "johnmuir").id, description:"The first hike we went on!");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303491/userphotos/10684343_419147361580116_324678669_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"Right behind upper yosemite falls on the bridge.");
+  user_id: User.find_by(username: "johnmuir").id, description:"Right behind upper yosemite falls on the bridge.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303531/userphotos/10964022_842573509138045_1898305129_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"We have two backpacks but mine is pretty much empty and his is twice full.");
+  user_id: User.find_by(username: "johnmuir").id, description:"We have two backpacks but mine is pretty much empty and his is twice full.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478303616/userphotos/11410380_782190005229311_323648687_n.jpg.jpg",
-  user_id: User.find_by(username: "skdkim").id, description:"About top start the adventure. Goodbye world for 5 days.");
+  user_id: User.find_by(username: "johnmuir").id, description:"About top start the adventure. Goodbye world for 5 days.");
 
 
 
