@@ -17,3 +17,7 @@
 **Challenge:** Get rid of landing page and let logout button redirect to login page
 **Problem:** Because of asynchronous actions pages are being reloaded before user is logged out therefore landing on same page.
 **Solution:** Push the route on the dispatch of logout action in middleware upon success callback
+
+---
+**Challenge:** As I added more photos to profile page the grey background would not reach the full height of the page and stopped midway.
+**Solution:** Put profile content page inside a div and styled that.
