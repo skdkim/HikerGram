@@ -40,20 +40,8 @@ class UserPhotoIndex extends React.Component {
         }
       </div>
     );
-
-    // return (
-    //   <MasonryInfiniteScroller elementType={"ul"} className={"photos-container"}>
-    //     {
-    //         this.props.photos.map((el, index) => <img key={index} src={el.image_url}/>)
-    //       }
-    //   </MasonryInfiniteScroller>
-    // );
   }
 }
-// <MasonryInfiniteScroller hasMore={this.state.hasMore} loadMore={() => this.setState({ elements: this.state.elements.push("Element") })}>
-//   {
-//     this.props.photos.map((el, index) => <img key={index} src={el.image_url}/>)
-//   }
-// </MasonryInfiniteScroller>
+
 
 export default UserPhotoIndex;

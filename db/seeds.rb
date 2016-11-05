@@ -22,7 +22,7 @@ User.create(username: "missholldoll", password: "pnwalways",
   firstname: "Holly Johnson");
 User.create(username: "johnmuir", password: "hiking4life",
   image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478193569/profile_images/johnmuirprofile.jpg",
-  description: "I love the outdoors!!!", firstname: "John Muir");
+  description: "The mountains are calling and I must go.", firstname: "John Muir");
 User.create(username: "elon.musk", password: "livinglife",
   image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478327887/profile_images/11273054_1444992415800527_1323603731_a.jpg",
   description: "hear my stories humans of earth", firstname: "Matthew Wheat");

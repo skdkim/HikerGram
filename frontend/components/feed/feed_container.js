@@ -4,7 +4,7 @@ import Feed from './feed';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  user: state.session.currentUser
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

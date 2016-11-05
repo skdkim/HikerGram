@@ -4,13 +4,15 @@ import HeaderContainer from '../header/header_container';
 
 class Feed extends React.Component {
   render(){
-    const {user} = this.props;
+    const currentUser = this.props.currentUser;
 
     return(
       <div className="main-container">
         <HeaderContainer />
         <main className="feed border-top">
-          <h1>Where the feed goes</h1>
+          <div>
+            <h1>{currentUser.username}</h1>
+          </div>
         </main>
       </div>
 
