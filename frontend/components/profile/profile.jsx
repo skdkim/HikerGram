@@ -46,7 +46,6 @@ class Profile extends React.Component {
                     <h1 className="username small-size" id="user-bio">User Description User Description User Description User Description User Description User Description</h1>
                   </div>
                 </div>
-
               </div>
               <div className="all-photos">
                   <UserPhotoIndexContainer />
