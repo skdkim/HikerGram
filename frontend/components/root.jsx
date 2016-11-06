@@ -9,7 +9,8 @@ import LandingContainer from './landing/landing_container';
 import ProfileContainer from './profile/profile_container';
 import DiscoverContainer from './discover/discover_container';
 
-import {fetchUserDetail} from '../actions/user_actions';
+import { fetchUserDetail } from '../actions/user_actions';
+import { requestAllPhotos } from '../actions/photo_actions';
 
 const Root = (props) => {
 
@@ -32,6 +33,11 @@ const Root = (props) => {
     props.store.dispatch(fetchUserDetail(currentUser.id));
   };
 
+  const fetchAllPhotos = () => {
+    const photos = props.store.getState().photos;
+    props.store.dispatch(requestAllPhotos());
+  };
+
   return (
     <Provider store={props.store}>
       <Router history={hashHistory}>
@@ -39,7 +45,7 @@ const Root = (props) => {
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
           <Route path="/landing" component={LandingContainer} />
-          <Route path="/discover" component={DiscoverContainer} />
+          <Route path="/discover" component={DiscoverContainer} onEnter={fetchAllPhotos}/>
           <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>
         </Route>
       </Router>
