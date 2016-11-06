@@ -1,77 +1,160 @@
-#logo-link {
-  height: 35px;
-  width: 176px;
-}
-
-.main-container {
-  display: block;
-  height: 100%
-}
-
-header {
-  display: flex;
-  height: 31px;
-  width: 930px;
-  padding: 20px 40px;
-  max-width: 1010px;
+.feed-page {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin: 0 auto;
-  margin-bottom: 5px;
-  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+  padding-top: 60px;
 }
 
-a#hikerGram-text {
-  position: relative;
-  top: -7px;
-  left: -111px;
-  background: white;
-  font-size: 30px;
-  font-family: sans-serif;
-  font-weight: 600;
-}
-
-input#search-input {
-  border: solid 1px #dbdbdb;
+.whole-feed-photo-container {
+  margin-bottom: 60px;
+  border: 1px solid #efefef;
+  background-color: #fff;
   border-radius: 3px;
-  color: #262626;
-  font-size: 14px;
-  outline: none;
-  padding: 3px 10px 3px 26px;
-  z-index: 2;
+  margin-left: -1px;
+  margin-right: -1px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding-top: 0;
+}
+
+.feed-photo-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 14px 20px;
+  margin: 0;
+  width: 93.5%;
+}
+
+.feed-photo-user-icon {
+  width: 30px;
+  height: 30px;
+  margin: -1px 10px -1px -5px;
+  flex-shrink: 0;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 50%;
   box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+}
+
+.feed-photo-user-icon-image {
   height: 100%;
   width: 100%;
-  font-weight: 300;
+  object-fit: cover;
 }
 
-.small-icon {
-  height: 28px;
-  width: 28px;
-  align-self: flex-end;
+.feed-sbt {
+  color: #262626;
+  text-decoration: none;
+  font-weight: 600;
+  padding-left: 5px;
+  margin-left: -5px;
+  line-height: 18px;
+  font-size: 15px;
+  height: auto;
+  font-family: sans-serif;
+}
+
+.feed-photo-container {
+  border-bottom: 1px solid #efefef;
+  border-top: 1px solid #efefef;
+    box-shadow: inset 0 0 20px 0 #efefef;
+    background-color: #edeeee;
+display: block;
+width: 100%;
+overflow: hidden;
+height: 600px;
+}
+
+.feed-photo {
+  object-fit: cover;
+  height: 600px;
+}
+
+.fp-info {
+  padding: 0 24px;
+  font-size: 15px;
+  line-height: 18px;
   display: flex;
+  flex-direction: column;
+}
+
+.fpi-likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.nbt {
+  font-weight: 400;
+}
+
+.fpid-comments {
+  list-style: none;
+}
+
+.fpid-comment {
+  margin-bottom: 7px;
+position: relative;
+word-wrap: break-word;
+}
+
+.fpi-add-comments {
+  display: flex;
+  margin-top: 13px;
+  min-height: 68px;
+  align-items: center;
+  border-top: 1px solid #efefef;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.like-button {
+  margin-left: -9px;
+margin-right: 3px;
+background-color: transparent;
+  border: none;
   cursor: pointer;
+  padding: 8px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 127px;
-  align-items: flex-end;
-  margin-left: 180px;
+.openHeartSprite {
+  background-image: url(//instagramstatic-a.akamaihd.net/h1/sprites/core/0ba1af.png);
+  background-size: 352px 268px;
+  background-position: -76px -224px;
+  display: block;
+overflow: hidden;
+text-indent: 110%;
+white-space: nowrap;
+height: 24px;
+width: 24px;
 }
 
-.border-top {
-  border-top: 1px solid #e4d3d3;
+.fullHeartSprite {
+  background-image: url(//instagramstatic-a.akamaihd.net/h1/sprites/core/0ba1af.png);
+  background-size: 352px 268px;
+  background-position: -51px -224px;
+  display: block;
+overflow: hidden;
+text-indent: 110%;
+white-space: nowrap;
+height: 24px;
+width: 24px;
 }
 
-.feed {
-  background-color: #fafafa;
-  padding-bottom: 20px;
+.add-a-comment {
+flex-shrink: 1;
+    color: #999;
 }
 
-#search-glass {
-  height: 10px;
-  width: 10px;
-  position: relative;
-  top: -24px;
-  left: 9px;
+.aac-input {
+  border: none;
 }
+
+//

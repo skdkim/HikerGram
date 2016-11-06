@@ -67,8 +67,8 @@ class Auth extends React.Component {
           <h3 className="form-welcome-title">Welcome to HikerGram</h3>
           <form onSubmit={this.handleSubmit.bind(this)}>
             <div className="inputs">
-              <label className="username-login"><input onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
-              <label className="password-login"><input onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
+              <label className="username-login"><input className="auth-inputs" onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
+              <label className="password-login"><input className="auth-inputs" onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
             </div>
 
             <div className="station-buttons">

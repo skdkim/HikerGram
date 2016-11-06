@@ -178,7 +178,7 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v14783245
   description: "I stand before the landscape bowing in my heart at it's glory.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324521/johnmuir/photo-1474576142067-3d38a82550b2_wm9zxi.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "Snack breaks are just as important as a good pace.");
+  description: "Come to the woods for here is rest.");
 
 # photos for elon.musk
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/v1478324285/elon.musk/photo-1419717567666-6e559d5e0339_ndsyhz.jpg",
