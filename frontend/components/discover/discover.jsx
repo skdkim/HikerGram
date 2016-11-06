@@ -7,7 +7,7 @@ class Discover extends React.Component {
 
   render(){
     let allPhotosObj = this.props.allPhotos;
-    const allPhotos = Object.keys(allPhotosObj).map(key => allPhotosObj[key]);
+    const allPhotos = _.shuffle(Object.keys(allPhotosObj).map(key => allPhotosObj[key]));
     return(
       <div className="main-container">
         <HeaderContainer />
