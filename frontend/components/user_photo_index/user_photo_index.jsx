@@ -15,7 +15,6 @@ class UserPhotoIndex extends React.Component {
     this.state = {};
   }
 
-
   render(){
     let childElements = this.props.photos.map((photo, idx) => {
         return (
@@ -42,6 +41,5 @@ class UserPhotoIndex extends React.Component {
     );
   }
 }
-
 
 export default UserPhotoIndex;

@@ -3,8 +3,11 @@ import Discover from './discover';
 
 import { logout } from '../../actions/session_actions';
 
+
 const mapStateToProps = state => ({
-  user: state.session.currentUser
+  user: state.session.currentUser,
+  photos: state.session.currentUser.photos,
+  allPhotos: state.photos
 });
 
 const mapDispatchToProps = dispatch => ({
