@@ -3,6 +3,8 @@ import MasonryInfiniteScroller from 'react-masonry-infinite';
 import Masonry from 'react-masonry-component';
 import Modal from 'react-modal';
 
+import ProfileModalStyle from './profile_modal_style';
+
 let masonryOptions = {
   transitionDuration: 0
 };
@@ -15,13 +17,14 @@ class UserPhotoIndex extends React.Component {
     super(props);
     this.state = {
       modalOpen: false,
-      location: "profile"
+      location: "profile",
+      photo: ""
     };
   }
 
   _handleClick(e){
     e.preventDefault();
-    this.setState({ modalOpen: true });
+    this.setState({ modalOpen: true, photo: e.target.src });
   }
 
   onModalClose(){
@@ -38,10 +41,20 @@ class UserPhotoIndex extends React.Component {
             );
           })
         }
+
         <Modal
+          className="profile-modal"
           isOpen={this.state.modalOpen}
-          onRequestClose={this.onModalClose.bind(this)}>
-          ...content
+          onRequestClose={this.onModalClose.bind(this)}
+          style={ProfileModalStyle}>
+          <div className="modal-container">
+            <div className="mc-photo">
+              <img src={this.state.photo}/>
+            </div>
+            <div className="mc-info">
+              <h1>photo-info</h1>
+            </div>
+          </div>
         </Modal>
 
       </div>
