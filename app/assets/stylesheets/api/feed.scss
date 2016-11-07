@@ -70,12 +70,15 @@
 display: block;
 width: 100%;
 overflow: hidden;
-height: 600px;
+// height: 600px;
+  img {
+    vertical-align: top;
+  }
 }
 
 .feed-photo {
   object-fit: cover;
-  height: 600px;
+  max-width: 600px;
 }
 
 .fp-info {

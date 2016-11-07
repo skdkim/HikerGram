@@ -4,13 +4,13 @@ const FeedCapsule = (props) => (
   <article className="whole-feed-photo-container">
     <header className="feed-photo-header">
       <a className="feed-photo-user-icon" href={"/"}>
-        <img className="feed-photo-user-icon-image" src={`${currentUser.image_url}`}/>
+        <img className="feed-photo-user-icon-image" src={`${props.user.image_url}`}/>
       </a>
-      <h1 className="feed-sbt">{currentUser.username}</h1>
+      <h1 className="feed-sbt">{props.user.username}</h1>
     </header>
 
     <div className="feed-photo-container">
-      <img className="feed-photo" src={`${currentUser.photos[1].image_url}`}/>
+      <img className="feed-photo" src={`${props.photo.image_url}`}/>
     </div>
 
     <div className="fp-info">
@@ -23,8 +23,8 @@ const FeedCapsule = (props) => (
       <div className="fpi-description">
         <ul className="fpid-comments">
           <li className="fpid-comment">
-            <h1 className="feed-sbt">{currentUser.username}
-              <span className="feed-sbt nbt"> {currentUser.photos[1].description}</span>
+            <h1 className="feed-sbt">{props.photo.user_id.username}
+              <span className="feed-sbt nbt"> {props.photo.description}</span>
             </h1>
           </li>
         </ul>

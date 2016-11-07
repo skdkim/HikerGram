@@ -17,10 +17,9 @@ class Feed extends React.Component {
         <main>
           <div className="feed border-top">
             <section className="feed-page">
-              // {
-              //   currentUser.photos.map((photo, key) => <FeedCapsule photo={photo} />)
-              // }
-              <FeedCapsule />
+              {
+                currentUser.photos.map((photo, idx) => <FeedCapsule user={currentUser} key={idx} photo={photo} />)
+              }
             </section>
           </div>
         </main>
