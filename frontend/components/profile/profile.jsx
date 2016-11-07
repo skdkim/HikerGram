@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter, hashHistory } from 'react-router';
 var Masonry = require('react-masonry-component');
+import Modal from 'react-modal';
 
 import HeaderContainer from '../header/header_container';
 import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_container';
