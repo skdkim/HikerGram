@@ -16,3 +16,9 @@
 **Challenge:** Website is running really slowly due to all the high resolution photos being loaded directly to webpage despite needing only a small version of it.
 
 **Temp_Solution:** Add a deflater but this doesn't solve the problem entirely. I will most likely need to add a smaller version of the photo and parse it on click or something.
+
+**Addition:** Changed all photo quality to 50%.
+
+---
+**Challenge:** Modal's do not dynamically change sizes, therefore thinner photos cannot take up less space. Also Modal is not properly vertically aligning...
+**Solution:** Unsolved.

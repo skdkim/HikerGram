@@ -20,14 +20,21 @@ class UserPhotoIndex extends React.Component {
     };
   }
 
+  // componentWillUpdate(){
+  //   console.log("component updated!");
+  // }
+
   _handleClick(e){
     e.preventDefault();
     // this.getMeta(
     //   e.target.src,
     //   (width, height) => {
     //     if (width < height){
-    //       ProfileModalStyle.content["maxWidth"] = '10px';
+    //       console.log("width set!");
+    //       ProfileModalStyle.content["maxWidth"] = `${width + 335}px`;
     //     } else {
+    //       console.log("width set!");
+    //
     //       ProfileModalStyle.content["maxWidth"] = '935px';
     //     }
     //   }
@@ -51,10 +58,6 @@ class UserPhotoIndex extends React.Component {
     this.setState({ modalOpen: false });
   }
 
-  handleRandom(e){
-    e.preventDefault();
-  }
-
   render(){
     return (
       <div className="photos-container">
@@ -73,7 +76,7 @@ class UserPhotoIndex extends React.Component {
           onRequestClose={this.onModalClose.bind(this)}>
           <div className="modal-container">
             <div className="mc-photo">
-              <img onClick={this.handleRandom.bind(this)} src={this.state.photo}/>
+              <img src={this.state.photo}/>
             </div>
             <div className="mc-info">
               <h1>photo-info</h1>

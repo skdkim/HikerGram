@@ -43,17 +43,17 @@
 ## Phase 2: Photos Model, API, and Components (2 days)
 #### Objective: Photos can be created, read, edited, and destroyed through the API
 - [X] Photos model
-- [ ] Seed database
+- [X] Seed database
 - [X] CRUD API for PhotosController
-- [ ] JBuilder view for photos
-- [ ] APIUtil for User and Database interaction
-- [ ] Style photos
+- [X] JBuilder view for photos
+- [X] APIUtil for User and Database interaction
+- [X] Style photos
 
 ## Phase 3: User Profile Page (1.5 days)
 #### Objective: Page displays all of User's photos
 - [X] Profile component
-- [ ] Render all user's photos on page with Masonry
-- [ ] More seeding if needed
+- [X] Render all user's photos on page ~~with Masonry~~
+- [X] More seeding if needed
 - [X] Style Page
 
 ## Phase 4: Likes (0.4 days)
@@ -92,7 +92,7 @@
 - [ ] Bonus Features!
 
 #### Bonus Features
-- [ ] Discover Page
+- [X] Discover Page
 - [ ] Expanding image on hover
 - [ ] Mouse directed vertical scroll
 - [ ] Infinite scroll
