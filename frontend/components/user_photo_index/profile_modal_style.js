@@ -13,7 +13,7 @@ module.exports = {
     overflow                : 'hidden',
     outline                 : 'none',
     maxWidth                : '935px',
-    left : '-8px',
+    maxHeight : '600px',
     width: '100%',
       margin: '191.5px auto'
   }
