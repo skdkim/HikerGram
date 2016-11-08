@@ -63,7 +63,7 @@ const Root = (props) => {
     <Provider store={props.store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={FeedContainer} onEnter={fetchUserInfo}/>
+          <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
           <Route path="/profile/:id" component={ProfileContainer} onEnter={profileGateKeeper}/>
 
