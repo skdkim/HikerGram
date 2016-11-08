@@ -22,6 +22,7 @@ const Root = (props) => {
     }
   };
 
+//
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = props.store.getState().session.currentUser;
     if(!currentUser){
