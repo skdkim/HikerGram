@@ -22,7 +22,6 @@ const Root = (props) => {
     }
   };
 
-//
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = props.store.getState().session.currentUser;
     if(!currentUser){
@@ -31,32 +30,45 @@ const Root = (props) => {
   };
 
   const fetchUserInfo = (nextState) => {
-    if (nextState.params.id){
+    if (Object.keys(nextState.params).indexOf('id') !== -1){
       props.store.dispatch(fetchUserDetail(nextState.params.id));
-
     } else {
       const currentUser = props.store.getState().session.currentUser;
       props.store.dispatch(fetchUserDetail(currentUser.id));
     }
   };
 
-  const fetchAllPhotos = () => {
-    const photos = props.store.getState().photos;
-    props.store.dispatch(requestAllPhotos());
+  const fetchAllPhotos = (nextState) => {
+    // doesn't look like I needed this line of code below...
+    // const photos = props.store.getState().photos;
+
+    // debugger
+    // props.store.dispatch(requestAllPhotos());
+
+    if (nextState.routes[1].path){
+      props.store.dispatch(requestAllPhotos({pageType: "discover"}));
+    } else {
+      props.store.dispatch(requestAllPhotos({pageType: "feed"}));
+    }
   };
 
-  const fetchAllFollows = () => {
-    const follows = props.store.getState().follows;
-    props.store.dispatch(requestAllFollows());
+  // const fetchAllFollows = () => {
+  //   const follows = props.store.getState().follows;
+  //   props.store.dispatch(requestAllFollows());
+  // };
+
+  const feedGateKeeper = (nextState, replace) => {
+    _ensureLoggedIn(nextState, replace);
+    fetchAllPhotos(nextState);
   };
 
-  const feedGateKeeper = () => {
-    _ensureLoggedIn();
-    fetchAllFollows();
+  const discoverGateKeeper = (nextState, replace) => {
+    _ensureLoggedIn(nextState, replace);
+    fetchAllPhotos(nextState);
   };
 
-  const profileGateKeeper = (nextState) => {
-    _ensureLoggedIn();
+  const profileGateKeeper = (nextState, replace) => {
+    _ensureLoggedIn(nextState, replace);
     fetchUserInfo(nextState);
   };
 
@@ -64,12 +76,12 @@ const Root = (props) => {
     <Provider store={props.store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
-          <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
-          <Route path="/profile/:id" component={ProfileContainer} onEnter={fetchUserInfo}/>
+          <IndexRoute component={FeedContainer} onEnter={feedGateKeeper}/>
+          <Route path='/profile' component={ProfileContainer} onEnter={profileGateKeeper}/>
+          <Route path="/profile/:id" component={ProfileContainer} onEnter={profileGateKeeper}/>
 
           <Route path="/landing" component={LandingContainer} />
-          <Route path="/discover" component={DiscoverContainer} onEnter={fetchAllPhotos}/>
+          <Route path="/discover" component={DiscoverContainer} onEnter={discoverGateKeeper}/>
           <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>
         </Route>
       </Router>

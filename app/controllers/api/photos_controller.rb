@@ -4,7 +4,11 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
+    if params[:pageType] === "feed"
+      @photos = Photo.all.where(user_id: current_user.id)
+    elsif
+      @photos = Photo.all
+    end
   end
 
   private

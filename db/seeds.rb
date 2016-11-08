@@ -398,15 +398,15 @@ Follow.create(follower_id: 6, followee_id: 8);
 Follow.create(follower_id: 6, followee_id: 9);
 Follow.create(follower_id: 6, followee_id: 10);
 
-Follow.create(follower_id: 7, followee_id: 2);
-Follow.create(follower_id: 7, followee_id: 3);
-Follow.create(follower_id: 7, followee_id: 4);
-Follow.create(follower_id: 7, followee_id: 5);
-Follow.create(follower_id: 7, followee_id: 6);
-Follow.create(follower_id: 7, followee_id: 1);
-Follow.create(follower_id: 7, followee_id: 8);
-Follow.create(follower_id: 7, followee_id: 9);
-Follow.create(follower_id: 7, followee_id: 10);
+# Follow.create(follower_id: 7, followee_id: 2);
+# Follow.create(follower_id: 7, followee_id: 3);
+# Follow.create(follower_id: 7, followee_id: 4);
+# Follow.create(follower_id: 7, followee_id: 5);
+# Follow.create(follower_id: 7, followee_id: 6);
+# Follow.create(follower_id: 7, followee_id: 1);
+# Follow.create(follower_id: 7, followee_id: 8);
+# Follow.create(follower_id: 7, followee_id: 9);
+# Follow.create(follower_id: 7, followee_id: 10);
 
 Follow.create(follower_id: 8, followee_id: 2);
 Follow.create(follower_id: 8, followee_id: 3);

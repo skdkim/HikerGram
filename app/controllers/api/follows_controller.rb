@@ -5,6 +5,8 @@ class Api::FollowsController < ApplicationController
 
   def show
     @follow = Follow.find(current_user.id)
+    # render 'api/users/show'
+    
   end
 
   private

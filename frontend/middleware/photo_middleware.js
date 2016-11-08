@@ -6,7 +6,7 @@ export default store => next => action => {
 
   switch(action.type) {
     case REQUEST_ALL_PHOTOS:
-      requestAllPhotos(successCallback);
+      requestAllPhotos(successCallback, action.pageType);
       return next(action);
     default:
       return next(action);

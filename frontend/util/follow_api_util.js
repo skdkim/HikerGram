@@ -1,7 +1,7 @@
-export const requestAllFollows = (success) => {
+export const requestAllFollows = (user, success) => {
   $.ajax({
     type: 'GET',
-    url: '/api/follows',
+    url: `/api/users/${user.id}/follows`,
     success
   });
 };
