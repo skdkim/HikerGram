@@ -10,7 +10,8 @@ class Feed extends React.Component {
     const currentUser = this.props.currentUser;
 
     //add the followees photos to newPhotos
-    const newPhotos = _.concat(currentUser.photos, currentUser.photos)
+    // const newPhotos = _.concat(currentUser.photos, currentUser.photos)
+    const photos = currentUser.photos;
 
     return(
       <div className="main-container">
@@ -19,7 +20,7 @@ class Feed extends React.Component {
           <div className="feed border-top">
             <section className="feed-page">
               {
-                newPhotos.map((photo, idx) => <FeedCapsule user={currentUser} key={idx} photo={photo} />)
+                photos.map((photo, idx) => <FeedCapsule user={currentUser} key={idx} photo={photo} />)
               }
             </section>
           </div>
