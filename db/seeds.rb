@@ -336,3 +336,104 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v147
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324484/REI/photo-1467106015942-a0ea2960655a_h5bg4v.jpg",
   user_id: User.find_by(username: "REI").id,
   description: "How many lumens do you need to light up the night sky?");
+
+# follows seeds
+Follow.create(follower_id: 1, followee_id: 2);
+Follow.create(follower_id: 1, followee_id: 3);
+Follow.create(follower_id: 1, followee_id: 4);
+Follow.create(follower_id: 1, followee_id: 5);
+Follow.create(follower_id: 1, followee_id: 6);
+Follow.create(follower_id: 1, followee_id: 7);
+Follow.create(follower_id: 1, followee_id: 8);
+Follow.create(follower_id: 1, followee_id: 9);
+Follow.create(follower_id: 1, followee_id: 10);
+
+Follow.create(follower_id: 2, followee_id: 1);
+Follow.create(follower_id: 2, followee_id: 3);
+Follow.create(follower_id: 2, followee_id: 4);
+Follow.create(follower_id: 2, followee_id: 5);
+Follow.create(follower_id: 2, followee_id: 6);
+Follow.create(follower_id: 2, followee_id: 7);
+Follow.create(follower_id: 2, followee_id: 8);
+Follow.create(follower_id: 2, followee_id: 9);
+Follow.create(follower_id: 2, followee_id: 10);
+
+Follow.create(follower_id: 3, followee_id: 2);
+Follow.create(follower_id: 3, followee_id: 1);
+Follow.create(follower_id: 3, followee_id: 4);
+Follow.create(follower_id: 3, followee_id: 5);
+Follow.create(follower_id: 3, followee_id: 6);
+Follow.create(follower_id: 3, followee_id: 7);
+Follow.create(follower_id: 3, followee_id: 8);
+Follow.create(follower_id: 3, followee_id: 9);
+Follow.create(follower_id: 3, followee_id: 10);
+
+Follow.create(follower_id: 4, followee_id: 2);
+Follow.create(follower_id: 4, followee_id: 3);
+Follow.create(follower_id: 4, followee_id: 1);
+Follow.create(follower_id: 4, followee_id: 5);
+Follow.create(follower_id: 4, followee_id: 6);
+Follow.create(follower_id: 4, followee_id: 7);
+Follow.create(follower_id: 4, followee_id: 8);
+Follow.create(follower_id: 4, followee_id: 9);
+Follow.create(follower_id: 4, followee_id: 10);
+
+Follow.create(follower_id: 5, followee_id: 2);
+Follow.create(follower_id: 5, followee_id: 3);
+Follow.create(follower_id: 5, followee_id: 4);
+Follow.create(follower_id: 5, followee_id: 1);
+Follow.create(follower_id: 5, followee_id: 6);
+Follow.create(follower_id: 5, followee_id: 7);
+Follow.create(follower_id: 5, followee_id: 8);
+Follow.create(follower_id: 5, followee_id: 9);
+Follow.create(follower_id: 5, followee_id: 10);
+
+Follow.create(follower_id: 6, followee_id: 2);
+Follow.create(follower_id: 6, followee_id: 3);
+Follow.create(follower_id: 6, followee_id: 4);
+Follow.create(follower_id: 6, followee_id: 5);
+Follow.create(follower_id: 6, followee_id: 1);
+Follow.create(follower_id: 6, followee_id: 7);
+Follow.create(follower_id: 6, followee_id: 8);
+Follow.create(follower_id: 6, followee_id: 9);
+Follow.create(follower_id: 6, followee_id: 10);
+
+Follow.create(follower_id: 7, followee_id: 2);
+Follow.create(follower_id: 7, followee_id: 3);
+Follow.create(follower_id: 7, followee_id: 4);
+Follow.create(follower_id: 7, followee_id: 5);
+Follow.create(follower_id: 7, followee_id: 6);
+Follow.create(follower_id: 7, followee_id: 1);
+Follow.create(follower_id: 7, followee_id: 8);
+Follow.create(follower_id: 7, followee_id: 9);
+Follow.create(follower_id: 7, followee_id: 10);
+
+Follow.create(follower_id: 8, followee_id: 2);
+Follow.create(follower_id: 8, followee_id: 3);
+Follow.create(follower_id: 8, followee_id: 4);
+Follow.create(follower_id: 8, followee_id: 5);
+Follow.create(follower_id: 8, followee_id: 6);
+Follow.create(follower_id: 8, followee_id: 7);
+Follow.create(follower_id: 8, followee_id: 1);
+Follow.create(follower_id: 8, followee_id: 9);
+Follow.create(follower_id: 8, followee_id: 10);
+
+Follow.create(follower_id: 9, followee_id: 2);
+Follow.create(follower_id: 9, followee_id: 3);
+Follow.create(follower_id: 9, followee_id: 4);
+Follow.create(follower_id: 9, followee_id: 5);
+Follow.create(follower_id: 9, followee_id: 6);
+Follow.create(follower_id: 9, followee_id: 7);
+Follow.create(follower_id: 9, followee_id: 8);
+Follow.create(follower_id: 9, followee_id: 1);
+Follow.create(follower_id: 9, followee_id: 10);
+
+Follow.create(follower_id: 10, followee_id: 2);
+Follow.create(follower_id: 10, followee_id: 3);
+Follow.create(follower_id: 10, followee_id: 4);
+Follow.create(follower_id: 10, followee_id: 5);
+Follow.create(follower_id: 10, followee_id: 6);
+Follow.create(follower_id: 10, followee_id: 7);
+Follow.create(follower_id: 10, followee_id: 8);
+Follow.create(follower_id: 10, followee_id: 9);
+Follow.create(follower_id: 10, followee_id: 1);

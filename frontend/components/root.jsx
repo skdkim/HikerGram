@@ -43,13 +43,27 @@ const Root = (props) => {
     props.store.dispatch(requestAllPhotos());
   };
 
+  const fetchAllFollows = () => {
+
+  };
+
+  const feedGateKeeper = () => {
+    _ensureLoggedIn();
+    fetchAllFollows();
+  };
+
+  const profileGateKeeper = (nextState) => {
+    _ensureLoggedIn();
+    fetchUserInfo(nextState);
+  };
+
   return (
     <Provider store={props.store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
-          <Route path="/profile/:id" component={ProfileContainer} onEnter={fetchUserInfo}/>
+          <Route path="/profile/:id" component={ProfileContainer} onEnter={profileGateKeeper}/>
 
           <Route path="/landing" component={LandingContainer} />
           <Route path="/discover" component={DiscoverContainer} onEnter={fetchAllPhotos}/>
