@@ -28,9 +28,14 @@ const Root = (props) => {
     }
   };
 
-  const fetchUserInfo = () => {
-    const currentUser = props.store.getState().session.currentUser;
-    props.store.dispatch(fetchUserDetail(currentUser.id));
+  const fetchUserInfo = (nextState) => {
+    if (nextState.params.id){
+      props.store.dispatch(fetchUserDetail(nextState.params.id));
+
+    } else {
+      const currentUser = props.store.getState().session.currentUser;
+      props.store.dispatch(fetchUserDetail(currentUser.id));
+    }
   };
 
   const fetchAllPhotos = () => {
@@ -44,6 +49,8 @@ const Root = (props) => {
         <Route path="/" component={App}>
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
+          <Route path="/profile/:id" component={ProfileContainer} onEnter={fetchUserInfo}/>
+
           <Route path="/landing" component={LandingContainer} />
           <Route path="/discover" component={DiscoverContainer} onEnter={fetchAllPhotos}/>
           <Route path="/auth" component={AuthContainer} onEnter={_redirectIfLoggedIn}/>

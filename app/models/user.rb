@@ -25,6 +25,22 @@ class User < ActiveRecord::Base
 
   has_many :photos
 
+  has_many :followers,
+    through: :thefollowers,
+    source: :followers
+  has_many :thefollowers,
+    foreign_key: :followee_id,
+    class_name: :Follow
+
+  has_many :followees,
+    through: :thefollowees,
+    source: :followees
+  has_many :thefollowees,
+    foreign_key: :follower_id,
+    class_name: :Follow
+
+
+
   def self.find_by_credentials(username, password)
     @user = User.find_by(username: username)
     return nil unless @user

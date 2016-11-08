@@ -6,7 +6,7 @@ class Api::PhotosController < ApplicationController
   def index
     @photos = Photo.all
   end
-  
+
   private
   def photos_params
     params.require(:photos).permit(:image_url, :title, :description)
