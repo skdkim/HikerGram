@@ -66,7 +66,7 @@ const Root = (props) => {
         <Route path="/" component={App}>
           <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
           <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
-          <Route path="/profile/:id" component={ProfileContainer} onEnter={profileGateKeeper}/>
+          <Route path="/profile/:id" component={ProfileContainer} onEnter={fetchUserInfo}/>
 
           <Route path="/landing" component={LandingContainer} />
           <Route path="/discover" component={DiscoverContainer} onEnter={fetchAllPhotos}/>
