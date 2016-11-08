@@ -9,7 +9,8 @@ class Feed extends React.Component {
   render(){
     const currentUser = this.props.currentUser;
 
-    //take article out and make it into a functional component
+    //add the followees photos to newPhotos
+    const newPhotos = _.concat(currentUser.photos, currentUser.photos)
 
     return(
       <div className="main-container">
@@ -18,7 +19,7 @@ class Feed extends React.Component {
           <div className="feed border-top">
             <section className="feed-page">
               {
-                currentUser.photos.map((photo, idx) => <FeedCapsule user={currentUser} key={idx} photo={photo} />)
+                newPhotos.map((photo, idx) => <FeedCapsule user={currentUser} key={idx} photo={photo} />)
               }
             </section>
           </div>

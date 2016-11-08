@@ -1,9 +1,11 @@
 class Api::FollowsController < ApplicationController
   def index
-    @follows = Follow.All
+    @follows = Follow.all
   end
 
-  
+  def show
+    @follow = Follow.find(current_user.id)
+  end
 
   private
   def follows_params

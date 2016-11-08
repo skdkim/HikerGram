@@ -11,6 +11,7 @@ import DiscoverContainer from './discover/discover_container';
 
 import { fetchUserDetail } from '../actions/user_actions';
 import { requestAllPhotos } from '../actions/photo_actions';
+import { requestAllFollows } from '../actions/follow_actions';
 
 const Root = (props) => {
 
@@ -44,7 +45,8 @@ const Root = (props) => {
   };
 
   const fetchAllFollows = () => {
-
+    const follows = props.store.getState().follows;
+    props.store.dispatch(requestAllFollows());
   };
 
   const feedGateKeeper = () => {
@@ -61,7 +63,7 @@ const Root = (props) => {
     <Provider store={props.store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={FeedContainer} onEnter={_ensureLoggedIn}/>
+          <IndexRoute component={FeedContainer} onEnter={fetchAllFollows}/>
           <Route path="/profile" component={ProfileContainer} onEnter={fetchUserInfo}/>
           <Route path="/profile/:id" component={ProfileContainer} onEnter={profileGateKeeper}/>
 
