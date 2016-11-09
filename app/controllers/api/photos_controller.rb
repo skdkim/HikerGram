@@ -10,8 +10,10 @@ class Api::PhotosController < ApplicationController
       end
       array.push(current_user.id)
       @photos = Photo.all.where(user_id: array)
-    elsif
+    elsif params[:pageType] === "discover"
       @photos = Photo.all.where.not(user_id: current_user.id)
+    elsif params[:pageType] === "profile"
+      @photos = Photo.all.where(user_id: current_user.id)
     end
   end
 

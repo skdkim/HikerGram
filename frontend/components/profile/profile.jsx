@@ -44,7 +44,7 @@ class Profile extends React.Component {
                     <h1 className="username small-size" id="following">following</h1>
                   </div>
                   <div className="user-description">
-                    <h1 className="username small-size" id="user-bio">User Description User Description User Description User Description User Description User Description</h1>
+                    <h1 className="username small-size" id="user-bio">{this.props.user.description}</h1>
                   </div>
                 </div>
               </div>

@@ -44,9 +44,10 @@ const Root = (props) => {
 
     // debugger
     // props.store.dispatch(requestAllPhotos());
-
-    if (nextState.routes[1].path){
+    if (nextState.routes[1].path === "/discover"){
       props.store.dispatch(requestAllPhotos({pageType: "discover"}));
+    } else if (nextState.routes[1].path === "/profile"){
+      props.store.dispatch(requestAllPhotos({pageType: "profile"}));
     } else {
       props.store.dispatch(requestAllPhotos({pageType: "feed"}));
     }
@@ -65,11 +66,13 @@ const Root = (props) => {
   const discoverGateKeeper = (nextState, replace) => {
     _ensureLoggedIn(nextState, replace);
     fetchAllPhotos(nextState);
+    fetchUserInfo(nextState);
   };
 
   const profileGateKeeper = (nextState, replace) => {
     _ensureLoggedIn(nextState, replace);
     fetchUserInfo(nextState);
+    fetchAllPhotos(nextState);
   };
 
   return (

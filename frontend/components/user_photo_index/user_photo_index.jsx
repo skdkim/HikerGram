@@ -19,31 +19,18 @@ class UserPhotoIndex extends React.Component {
     this.state = {
       modalOpen: false,
       location: "profile",
-      photo: ""
+      photo: "",
+      src: "",
+      description: ""
     };
   }
 
-  // componentWillUpdate(){
-  //   console.log("component updated!");
-  // }
-
-  _handleClick(e){
-    e.preventDefault();
-    // this.getMeta(
-    //   e.target.src,
-    //   (width, height) => {
-    //     if (width < height){
-    //       console.log("width set!");
-    //       ProfileModalStyle.content["maxWidth"] = `${width + 335}px`;
-    //     } else {
-    //       console.log("width set!");
-    //
-    //       ProfileModalStyle.content["maxWidth"] = '935px';
-    //     }
-    //   }
-    // );
-
-    this.setState({ modalOpen: true, photo: e.target.src });
+  _handleClick(photo){
+    return e => {
+      // debugger
+      e.preventDefault();
+      this.setState({ modalOpen: true, src: photo.image_url, description: photo.description});
+    };
   }
 
   _handleModalWidth(width){
@@ -65,13 +52,12 @@ class UserPhotoIndex extends React.Component {
     return (
       <div className="photos-container">
         {
-          this.props.photos.map((photo, idx) => {
+          this.props.profilePhotos.map((photo, idx) => {
             return (
-              <img onClick={this._handleClick.bind(this)} key={idx} className="square-box" src={photo.image_url} />
+              <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
             );
           })
         }
-
         <Modal
           style={ProfileModalStyle}
           className="profile-modal"
@@ -79,15 +65,44 @@ class UserPhotoIndex extends React.Component {
           onRequestClose={this.onModalClose.bind(this)}>
           <div className="modal-container">
             <div className="mc-photo">
-              <img src={this.state.photo}/>
+              <img src={this.state.src}/>
             </div>
 
             <div className="mc-info">
               <CapsuleHeader user={this.props.user}/>
-              <CapsuleInfo photo={this.state.photo}/>
+
+              <div className="fp-info">
+                <div className="inner-fp-info">
+                  <div className="fpi-likes">
+                    <span className="fpil-text">
+                      <span className="feed-sbt">49</span>
+                      <span className="feed-sbt nbt"> likes</span>
+                    </span>
+                  </div>
+                  <div className="fpi-description">
+                    <ul className="fpid-comments">
+                      <li className="fpid-comment">
+                        <h1 className="feed-sbt">{this.props.user.username}
+                          <span className="feed-sbt nbt"> {this.state.description}</span>
+                        </h1>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <section className="fpi-add-comments">
+                  <a className="like-button">
+                    <span className="openHeartSprite">like</span>
+                  </a>
+                  <form className="add-a-comment">
+                    <input type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value=""/>
+                  </form>
+                </section>
+              </div>
+
             </div>
           </div>
         </Modal>
+
 
       </div>
     );
@@ -95,15 +110,3 @@ class UserPhotoIndex extends React.Component {
 }
 
 export default UserPhotoIndex;
-
-// let childElements = this.props.photos.map((photo, idx) => {
-//     return (
-//       <img key={idx} className="square-box" src={photo.image_url} />
-//     );
-//   });
-
-// return (
-//       <Masonry elementType={"div"} className={"photos-container"} style={style}>
-//           {childElements}
-//       </Masonry>
-// );
