@@ -75,7 +75,7 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v147
   description: "The view here is amazing...");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324523/philh.lee/photo-1471921152622-ee4bff0a0238_dzelit.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "This is why this is my favorite park.");
+  description: "It is easier to feel than to realize, or in any way explain, Yosemite grandeur. The magnitudes of the rocks and trees and streams are so delicately harmonized, they are mostly hidden.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324540/philh.lee/photo-1472404122088-5682d90f2a7a_pesrd3.jpg",
   user_id: User.find_by(username: "missholldoll").id,
   description: "Will I love this place always?");
@@ -99,7 +99,7 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v147
   description: "Nothing quite like a peaceful lake");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324540/philh.lee/photo-1475592339713-a05582419983_vczjie.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "");
+  description: "Climb the mountains and get their good tidings.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324563/philh.lee/till-the-cows-come-home_dnygyb.jpg",
   user_id: User.find_by(username: "StephHikes").id,
   description: "Nothing quite like the golden hour.");
@@ -145,7 +145,7 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v147
 # photos for missholldoll
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324263/missholldoll/bb9f9777_qt8axx.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "Steady walkings.");
+  description: "The clearest way into the Universe is through a forest wilderness.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324261/missholldoll/caroline_sada_landscape_t6fll8.jpg",
   user_id: User.find_by(username: "skdkim").id,
   description: "lovely pastures are one of my favorite things");
@@ -174,7 +174,7 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v147
   description: "In all it's brilliance how amazing.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324282/johnmuir/photo-1415650328328-1909c4ceabdb_f21col.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "View like these take the weight off my shoulders");
+  description: "Rocks and waters, etc., are words of God, and so are men. We all flow from one fountain Soul. All are expressions of one Love.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324304/johnmuir/photo-1423057062227-3a08155aedfc_cil8is.jpg",
   user_id: User.find_by(username: "beargrylls").id,
   description: "Many people conquered this mountain today!");
@@ -183,7 +183,7 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v147
   description: "Slay this difficult route! How amazing it is.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324337/johnmuir/photo-1443636695178-be226c44e060_gzhvpw.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "Took a detour from my regular route to check out this beautiful fall.");
+  description: "Take a course in good water and air; and in the eternal youth of Nature you may renew your own. Go quietly, alone; no harm will befall you.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324355/johnmuir/photo-1444857957393-c7a377126d9c_a4kewk.jpg",
   user_id: User.find_by(username: "philh.lee").id,
   description: "All that you've done for me.");
@@ -195,13 +195,13 @@ Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v147
   description: "Beauty like this makes me adore all things.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324413/johnmuir/photo-1446729444801-31245ddba81a_cldm0s.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "How is this not all together so wonderful?");
+  description: "The redwood is the glory of the Coast Range. It extends along the western slope, in a nearly continuous belt about ten miles wide, from beyond the Oregon boundary to the south of Santa Cruz, a distance of nearly four hundred miles, and in massive, sustained grandeur and closeness of growth surpasses all the other timber woods of the world.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324482/johnmuir/photo-1447690709975-318628b14c57_u3griu.jpg",
   user_id: User.find_by(username: "elon.musk").id,
   description: "Every small thing is just as glorious as the big.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324503/johnmuir/photo-1465756600300-8073ffa4337e_apshxo.jpg",
   user_id: User.find_by(username: "johnmuir").id,
-  description: "Here I am to bask in the glory of nature.");
+  description: "To the lover of wilderness, Alaska is one of the most wonderful countries in the world.");
 Photo.create(image_url: "http://res.cloudinary.com/skdkim/image/upload/q_50/v1478324508/johnmuir/photo-1470995604269-a974c362dafe_dphja5.jpg",
   user_id: User.find_by(username: "withaHachet").id,
   description: "I'll never know how much this will change over the years.");
