@@ -10,6 +10,8 @@
 #
 
 class Follow < ActiveRecord::Base
+  validates :follower_id, :followee_id, presence: true
+
   belongs_to :followers,
     foreign_key: :follower_id,
     class_name: :User

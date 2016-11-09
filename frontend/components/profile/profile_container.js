@@ -4,7 +4,8 @@ import Profile from './profile';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  user: state.userDetail
+  user: state.userDetail,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

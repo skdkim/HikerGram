@@ -6,7 +6,17 @@ class Api::FollowsController < ApplicationController
   def show
     @follow = Follow.find(current_user.id)
     # render 'api/users/show'
-    
+  end
+
+  def create
+    @follow = Follow.new(follows_params)
+    if @follow.save
+      render :show
+    end
+  end
+
+  def destroy
+    @follow = Follow.find(params[:id])
   end
 
   private

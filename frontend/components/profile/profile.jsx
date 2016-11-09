@@ -9,6 +9,7 @@ import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_contai
 class Profile extends React.Component {
   constructor(props){
     super(props);
+
   }
 
   handleLogout(){
@@ -16,46 +17,61 @@ class Profile extends React.Component {
     this.props.router.push("/landing");
   }
 
+// this is the edit profile icon
+// <img className="small-icon settings-button" src="http://res.cloudinary.com/skdkim/image/upload/v1478197868/hikergram_assets/settings.png"/>
+
   render(){
-    return(
-      <div className="main-container">
-        <HeaderContainer />
-        <main>
-          <div className="feed border-top">
-            <article>
-              <div className="profile-top">
-                <div className="profile-img-container">
-                  <img className="profile-image" src={this.props.user.image_url}></img>
+
+    if (this.props.user.followers){
+      let followers = Object.keys(this.props.user.followers).map(key => this.props.user.followers[key]).map(ele => ele.username);
+      let button = <button className="followingStyle">Following</button>;
+      if (this.props.user.id === this.props.currentUser.id){
+        button = <div></div>;
+      } else if (followers.indexOf(this.props.currentUser.username) === -1){
+        button = <button className="followStyle">Follow</button>;
+      }
+      return(
+        <div className="main-container">
+          <HeaderContainer />
+          <main>
+            <div className="feed border-top">
+              <article>
+                <div className="profile-top">
+                  <div className="profile-img-container">
+                    <img className="profile-image" src={this.props.user.image_url}></img>
+                  </div>
+
+                  <div className="profile-top-info">
+                    <div className="user-nav bm20">
+                      <h1 className="username">{this.props.user.username}</h1>
+                      {button}
+                    </div>
+                    <div className="user-data bm20">
+                      <h1 className="data-num username">{this.props.user.photos.length}</h1>
+                      <h1 className="username small-size" id="posts">posts</h1>
+
+                      <h1 className="data-num username">{this.props.user.followers.length}</h1>
+                      <h1 className="username small-size" id="followers">followers</h1>
+
+                      <h1 className="data-num username">{this.props.user.followees.length}</h1>
+                      <h1 className="username small-size" id="following">following</h1>
+                    </div>
+                    <div className="user-description">
+                      <h1 className="username small-size" id="user-bio">{this.props.user.description}</h1>
+                    </div>
+                  </div>
                 </div>
-
-                <div className="profile-top-info">
-                  <div className="user-nav bm20">
-                    <h1 className="username">{this.props.user.username}</h1>
-                    <img className="small-icon settings-button" src="http://res.cloudinary.com/skdkim/image/upload/v1478197868/hikergram_assets/settings.png"/>
-                  </div>
-                  <div className="user-data bm20">
-                    <h1 className="data-num username">121</h1>
-                    <h1 className="username small-size" id="posts">posts</h1>
-
-                    <h1 className="data-num username">329</h1>
-                    <h1 className="username small-size" id="followers">followers</h1>
-
-                    <h1 className="data-num username">422</h1>
-                    <h1 className="username small-size" id="following">following</h1>
-                  </div>
-                  <div className="user-description">
-                    <h1 className="username small-size" id="user-bio">{this.props.user.description}</h1>
-                  </div>
-                </div>
-              </div>
-              <div className="all-photos">
+                <div className="all-photos">
                   <UserPhotoIndexContainer />
-              </div>
-            </article>
-          </div>
-        </main>
-      </div>
-    );
+                </div>
+              </article>
+            </div>
+          </main>
+        </div>
+      );
+    } else {
+      return (<div></div>);
+    }
   }
 }
 
