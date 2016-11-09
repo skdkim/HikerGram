@@ -50,7 +50,6 @@ class Profile extends React.Component {
               </div>
               <div className="all-photos">
                   <UserPhotoIndexContainer />
-
               </div>
             </article>
           </div>

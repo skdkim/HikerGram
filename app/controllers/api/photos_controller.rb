@@ -5,9 +5,13 @@ class Api::PhotosController < ApplicationController
 
   def index
     if params[:pageType] === "feed"
-      @photos = Photo.all.where(user_id: current_user.id)
+      array = current_user.followees.map do |followee|
+        followee.id
+      end
+      array.push(current_user.id)
+      @photos = Photo.all.where(user_id: array)
     elsif
-      @photos = Photo.all
+      @photos = Photo.all.where.not(user_id: current_user.id)
     end
   end
 

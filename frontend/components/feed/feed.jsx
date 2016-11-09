@@ -7,12 +7,7 @@ import FeedCapsule from './feed_capsule';
 
 class Feed extends React.Component {
   render(){
-    const currentUser = this.props.currentUser;
-
-    //add the followees photos to newPhotos
-    // const newPhotos = _.concat(currentUser.photos, currentUser.photos)
-    const photos = currentUser.photos;
-
+    const photoss = Object.keys(this.props.photos).map(key => this.props.photos[key]);
     return(
       <div className="main-container">
         <HeaderContainer />
@@ -20,13 +15,14 @@ class Feed extends React.Component {
           <div className="feed border-top">
             <section className="feed-page">
               {
-                photos.map((photo, idx) => <FeedCapsule user={currentUser} key={idx} photo={photo} />)
+                photoss.map((photo, idx) => {
+                  return (<FeedCapsule key={idx} user={photo.user} photo={photo} />);
+                })
               }
             </section>
           </div>
         </main>
       </div>
-
     );
   }
 }

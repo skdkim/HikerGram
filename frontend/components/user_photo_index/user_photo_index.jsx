@@ -4,6 +4,9 @@ import Masonry from 'react-masonry-component';
 import Modal from 'react-modal';
 
 import ProfileModalStyle from './profile_modal_style';
+import CapsuleHeader from '../feed/capsule_header';
+import CapsuleInfo from '../feed/capsule_info';
+
 
 let masonryOptions = {
   transitionDuration: 0
@@ -78,8 +81,10 @@ class UserPhotoIndex extends React.Component {
             <div className="mc-photo">
               <img src={this.state.photo}/>
             </div>
+
             <div className="mc-info">
-              <h1>photo-info</h1>
+              <CapsuleHeader user={this.props.user}/>
+              <CapsuleInfo photo={this.state.photo}/>
             </div>
           </div>
         </Modal>

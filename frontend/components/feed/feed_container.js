@@ -5,12 +5,12 @@ import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  followees: state.userDetail.followees,
-  allFollows: state.follows
+  photos: state.photos
 });
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout())
+  // need to add dispatch for following and unfollowing
 });
 
 export default connect(

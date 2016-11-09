@@ -129,6 +129,9 @@ article {
 }
 
 .mc-info {
+  display: flex;
+  flex-direction: column;;
+  justify-content: space-between;
   max-width: 335px;
   min-width: 335px;
   width: 100%;

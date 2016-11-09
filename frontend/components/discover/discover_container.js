@@ -7,7 +7,7 @@ import { logout } from '../../actions/session_actions';
 const mapStateToProps = state => ({
   user: state.session.currentUser,
   photos: state.session.currentUser.photos,
-  allPhotos: state.photos
+  allPhotos: _.shuffle(state.photos)
 });
 
 const mapDispatchToProps = dispatch => ({
