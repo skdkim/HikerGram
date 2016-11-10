@@ -21,7 +21,7 @@ class CapsuleInfo extends React.Component {
   //   this.setState({heartClass: "openHeartSprite"});
   // }
 
-// , likesCount: this.state.likesCount++
+  // , likesCount: this.state.likesCount++
 
   toggleLike(e){
     e.preventDefault();

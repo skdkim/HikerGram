@@ -7,15 +7,21 @@ import { CREATE_LIKE,
 import { createLike, destroyLike, } from '../util/like_api_util';
 
 export default store => next => action => {
-  const createSuccess = like => store.dispatch(addLike(like));
-  const destroySuccess = id => store.dispatch(removeLike(id));
+  const createSuccess = like => {
+    // debugger
+    store.dispatch(addLike(like));
+  };
+  const destroySuccess = like => {
+    // debugger
+    store.dispatch(removeLike(like));
+  };
 
   switch(action.type){
     case CREATE_LIKE:
       createLike(action.like, createSuccess);
       return next(action);
     case DESTROY_LIKE:
-      destroyLike(action.id, destroyLike);
+      destroyLike(action.id, destroySuccess);
       return next(action);
     default:
       return next(action);

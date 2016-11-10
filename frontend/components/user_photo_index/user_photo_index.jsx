@@ -35,7 +35,7 @@ class UserPhotoIndex extends React.Component {
         currentUserLikes: photo.currentUserLikes,
         photoId: photo.id,
         heartClass: photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
-        likesCount: photo.likes.length,
+        likesCount: photo.likesCount,
         photo: photo
       });
     };

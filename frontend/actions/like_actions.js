@@ -18,7 +18,7 @@ export const addLike = (like) => ({
   like
 });
 
-export const removeLike = (id) => ({
+export const removeLike = (like) => ({
   type: REMOVE_LIKE,
-  id
+  like
 });

@@ -10,7 +10,7 @@
 - [X] Hosting on Heroku
 - [X] New account creation, login, and guest/demo login
 - [X] Images
-- [ ] Likes
+- [X] Likes
 - [ ] Commenting on images
 - [X] Following & Photo feed
 - [ ] A production README
@@ -58,11 +58,11 @@
 
 ## Phase 4: Likes (0.4 days)
 #### Objective: Users can like any photo
-- [ ] Likes model
-- [ ] Seed Database with Likes
-- [ ] CRUD API for liking photos
-- [ ] Update Photo components to display numbers of likes
-- [ ] Style Likes
+- [X] Likes model
+- [X] Seed Database with Likes
+- [X] CRUD API for liking photos
+- [X] Update Photo components to display numbers of likes
+- [X] Style Likes
 
 ## Phase 5: Comments (0.6 days)
 #### Objective: Users can comment on any photo
