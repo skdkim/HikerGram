@@ -16,7 +16,7 @@ class Feed extends React.Component {
             <section className="feed-page">
               {
                 photoss.map((photo, idx) => {
-                  return (<FeedCapsule key={idx} user={photo.user} photo={photo} />);
+                  return (<FeedCapsule key={idx} createLike={this.props.createLike} destroyLike={this.props.destroyLike} user={photo.user} currentUser={this.props.currentUser} photo={photo} />);
                 })
               }
             </section>

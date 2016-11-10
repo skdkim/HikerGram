@@ -15,9 +15,9 @@ class FeedCapsule extends React.Component {
         <article className="whole-feed-photo-container">
           <CapsuleHeader user={this.props.user}/>
 
-          <CapsulePhoto photo={this.props.photo} />
+          <CapsulePhoto currentUser={this.props.currentUser} photo={this.props.photo} createLike={this.props.createLike}/>
 
-          <CapsuleInfo photo={this.props.photo} />
+          <CapsuleInfo currentUser={this.props.currentUser} createLike={this.props.createLike} destroyLike={this.props.destroyLike} photo={this.props.photo} />
         </article>
       );
     } else {

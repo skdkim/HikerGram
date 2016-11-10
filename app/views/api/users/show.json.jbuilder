@@ -14,6 +14,7 @@ json.partial! "api/users/user", user: @user
 #   end
 # end
 
-# json.set! :photos do
-#   json.array! @user.photos, partial: 'api/users/photos', as: :photo
-# end
+json.set! :photos do
+  json.array! @user.photos, partial: 'api/users/photos', as: :photo
+end
+# json.likes_count current_user.likes.length

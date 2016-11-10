@@ -24,13 +24,11 @@ class Profile extends React.Component {
   handleFollowing(e){
     e.preventDefault();
     this.props.destroyFollow(this.props.user.id);
-    this.setState({follow: "Follow"});
   }
 
   handleFollow(e){
     e.preventDefault();
     this.props.createFollow({follower_id: this.props.currentUser.id, followee_id: this.props.user.id});
-    this.setState({follow: "Following"});
   }
 
   render(){
