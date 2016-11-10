@@ -9,10 +9,10 @@
 
 - [X] Hosting on Heroku
 - [X] New account creation, login, and guest/demo login
-- [ ] Images
+- [X] Images
 - [ ] Likes
 - [ ] Commenting on images
-- [ ] Following & Photo feed
+- [X] Following & Photo feed
 - [ ] A production README
 
 
@@ -74,22 +74,22 @@
 
 ## Phase 6: Follows (1.5 day)
 #### Objective: Users can follow other users
-- [ ] Follows model
-- [ ] CRUD API for following other users
-- [ ] Update any components that need to display follows
-  - [ ] Profile Component
-  - [ ] Photo Component
-- [ ] Seed follows
-- [ ] Style follows
+- [X] Follows model
+- [X] CRUD API for following other users
+- [X] Update any components that need to display follows
+  - [X] Profile Component
+  - [X] Photo Component
+- [X] Seed follows
+- [X] Style follows
 
 ## Phase 7: Photo Feed, home page (1 day)
-- [ ] Display random photos of followees
-- [ ] Style Photos
+- [X] Display photos of followees
+- [X] Style Photos
 
 ## Phase 8: Clean-up(1 day)
 - [ ] Confirm all items are checked on this list
-- [ ] Touch-up styling
-- [ ] Bonus Features!
+- [X] Touch-up styling
+- [ ] ~~Bonus Features!~~
 
 #### Bonus Features
 - [X] Discover Page

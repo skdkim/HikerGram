@@ -25,6 +25,11 @@ class User < ActiveRecord::Base
 
   has_many :photos
 
+  has_many :likes
+  has_many :likedPhotos,
+    through: :likes,
+    source: :photo
+
   has_many :followers,
     through: :thefollowers,
     source: :followers

@@ -140,12 +140,25 @@ word-wrap: break-word;
   background-size: 352px 268px;
   background-position: -76px -224px;
   display: block;
-overflow: hidden;
-text-indent: 110%;
-white-space: nowrap;
-height: 24px;
-width: 24px;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
 }
+
+.redHeartSprite {
+  background-image: url(//instagramstatic-a.akamaihd.net/h1/sprites/core/0ba1af.png);
+  background-size: 352px 268px;
+  background-position: -51px -224px;
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
+}
+
 
 .fullHeartSprite {
   background-image: url(//instagramstatic-a.akamaihd.net/h1/sprites/core/0ba1af.png);

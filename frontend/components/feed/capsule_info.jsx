@@ -1,6 +1,11 @@
 import React from 'react';
 
 const CapsuleInfo = (props) => {
+  let heartClass = "openHeartSprite";
+  if(props.photo.currentUserLikes){
+    heartClass = "redHeartSprite";
+    console.log("true");
+  }
   return (
     <div className="fp-info">
         <div className="fpi-likes">
@@ -20,7 +25,7 @@ const CapsuleInfo = (props) => {
         </div>
       <section className="fpi-add-comments">
         <a className="like-button">
-          <span className="openHeartSprite">like</span>
+          <span className={heartClass}>like</span>
         </a>
         <form className="add-a-comment">
           <input type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value=""/>
