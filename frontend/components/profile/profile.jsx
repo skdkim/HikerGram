@@ -9,7 +9,9 @@ import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_contai
 class Profile extends React.Component {
   constructor(props){
     super(props);
-
+    this.state = {
+      follow: ""
+    };
   }
 
   handleLogout(){
@@ -19,16 +21,26 @@ class Profile extends React.Component {
 
 // this is the edit profile icon
 // <img className="small-icon settings-button" src="http://res.cloudinary.com/skdkim/image/upload/v1478197868/hikergram_assets/settings.png"/>
+  handleFollowing(e){
+    e.preventDefault();
+    this.props.destroyFollow(this.props.user.id);
+    this.setState({follow: "Follow"});
+  }
+
+  handleFollow(e){
+    e.preventDefault();
+    this.props.createFollow({follower_id: this.props.currentUser.id, followee_id: this.props.user.id});
+    this.setState({follow: "Following"});
+  }
 
   render(){
 
     if (this.props.user.followers){
-      let followers = Object.keys(this.props.user.followers).map(key => this.props.user.followers[key]).map(ele => ele.username);
-      let button = <button className="followingStyle">Following</button>;
+      let button = <button onClick={this.handleFollowing.bind(this)} className="followingStyle">Following</button>;
       if (this.props.user.id === this.props.currentUser.id){
         button = <div></div>;
-      } else if (followers.indexOf(this.props.currentUser.username) === -1){
-        button = <button className="followStyle">Follow</button>;
+      } else if (!this.props.user.currentUserFollows){
+        button = <button onClick={this.handleFollow.bind(this)} className="followStyle">Follow</button>;
       }
       return(
         <div className="main-container">
@@ -50,10 +62,10 @@ class Profile extends React.Component {
                       <h1 className="data-num username">{this.props.user.photos.length}</h1>
                       <h1 className="username small-size" id="posts">posts</h1>
 
-                      <h1 className="data-num username">{this.props.user.followers.length}</h1>
+                      <h1 className="data-num username">{this.props.user.follower_count}</h1>
                       <h1 className="username small-size" id="followers">followers</h1>
 
-                      <h1 className="data-num username">{this.props.user.followees.length}</h1>
+                      <h1 className="data-num username">{this.props.user.followee_count}</h1>
                       <h1 className="username small-size" id="following">following</h1>
                     </div>
                     <div className="user-description">

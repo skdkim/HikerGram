@@ -1,1 +1,1 @@
-json.followees @follow.followees
+json.extract! @follow, :followee_id
