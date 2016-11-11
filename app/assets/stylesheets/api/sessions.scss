@@ -35,14 +35,14 @@ to {background-position:  0 -400px;}
 }
 
 .splash {
-  background: url(http://res.cloudinary.com/skdkim/image/upload/q_50/v1478125050/hikergram_assets/background_et6hc5.jpg);
+  background: url(http://res.cloudinary.com/skdkim/image/upload/v1478890413/hikergram_assets/girl_with_camera.jpg);
   background-size: cover;
   justify-content: center;
-  animation: scrollBgGridLinks 35s linear;
-  -webkit-animation: scrollBgGridLinks 35s linear;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
+  // animation: scrollBgGridLinks 35s linear;
+  // -webkit-animation: scrollBgGridLinks 35s linear;
+  // animation-fill-mode: forwards;
+  // -webkit-animation-fill-mode: forwards;
+  // -moz-animation-fill-mode: forwards;
   height: 100%;
   display: block;
   border: 1px solid rgba(0, 0, 0, 0);
@@ -66,7 +66,8 @@ form {
   margin: 30px auto 0;
   border: 5px solid;
   position: relative;
-  top: 50px;
+  top: 80px;
+  background: rgba(97, 73, 55, 0.58);
 }
 
 .username-login {
@@ -96,11 +97,11 @@ form {
 }
 
 button {
+  background: rgba(214, 190, 111, 0.44);
   cursor: pointer;
   line-height: 29px;
   padding: 0 11px;
   font-size: 16px;
-  background: rgba(0, 0, 231, 0.4);
   margin-top: 5px;
   margin: 5px 5px;
   border-radius: 3px;
@@ -121,6 +122,9 @@ button {
   font-size: 50px;
   margin: 0;
   opacity: .95;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #d6be6f;
 }
 
 
@@ -132,19 +136,19 @@ button {
 }
 
 ::-webkit-input-placeholder {
-   color: grey;
+   color: rgb(31, 28, 28);
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: grey;
+   color: rgb(31, 28, 28);
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: grey;
+   color: rgb(31, 28, 28);
 }
 
 :-ms-input-placeholder {
-   color: grey;
+   color: rgb(31, 28, 28);
 }
 
  input.auth-inputs {
