@@ -44,6 +44,8 @@ const PhotoReducer = (oldState = _nullPhoto, action) => {
     // debugger
       newState = merge({}, oldState);
       newState[action.comment.photo_id].comments[action.comment.comment_id] = action.comment;
+      newState[action.comment.photo_id].comments[action.comment.comment_id].currentUsersComment = true;
+
       // newState.likes_count++;
       // newState.currentUserLikes = true;
       // newState.photoLikes++;

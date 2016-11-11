@@ -108,11 +108,11 @@ class CapsuleInfo extends React.Component {
               {descript}
               {
                 commentss.map((comment, idx) => {
-                  if (comment.commentor_id !== this.props.currentUser.id && comment.photoOwner !== this.props.currentUser.id){
+                  if (comment.currentUsersComment || comment.photoOwner === this.props.currentUser.id){
                     // debugger
-                    this.deleteButtonClass =  "dp-none";
+                    this.deleteButtonClass =  "delete-comment";
                   } else {
-                    this.deleteButtonClass = "delete-comment";
+                    this.deleteButtonClass = "dp-none";
                   }
                   // debugger
                   return (

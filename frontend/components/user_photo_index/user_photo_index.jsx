@@ -150,6 +150,7 @@ class UserPhotoIndex extends React.Component {
                       {descript}
                       {
                         this.state.commentss.map((comment, idx) => {
+                          // delete button appearance logic
                           // if (comment.commentor_id === this.props.currentUser.id || comment.photoOwner === this.props.currentUser.id){
                           //   this.deleteButtonClass =  "delete-comment";
                           // } else {
@@ -164,7 +165,7 @@ class UserPhotoIndex extends React.Component {
                                 </h1>
                               </a>
                               <span className="feed-sbt nbt">{comment.comment_text}</span>
-                              <button onClick={this.handleDeleteComment.bind(this, comment)} className="dp-none">X</button>
+                              <button onClick={this.handleDeleteComment.bind(this, comment)} className="delete-comment">X</button>
                             </li>
                           );
                         })
@@ -178,7 +179,7 @@ class UserPhotoIndex extends React.Component {
                   <a className="like-button">
                     <span onClick={this.toggleLike.bind(this, this.state.photo)} className={this.state.heartClass}>like</span>
                   </a>
-                  <form onSubmit={this.handleCommentEnter.bind(this)} className="add-a-comment dp-none">
+                  <form onSubmit={this.handleCommentEnter.bind(this)} className="add-a-comment">
                     <input onChange={this.handleCommentChange.bind(this)} type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value={this.state.comment}/>
                   </form>
                 </section>

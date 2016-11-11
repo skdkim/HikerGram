@@ -14,6 +14,7 @@
           json.comment_text comment.comment_text
           json.comment_id comment.id
           json.photoOwner comment.photo.user.id
+          json.currentUsersComment comment.user.id === current_user.id ? true : false
         end
       end
     end
