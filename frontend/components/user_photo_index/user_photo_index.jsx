@@ -178,7 +178,7 @@ class UserPhotoIndex extends React.Component {
                   <a className="like-button">
                     <span onClick={this.toggleLike.bind(this, this.state.photo)} className={this.state.heartClass}>like</span>
                   </a>
-                  <form onSubmit={this.handleCommentEnter.bind(this)} className="add-a-comment">
+                  <form onSubmit={this.handleCommentEnter.bind(this)} className="add-a-comment dp-none">
                     <input onChange={this.handleCommentChange.bind(this)} type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value={this.state.comment}/>
                   </form>
                 </section>

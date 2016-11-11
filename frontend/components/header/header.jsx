@@ -34,8 +34,8 @@ class Header extends React.Component {
               </div>
 
               <div>
-                <input id="search-input" placeholder="Search"></input>
-                  <img id="search-glass" src="http://res.cloudinary.com/skdkim/image/upload/v1478145918/hikergram_assets/magnifying-glass_bu4geg.png"/>
+                <input className="dp-none" id="search-input" placeholder="Search"></input>
+                  <img className="dp-none" id="search-glass" src="http://res.cloudinary.com/skdkim/image/upload/v1478145918/hikergram_assets/magnifying-glass_bu4geg.png"/>
               </div>
 
               <div>
