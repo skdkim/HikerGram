@@ -6,8 +6,11 @@ class CapsuleInfo extends React.Component {
     super(props);
     this.state = {
       heartClass: this.props.photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
-      likesCount: this.props.photo.likers.length
+      likesCount: this.props.photo.likers.length,
+      comment: "",
+      deleteButtonClass: ""
     };
+    this.deleteButtonClass = "";
   }
 
   // giveLike(e) {
@@ -45,8 +48,34 @@ class CapsuleInfo extends React.Component {
   //     heart = <span onClick={this.unLike.bind(this)} className="redHeartSprite">like</span>;
   //     }
 
+  handleCommentChange(e){
+    e.preventDefault();
+    const comment = e.target.value;
+    this.setState({ comment });
+  }
+
+  handleCommentEnter(e){
+    e.preventDefault();
+    this.props.createComment({comment_text: this.state.comment, photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
+    this.setState({comment: ""});
+  }
+
+  handleDeleteComment(comment){
+    // debugger
+    this.props.destroyComment(comment.comment_id);
+  }
+
+
   render(){
+    let commentss = Object.keys(this.props.photo.comments).map(key => this.props.photo.comments[key])
+    // debugger
+
     let descript;
+    // let deleteButton;
+    // if (this.props.photo.user.id === this.props.currentUser.id){
+    //   deleteButton = (<button onClick={this.handleDeleteComment.bind(this, comment)} className="delete-comment">X</button>);
+    // }
+
     if (this.props.photo.description){
       descript = (
         <li className="fpid-comment">
@@ -62,6 +91,7 @@ class CapsuleInfo extends React.Component {
       descript = (<div></div>);
     }
 
+
     if (this.props.photo){
       return (
         <div className="fp-info">
@@ -75,7 +105,14 @@ class CapsuleInfo extends React.Component {
             <ul className="fpid-comments">
               {descript}
               {
-                this.props.photo.comments.map((comment, idx) => {
+                commentss.map((comment, idx) => {
+                  if (comment.commentor_id === this.props.currentUser.id){
+                    debugger
+                    this.deleteButtonClass =  "delete-comment";
+                  } else {
+                    this.deleteButtonClass = "dp-none";
+                  }
+                  // debugger
                   return (
                     <li key={idx} className="fpid-comment">
                       <a href={`#/profile/${comment.commentor_id}`}>
@@ -84,6 +121,7 @@ class CapsuleInfo extends React.Component {
                         </h1>
                       </a>
                       <span className="feed-sbt nbt">{comment.comment_text}</span>
+                      <button onClick={this.handleDeleteComment.bind(this, comment)} className={this.deleteButtonClass}>X</button>
                     </li>
                   );
                 })
@@ -94,8 +132,8 @@ class CapsuleInfo extends React.Component {
             <a className="like-button">
               <span onClick={this.toggleLike.bind(this)} className={this.state.heartClass}>like</span>
             </a>
-            <form className="add-a-comment">
-              <input type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value=""/>
+            <form className="add-a-comment" onSubmit={this.handleCommentEnter.bind(this)}>
+              <input onChange={this.handleCommentChange.bind(this)} type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value={this.state.comment}/>
             </form>
           </section>
         </div>
@@ -107,3 +145,6 @@ class CapsuleInfo extends React.Component {
 }
 
 export default CapsuleInfo;
+
+
+// <button onClick={this.handleDeleteComment.bind(this, comment)} className="delete-comment">X</button>

@@ -61,6 +61,7 @@
   font-size: 15px;
   height: auto;
   font-family: sans-serif;
+  width: 100%;
 }
 
 .feed-photo-container {
@@ -112,6 +113,7 @@
   position: relative;
   word-wrap: break-word;
   display: flex;
+  // align-items: center;
 }
 
 .mr-5 {
@@ -170,11 +172,11 @@
   background-size: 352px 268px;
   background-position: -51px -224px;
   display: block;
-overflow: hidden;
-text-indent: 110%;
-white-space: nowrap;
-height: 24px;
-width: 24px;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  height: 24px;
+  width: 24px;
 }
 
 .add-a-comment {
@@ -189,6 +191,26 @@ width: 24px;
   width: 100%;
 }
 
+.delete-comment {
+  background: 0 0;
+  border: none;
+  color: #c7c7c7;
+  cursor: pointer;
+  float: right;
+  font-size: inherit;
+  height: 1em;
+  line-height: inherit;
+  margin-left: 10px;
+  overflow: hidden;
+  padding: 0;
+  width: 1em;
+  position: relative;
+  top: -6px;
+  left: -2px;
+}
 
+.dp-none {
+  display: none;
+}
 
 //
