@@ -13,6 +13,7 @@
           json.commentor_id comment.user.id
           json.comment_text comment.comment_text
           json.comment_id comment.id
+          json.photoOwner comment.photo.user.id
         end
       end
     end

@@ -13,6 +13,7 @@ let masonryOptions = {
 
 class UserPhotoIndex extends React.Component {
   constructor(props){
+    // debugger
     super(props);
     this.state = {
       modalOpen: false,
@@ -21,11 +22,19 @@ class UserPhotoIndex extends React.Component {
       src: "",
       description: "",
       currentUserLikes: "",
-      photo: ""
+      photo: "",
+      commentss: [],
+      comment: "",
+      currentUserId: props.currentUser.id
     };
+    this.commentss = "";
+    this.deleteButtonClass = "";
+    this.currentUser = props.currentUser;
+    this.currentUserId = props.currentUser.id;
   }
 
   _handleClick(photo){
+    // debugger
     return e => {
       e.preventDefault();
       this.setState({
@@ -36,8 +45,12 @@ class UserPhotoIndex extends React.Component {
         photoId: photo.id,
         heartClass: photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
         likesCount: photo.likesCount,
-        photo: photo
+        photo: photo,
+        commentss: Object.keys(photo.comments).map(key => photo.comments[key])
       });
+      // this.commentss = Object.keys(photo.comments).map(key => photo.comments[key]);
+
+      // debugger
     };
   }
 
@@ -45,17 +58,8 @@ class UserPhotoIndex extends React.Component {
     this.setState({ modalOpen: false });
   }
 
-  // giveLike(e) {
-  //   e.preventDefault();
-  //   this.props.createLike({photo_id: this.state.photoId, user_id: this.props.currentUser.id});
-  // }
-  //
-  // unLike(e){
-  //   e.preventDefault();
-  //   this.props.destroyLike(this.state.photoId);
-  // }
-
   toggleLike(e){
+    // debugger
     // e.preventDefault();
     if (this.state.heartClass === "openHeartSprite"){
       this.props.createLike({photo_id: this.state.photo.id, user_id: this.props.currentUser.id});
@@ -64,6 +68,25 @@ class UserPhotoIndex extends React.Component {
       this.props.destroyLike(this.state.photo.id);
       this.setState({heartClass: "openHeartSprite", likesCount: this.state.likesCount - 1});
     }
+    // debugger
+  }
+
+  handleDeleteComment(comment){
+    // debugger
+    this.props.destroyComment(comment.comment_id);
+  }
+
+  handleCommentChange(e){
+    e.preventDefault();
+    const comment = e.target.value;
+    this.setState({ comment });
+  }
+
+  handleCommentEnter(e){
+    e.preventDefault();
+    // debugger
+    this.props.createComment({comment_text: this.state.comment, photo_id: this.state.photo.id, user_id: this.props.currentUser.id});
+    this.setState({comment: ""});
   }
 
   // let heart = <span onClick={this.giveLike.bind(this)} className="openHeartSprite">like</span>;
@@ -71,15 +94,35 @@ class UserPhotoIndex extends React.Component {
   //     heart = <span onClick={this.unLike.bind(this)} className="redHeartSprite">like</span>;
   //     }
   render(){
+    let descript;
+
+
     return (
       <div className="photos-container">
         {
           this.props.profilePhotos.map((photo, idx) => {
+            // debugger
+
+            if (photo.comments){
+              descript = (
+                <li className="fpid-comment">
+                  <a href={`#/profile/${photo.user.id}`}>
+                    <h1 className="feed-sbt mr-5">
+                      {photo.user.username}
+                    </h1>
+                  </a>
+                  <span className="feed-sbt nbt"> {photo.description}</span>
+                </li>
+              );
+            } else {
+              descript = (<div></div>);
+            }
             return (
               <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
             );
           })
         }
+
         <Modal
           style={ProfileModalStyle}
           className="profile-modal"
@@ -102,21 +145,41 @@ class UserPhotoIndex extends React.Component {
                     </span>
                   </div>
                   <div className="fpi-description">
+
                     <ul className="fpid-comments">
-                      <li className="fpid-comment">
-                        <h1 className="feed-sbt">{this.props.user.username}
-                          <span className="feed-sbt nbt"> {this.state.description}</span>
-                        </h1>
-                      </li>
+                      {descript}
+                      {
+                        this.state.commentss.map((comment, idx) => {
+                          // if (comment.commentor_id === this.props.currentUser.id || comment.photoOwner === this.props.currentUser.id){
+                          //   this.deleteButtonClass =  "delete-comment";
+                          // } else {
+                          //   this.deleteButtonClass = "dp-none";
+                          // }
+                          // debugger
+                          return (
+                            <li key={idx} className="fpid-comment">
+                              <a href={`#/profile/${comment.commentor_id}`}>
+                                <h1 className="feed-sbt mr-5">
+                                  {comment.commentor}
+                                </h1>
+                              </a>
+                              <span className="feed-sbt nbt">{comment.comment_text}</span>
+                              <button onClick={this.handleDeleteComment.bind(this, comment)} className="dp-none">X</button>
+                            </li>
+                          );
+                        })
+                      }
+
                     </ul>
+
                   </div>
                 </div>
                 <section className="fpi-add-comments">
                   <a className="like-button">
                     <span onClick={this.toggleLike.bind(this, this.state.photo)} className={this.state.heartClass}>like</span>
                   </a>
-                  <form className="add-a-comment">
-                    <input type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value=""/>
+                  <form onSubmit={this.handleCommentEnter.bind(this)} className="add-a-comment">
+                    <input onChange={this.handleCommentChange.bind(this)} type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value={this.state.comment}/>
                   </form>
                 </section>
               </div>
@@ -132,3 +195,25 @@ class UserPhotoIndex extends React.Component {
 }
 
 export default UserPhotoIndex;
+
+// {
+//   this.state.commentss.map((comment, idx) => {
+//     if (comment.commentor_id === this.props.currentUser.id || comment.photoOwner === this.props.currentUser.id){
+//       this.deleteButtonClass =  "delete-comment";
+//     } else {
+//       this.deleteButtonClass = "dp-none";
+//     }
+//     // debugger
+//     return (
+//       <li key={idx} className="fpid-comment">
+//         <a href={`#/profile/${comment.commentor_id}`}>
+//           <h1 className="feed-sbt mr-5">
+//             {comment.commentor}
+//           </h1>
+//         </a>
+//         <span className="feed-sbt nbt">{comment.comment_text}</span>
+//         <button onClick={this.handleDeleteComment.bind(this, comment)} className={this.deleteButtonClass}>X</button>
+//       </li>
+//     );
+//   })
+// }

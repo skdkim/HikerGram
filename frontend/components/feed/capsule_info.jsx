@@ -7,6 +7,7 @@ class CapsuleInfo extends React.Component {
     this.state = {
       heartClass: this.props.photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
       likesCount: this.props.photo.likers.length,
+      userId: this.props.photo.user.id,
       comment: "",
       deleteButtonClass: ""
     };
@@ -106,8 +107,7 @@ class CapsuleInfo extends React.Component {
               {descript}
               {
                 commentss.map((comment, idx) => {
-                  if (comment.commentor_id === this.props.currentUser.id){
-                    debugger
+                  if (comment.commentor_id === this.props.currentUser.id || comment.photoOwner === this.props.currentUser.id){
                     this.deleteButtonClass =  "delete-comment";
                   } else {
                     this.deleteButtonClass = "dp-none";
