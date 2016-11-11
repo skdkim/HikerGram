@@ -9,9 +9,9 @@ class CapsuleInfo extends React.Component {
       likesCount: this.props.photo.likers.length,
       userId: this.props.photo.user.id,
       comment: "",
-      deleteButtonClass: ""
+      deleteButtonClass: "delete-comment"
     };
-    this.deleteButtonClass = "";
+    this.deleteButtonClass = "delete-comment";
   }
 
   // giveLike(e) {
@@ -57,6 +57,7 @@ class CapsuleInfo extends React.Component {
 
   handleCommentEnter(e){
     e.preventDefault();
+    this.deleteButtonClass = "delete-comment";
     this.props.createComment({comment_text: this.state.comment, photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
     this.setState({comment: ""});
   }
@@ -68,7 +69,6 @@ class CapsuleInfo extends React.Component {
 
 
   render(){
-    let commentss = Object.keys(this.props.photo.comments).map(key => this.props.photo.comments[key])
     // debugger
 
     let descript;
@@ -93,7 +93,8 @@ class CapsuleInfo extends React.Component {
     }
 
 
-    if (this.props.photo){
+    if (this.props.photo.comments){
+      let commentss = Object.keys(this.props.photo.comments).map(key => this.props.photo.comments[key]);
       return (
         <div className="fp-info">
           <div className="fpi-likes">
@@ -107,10 +108,11 @@ class CapsuleInfo extends React.Component {
               {descript}
               {
                 commentss.map((comment, idx) => {
-                  if (comment.commentor_id === this.props.currentUser.id || comment.photoOwner === this.props.currentUser.id){
-                    this.deleteButtonClass =  "delete-comment";
+                  if (comment.commentor_id !== this.props.currentUser.id && comment.photoOwner !== this.props.currentUser.id){
+                    // debugger
+                    this.deleteButtonClass =  "dp-none";
                   } else {
-                    this.deleteButtonClass = "dp-none";
+                    this.deleteButtonClass = "delete-comment";
                   }
                   // debugger
                   return (
@@ -120,7 +122,9 @@ class CapsuleInfo extends React.Component {
                           {comment.commentor}
                         </h1>
                       </a>
-                      <span className="feed-sbt nbt">{comment.comment_text}</span>
+                      <span className="feed-sbt nbt">
+                        {comment.comment_text}
+                      </span>
                       <button onClick={this.handleDeleteComment.bind(this, comment)} className={this.deleteButtonClass}>X</button>
                     </li>
                   );

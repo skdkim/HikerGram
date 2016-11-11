@@ -62,6 +62,7 @@
   height: auto;
   font-family: sans-serif;
   width: 100%;
+  max-width: 437px;
 }
 
 .feed-photo-container {
@@ -113,6 +114,8 @@
   position: relative;
   word-wrap: break-word;
   display: flex;
+  // height: 18px;
+  height: 100%;
   // align-items: center;
 }
 
