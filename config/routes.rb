@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :photos, only: [:show, :create, :destroy, :index]
     resources :follows, only: [:index, :show, :create, :destroy]
     resources :likes, only: [:show, :create, :destroy]
+    resources :comments, only: [:show, :create, :destroy]
   end
 
   root "static_pages#root"

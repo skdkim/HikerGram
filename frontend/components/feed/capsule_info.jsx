@@ -2,6 +2,7 @@ import React from 'react';
 
 class CapsuleInfo extends React.Component {
   constructor(props){
+    // debugger
     super(props);
     this.state = {
       heartClass: this.props.photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
@@ -45,6 +46,22 @@ class CapsuleInfo extends React.Component {
   //     }
 
   render(){
+    let descript;
+    if (this.props.photo.description){
+      descript = (
+        <li className="fpid-comment">
+          <a href={`#/profile/${this.props.photo.user.id}`}>
+            <h1 className="feed-sbt mr-5">
+              {this.props.photo.user.username}
+            </h1>
+          </a>
+          <span className="feed-sbt nbt"> {this.props.photo.description}</span>
+        </li>
+      );
+    } else {
+      descript = (<div></div>);
+    }
+
     if (this.props.photo){
       return (
         <div className="fp-info">
@@ -56,11 +73,21 @@ class CapsuleInfo extends React.Component {
           </div>
           <div className="fpi-description">
             <ul className="fpid-comments">
-              <li className="fpid-comment">
-                <h1 className="feed-sbt">{this.props.photo.user.username}
-                  <span className="feed-sbt nbt"> {this.props.photo.description}</span>
-                </h1>
-              </li>
+              {descript}
+              {
+                this.props.photo.comments.map((comment, idx) => {
+                  return (
+                    <li key={idx} className="fpid-comment">
+                      <a href={`#/profile/${comment.commentor_id}`}>
+                        <h1 className="feed-sbt mr-5">
+                          {comment.commentor}
+                        </h1>
+                      </a>
+                      <span className="feed-sbt nbt">{comment.comment_text}</span>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </div>
           <section className="fpi-add-comments">

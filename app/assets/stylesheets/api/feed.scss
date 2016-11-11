@@ -109,8 +109,13 @@
 
 .fpid-comment {
   margin-bottom: 7px;
-position: relative;
-word-wrap: break-word;
+  position: relative;
+  word-wrap: break-word;
+  display: flex;
+}
+
+.mr-5 {
+  margin-right: 5px;
 }
 
 .fpi-add-comments {
@@ -173,13 +178,15 @@ width: 24px;
 }
 
 .add-a-comment {
-flex-shrink: 1;
-    color: #999;
+  flex-shrink: 1;
+  color: #999;
+  width: 100%;
 }
 
 .aac-input {
   border: none;
   outline: none;
+  width: 100%;
 }
 
 

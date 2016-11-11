@@ -71,7 +71,7 @@ const Root = (props) => {
 
   const profileGateKeeper = (nextState, replace) => {
     _ensureLoggedIn(nextState, replace);
-    fetchAllPhotos(nextState);
+    // fetchAllPhotos(nextState);
     fetchUserInfo(nextState);
   };
 

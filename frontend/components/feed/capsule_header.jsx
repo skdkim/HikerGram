@@ -5,7 +5,9 @@ const CapsuleHeader = (props) => (
     <a className="feed-photo-user-icon" href={`#/profile/${props.user.id}`}>
       <img className="feed-photo-user-icon-image" src={`${props.user.image_url}`}/>
     </a>
-    <h1 className="feed-sbt">{props.user.username}</h1>
+    <a href={`#/profile/${props.user.id}`}>
+      <h1 className="feed-sbt">{props.user.username}</h1>
+    </a>
   </header>
 );
 
