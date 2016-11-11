@@ -14,6 +14,9 @@ class CapsuleInfo extends React.Component {
     this.deleteButtonClass = "delete-comment";
   }
 
+  componentWillReceiveProps(newProps){
+    // debugger
+  }
   // giveLike(e) {
   //   e.preventDefault();
   //   this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});

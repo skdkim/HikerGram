@@ -41,11 +41,11 @@ const PhotoReducer = (oldState = _nullPhoto, action) => {
       // debugger
       return newState;
     case ADD_COMMENT:
-    // debugger
       newState = merge({}, oldState);
       newState[action.comment.photo_id].comments[action.comment.comment_id] = action.comment;
       newState[action.comment.photo_id].comments[action.comment.comment_id].currentUsersComment = true;
 
+      // debugger
       // newState.likes_count++;
       // newState.currentUserLikes = true;
       // newState.photoLikes++;

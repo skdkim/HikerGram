@@ -44,7 +44,7 @@ class UserPhotoIndex extends React.Component {
         currentUserLikes: photo.currentUserLikes,
         photoId: photo.id,
         heartClass: photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
-        likesCount: photo.likesCount,
+        likesCount: photo.photoLikes,
         photo: photo,
         commentss: Object.keys(photo.comments).map(key => photo.comments[key])
       });
@@ -93,16 +93,20 @@ class UserPhotoIndex extends React.Component {
   //   if(this.state.currentUserLikes){
   //     heart = <span onClick={this.unLike.bind(this)} className="redHeartSprite">like</span>;
   //     }
+
+  componentWillReceiveProps(newProps){
+    this.setState({photo: newProps.profilePhotos[this.state.photo.id]})
+  }
+
   render(){
     let descript;
-
+    const photoss = Object.keys(this.props.profilePhotos).map(key => this.props.profilePhotos[key]);
 
     return (
       <div className="photos-container">
         {
-          this.props.profilePhotos.map((photo, idx) => {
+          photoss.map((photo, idx) => {
             // debugger
-
             if (photo.comments){
               descript = (
                 <li className="fpid-comment">
@@ -135,56 +139,13 @@ class UserPhotoIndex extends React.Component {
 
             <div className="mc-info">
               <CapsuleHeader user={this.props.user}/>
-
-              <div className="fp-info">
-                <div className="inner-fp-info">
-                  <div className="fpi-likes">
-                    <span className="fpil-text">
-                      <span className="feed-sbt">{this.state.likesCount}</span>
-                      <span className="feed-sbt nbt"> likes</span>
-                    </span>
-                  </div>
-                  <div className="fpi-description">
-
-                    <ul className="fpid-comments">
-                      {descript}
-                      {
-                        this.state.commentss.map((comment, idx) => {
-                          // delete button appearance logic
-                          // if (comment.commentor_id === this.props.currentUser.id || comment.photoOwner === this.props.currentUser.id){
-                          //   this.deleteButtonClass =  "delete-comment";
-                          // } else {
-                          //   this.deleteButtonClass = "dp-none";
-                          // }
-                          // debugger
-                          return (
-                            <li key={idx} className="fpid-comment">
-                              <a href={`#/profile/${comment.commentor_id}`}>
-                                <h1 className="feed-sbt mr-5">
-                                  {comment.commentor}
-                                </h1>
-                              </a>
-                              <span className="feed-sbt nbt">{comment.comment_text}</span>
-                              <button onClick={this.handleDeleteComment.bind(this, comment)} className="dp-none">X</button>
-                            </li>
-                          );
-                        })
-                      }
-
-                    </ul>
-
-                  </div>
-                </div>
-                <section className="fpi-add-comments">
-                  <a className="like-button">
-                    <span onClick={this.toggleLike.bind(this, this.state.photo)} className={this.state.heartClass}>like</span>
-                  </a>
-                  <form onSubmit={this.handleCommentEnter.bind(this)} className="add-a-comment">
-                    <input onChange={this.handleCommentChange.bind(this)} type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value={this.state.comment}/>
-                  </form>
-                </section>
-              </div>
-
+              <CapsuleInfo
+                createComment={this.props.createComment}
+                destroyComment={this.props.destroyComment}
+                currentUser={this.props.currentUser}
+                createLike={this.props.createLike}
+                destroyLike={this.props.destroyLike}
+                photo={this.state.photo} />
             </div>
           </div>
         </Modal>
@@ -218,3 +179,52 @@ export default UserPhotoIndex;
 //     );
 //   })
 // }
+
+// <div className="fp-info">
+//   <div className="inner-fp-info">
+//     <div className="fpi-likes">
+//       <span className="fpil-text">
+//         <span className="feed-sbt">{this.state.likesCount}</span>
+//         <span className="feed-sbt nbt"> likes</span>
+//       </span>
+//     </div>
+//     <div className="fpi-description">
+//
+//       <ul className="fpid-comments">
+//         {descript}
+//         {
+//           this.state.commentss.map((comment, idx) => {
+//             // delete button appearance logic
+//             // if (comment.commentor_id === this.props.currentUser.id || comment.photoOwner === this.props.currentUser.id){
+//             //   this.deleteButtonClass =  "delete-comment";
+//             // } else {
+//             //   this.deleteButtonClass = "dp-none";
+//             // }
+//             // debugger
+//             return (
+//               <li key={idx} className="fpid-comment">
+//                 <a href={`#/profile/${comment.commentor_id}`}>
+//                   <h1 className="feed-sbt mr-5">
+//                     {comment.commentor}
+//                   </h1>
+//                 </a>
+//                 <span className="feed-sbt nbt">{comment.comment_text}</span>
+//                 <button onClick={this.handleDeleteComment.bind(this, comment)} className="dp-none">X</button>
+//               </li>
+//             );
+//           })
+//         }
+//
+//       </ul>
+//
+//     </div>
+//   </div>
+//   <section className="fpi-add-comments">
+//     <a className="like-button">
+//       <span onClick={this.toggleLike.bind(this, this.state.photo)} className={this.state.heartClass}>like</span>
+//     </a>
+//     <form onSubmit={this.handleCommentEnter.bind(this)} className="add-a-comment">
+//       <input onChange={this.handleCommentChange.bind(this)} type="text" className="aac-input feed-sbt nbt" placeholder="Add a comment…" value={this.state.comment}/>
+//     </form>
+//   </section>
+// </div>
