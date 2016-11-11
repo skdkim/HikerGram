@@ -44,12 +44,14 @@ const Root = (props) => {
 
     // debugger
     // props.store.dispatch(requestAllPhotos());
-    if (nextState.routes[1].path === "/discover"){
+    if (nextState.location.pathname === "/discover"){
       props.store.dispatch(requestAllPhotos({pageType: "discover"}));
-    } else if (nextState.routes[1].path === "/profile"){
+    } else if (nextState.location.pathname === "/profile"){
       props.store.dispatch(requestAllPhotos({pageType: "profile"}));
-    } else {
+    } else if (nextState.location.pathname === "/"){
       props.store.dispatch(requestAllPhotos({pageType: "feed"}));
+    } else {
+      props.store.dispatch(requestAllPhotos({pageType: "otherUser", user_id: parseInt(nextState.location.pathname.match(/[0-9]+/g)[0]) }));
     }
   };
 
@@ -70,8 +72,9 @@ const Root = (props) => {
   };
 
   const profileGateKeeper = (nextState, replace) => {
+    // debugger
     _ensureLoggedIn(nextState, replace);
-    // fetchAllPhotos(nextState);
+    fetchAllPhotos(nextState);
     fetchUserInfo(nextState);
   };
 

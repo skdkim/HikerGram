@@ -4,6 +4,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
+    # debugger
     if params[:pageType] === "feed"
       array = current_user.followees.map do |followee|
         followee.id
@@ -14,6 +15,8 @@ class Api::PhotosController < ApplicationController
       @photos = Photo.all.where.not(user_id: current_user.id)
     elsif params[:pageType] === "profile"
       @photos = Photo.all.where(user_id: current_user.id)
+    elsif params[:pageType] === "otherUser"
+      @photos = Photo.all.where(user_id: params[:user_id])
     end
   end
 

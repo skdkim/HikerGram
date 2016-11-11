@@ -165,7 +165,7 @@ class UserPhotoIndex extends React.Component {
                                 </h1>
                               </a>
                               <span className="feed-sbt nbt">{comment.comment_text}</span>
-                              <button onClick={this.handleDeleteComment.bind(this, comment)} className="delete-comment">X</button>
+                              <button onClick={this.handleDeleteComment.bind(this, comment)} className="dp-none">X</button>
                             </li>
                           );
                         })

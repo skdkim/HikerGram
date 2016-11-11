@@ -9,7 +9,6 @@ import { createComment, destroyComment } from '../../actions/comment_actions';
 const mapStateToProps = state => ({
   user: state.userDetail,
   profilePhotos: state.userDetail.photos,
-  allPhotos: state.photos,
   currentUser: state.session.currentUser
 });
 
