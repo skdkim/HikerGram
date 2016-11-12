@@ -14,9 +14,13 @@ HikerGram is a fullstack web application clone of Instagram. HikerGram utilizes 
 
 On the backend, HikerGram uses the BCrypt library to generate password hashes with salts to make user passwords safe from rainbow table attacks. On HikerGram a user can use the Guest Login to experience the full features of this webapp fully stocked with photos, user relationships, and photo likes.
 
+![image of login/signup form](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-11%20at%2011.04.08%20AM.png)
+
 ### Feed Page
 
 The feed page loads all the photos users the current user is following plus their own photos depending on the order in which any given user uploaded their photo. Most recent photos will appear at the top. On this page the user can do all interactions with a given photo plus navigate to the photo owner's profile page via their icon.
+
+![image of feed page](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-11%20at%2011.05.59%20AM.png)
 
 ### Photo Interactions
 
@@ -33,10 +37,14 @@ When on someone else's profile, the current user can choose to follow or unfollo
 
 The user profile page displays all of a user's photos in a grid format. All photos can be click on to display a larger modal view of the picture featuring the ability to like and comment the photo. A user profile page can be accessed via any user profile icon that appears anywhere on the website. A user's profile page features the ability for other users to follow or unfollow them. 
 
+![image of profile page with modal](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-11%20at%2012.44.02%20PM.png)
+
 ### Discover Page
 
 The discover page displays all photos that the current user in grid format.
 In future renders of HikerGram the discover page will display the owners of all photos and will be able to expand on click.
+
+![image of discover page](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-11%20at%2011.07.34%20AM.png)
 
 ## Future Features
 
