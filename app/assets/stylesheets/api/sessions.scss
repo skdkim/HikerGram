@@ -53,8 +53,10 @@ to {background-position:  0 -400px;}
 }
 
 form {
-  display: block;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
   margin: 0;
 }
 
@@ -63,12 +65,16 @@ form {
   height: 500px;
   max-width: 500px;
   width: 100%;
-  margin: 30px auto 0;
-  border: 5px solid;
+  // margin: 30px auto 0;
+  // border: 5px solid;
+  border-radius: 8px;
   position: relative;
-  top: 120px;
-  left: 439px;
+
   background: rgba(97, 73, 55, 0.58);
+  margin: 169.5px auto;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
 }
 
 .username-login {
@@ -85,7 +91,7 @@ form {
   display: flex;
   text-align: center;
   position: relative;
-  top: 213px;
+  // top: 213px;
   justify-content: center;
 }
 
@@ -93,7 +99,7 @@ form {
   display: flex;
   text-align: center;
   position: relative;
-  top: 208px;
+  // top: 208px;
   justify-content: center;
 }
 
@@ -123,7 +129,8 @@ button {
   font-size: 50px;
   margin: 0;
   opacity: .95;
-  -webkit-text-stroke: 1px black;
+  padding-top: 10px;
+  // -webkit-text-stroke: 1px black;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   color: #d6be6f;
 }
@@ -133,7 +140,7 @@ button {
 .inputs {
   display: block;
   position: relative;
-  top: 40px;
+  // top: 40px;
 }
 
 ::-webkit-input-placeholder {
@@ -168,6 +175,11 @@ button {
 ul.errors {
   position: relative;
   text-decoration: initial;
-  top: -4px;
+  // top: -4px;
+  max-height: 69px;
   left: 44px;
+
+  li {
+    max-height: 23px;
+  }
 }
