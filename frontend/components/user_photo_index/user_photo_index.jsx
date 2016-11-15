@@ -126,7 +126,7 @@ class UserPhotoIndex extends React.Component {
                 <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
               );
             } else {
-              return (<div></div>);
+              return (<img className="square-box dp-none"></img>);
             }
           })
         }
