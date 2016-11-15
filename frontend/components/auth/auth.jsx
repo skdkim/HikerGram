@@ -70,17 +70,6 @@ class Auth extends React.Component {
               <div className="inputs">
                 <label className="username-login"><input className="auth-inputs" onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
                 <label className="password-login"><input className="auth-inputs" onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
-
-                  <span className="input input--madoka">
-                    <input className="input__field input__field--madoka" type="text" id="input-31" />
-                    <label className="input__label input__label--madoka" htmlFor="input-31">
-                      <svg className="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
-                        <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
-                      </svg>
-                      <span className="input__label-content input__label-content--madoka">Username</span>
-                    </label>
-                  </span>
-                  
               </div>
               {this.renderErrors()}
 
@@ -102,3 +91,13 @@ class Auth extends React.Component {
 }
 
 export default withRouter(Auth);
+
+// <span className="input input--madoka">
+//   <input className="input__field input__field--madoka" type="text" id="input-31" />
+//   <label className="input__label input__label--madoka" htmlFor="input-31">
+//     <svg className="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+//       <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+//     </svg>
+//     <span className="input__label-content input__label-content--madoka">Username</span>
+//   </label>
+// </span>

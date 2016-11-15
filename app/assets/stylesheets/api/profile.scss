@@ -148,3 +148,9 @@ article {
   border-color: #3897f0;
   color: #3897f0;
 }
+
+.flex-up {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

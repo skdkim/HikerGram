@@ -100,40 +100,42 @@ class CapsuleInfo extends React.Component {
       let commentss = Object.keys(this.props.photo.comments).map(key => this.props.photo.comments[key]);
       return (
         <div className="fp-info">
-          <div className="fpi-likes">
-            <span className="fpil-text">
-              <span className="feed-sbt">{this.state.likesCount}</span>
-              <span className="feed-sbt nbt"> likes</span>
-            </span>
-          </div>
-          <div className="fpi-description">
-            <ul className="fpid-comments">
-              {descript}
-              {
-                commentss.map((comment, idx) => {
-                  if (comment.currentUsersComment || comment.photoOwner === this.props.currentUser.id){
+          <div className="flex-up">
+            <div className="fpi-likes">
+              <span className="fpil-text">
+                <span className="feed-sbt">{this.state.likesCount}</span>
+                <span className="feed-sbt nbt"> likes</span>
+              </span>
+            </div>
+            <div className="fpi-description">
+              <ul className="fpid-comments">
+                {descript}
+                {
+                  commentss.map((comment, idx) => {
+                    if (comment.currentUsersComment || comment.photoOwner === this.props.currentUser.id){
+                      // debugger
+                      this.deleteButtonClass =  "delete-comment";
+                    } else {
+                      this.deleteButtonClass = "dp-none";
+                    }
                     // debugger
-                    this.deleteButtonClass =  "delete-comment";
-                  } else {
-                    this.deleteButtonClass = "dp-none";
-                  }
-                  // debugger
-                  return (
-                    <li key={idx} className="fpid-comment">
-                      <a href={`#/profile/${comment.commentor_id}`}>
-                        <h1 className="feed-sbt mr-5">
-                          {comment.commentor}
-                        </h1>
-                      </a>
-                      <span className="feed-sbt nbt">
-                        {comment.comment_text}
-                      </span>
-                      <button onClick={this.handleDeleteComment.bind(this, comment)} className={this.deleteButtonClass}>X</button>
-                    </li>
-                  );
-                })
-              }
-            </ul>
+                    return (
+                      <li key={idx} className="fpid-comment">
+                        <a href={`#/profile/${comment.commentor_id}`}>
+                          <h1 className="feed-sbt mr-5">
+                            {comment.commentor}
+                          </h1>
+                        </a>
+                        <span className="feed-sbt nbt">
+                          {comment.comment_text}
+                        </span>
+                        <button onClick={this.handleDeleteComment.bind(this, comment)} className={this.deleteButtonClass}>X</button>
+                      </li>
+                    );
+                  })
+                }
+              </ul>
+            </div>
           </div>
           <section className="fpi-add-comments">
             <a className="like-button">
