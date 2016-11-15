@@ -121,9 +121,13 @@ class UserPhotoIndex extends React.Component {
             } else {
               descript = (<div></div>);
             }
-            return (
-              <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
-            );
+            if (photo.image_url){
+              return (
+                <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
+              );
+            } else {
+              return (<div></div>);
+            }
           })
         }
 
