@@ -139,6 +139,10 @@
   height: 20%;
 }
 
+.t12 {
+  top: -12px;
+}
+
 .like-button {
   margin-left: -9px;
   margin-right: 3px;
@@ -147,7 +151,8 @@
   cursor: pointer;
   padding: 8px;
   position: relative;
-  top: -14px;
+  top: -2px;
+  height: 40px;
 }
 
 .openHeartSprite {
