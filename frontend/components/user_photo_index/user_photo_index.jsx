@@ -106,7 +106,6 @@ class UserPhotoIndex extends React.Component {
       <div className="photos-container">
         {
           photoss.map((photo, idx) => {
-            // debugger
             if (photo.comments){
               descript = (
                 <li className="fpid-comment">
@@ -126,7 +125,7 @@ class UserPhotoIndex extends React.Component {
                 <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
               );
             } else {
-              return (<img className="square-box dp-none"></img>);
+              return (<img key={-1} className="square-box dp-none"></img>);
             }
           })
         }
