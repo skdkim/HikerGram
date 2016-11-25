@@ -8,6 +8,7 @@ import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_contai
 
 class Profile extends React.Component {
   constructor(props){
+    // debugger
     super(props);
     this.state = {
       follow: ""
@@ -32,8 +33,8 @@ class Profile extends React.Component {
   }
 
   render(){
-
-    if (this.props.user.followers){
+    // debugger
+    if (this.props.user.followers && this.props.photos){
       let button = <button onClick={this.handleFollowing.bind(this)} className="followingStyle">Following</button>;
       if (this.props.user.id === this.props.currentUser.id){
         button = <div></div>;
@@ -72,7 +73,7 @@ class Profile extends React.Component {
                   </div>
                 </div>
                 <div className="all-photos">
-                  <UserPhotoIndexContainer />
+                  <UserPhotoIndexContainer profilePhotos={this.props.photos}/>
                 </div>
               </article>
             </div>

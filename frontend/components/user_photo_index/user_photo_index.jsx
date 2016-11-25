@@ -95,7 +95,10 @@ class UserPhotoIndex extends React.Component {
   //     }
 
   componentWillReceiveProps(newProps){
-    this.setState({photo: newProps.profilePhotos[this.state.photo.id]});
+    // debugger
+    if (this.state.modalOpen){
+      this.setState({photo: newProps.profilePhotos[this.state.photo.id]});
+    }
   }
 
   render(){
@@ -142,7 +145,9 @@ class UserPhotoIndex extends React.Component {
             </div>
 
             <div className="mc-info">
-              <CapsuleHeader user={this.props.user}/>
+              <CapsuleHeader
+                user={this.state.photo.user}
+                onRequestClose={this.onModalClose.bind(this)}/>
               <CapsuleInfo
                 createComment={this.props.createComment}
                 destroyComment={this.props.destroyComment}
