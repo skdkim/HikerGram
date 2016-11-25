@@ -1,11 +1,10 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "Refer to the [docs] (./docs) folder to see the progress.",
+  "description": "[Hikergram.com][Hikergram]",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "./node_modules/.bin/webpack"
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
   },
   "engines": {
     "node": "6.2.1",

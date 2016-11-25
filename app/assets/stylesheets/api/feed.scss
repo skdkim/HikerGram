@@ -107,6 +107,8 @@
 
 .fpid-comments {
   list-style: none;
+  overflow-y: scroll;
+
 }
 
 .fpid-comment {
@@ -114,9 +116,7 @@
   position: relative;
   word-wrap: break-word;
   display: flex;
-  // height: 18px;
-  height: 100%;
-  // align-items: center;
+  height: auto;
 }
 
 .mr-5 {
@@ -125,12 +125,13 @@
 
 .fpi-description {
   width: 100%;
+  height: 95%;
 }
 
 .fpi-add-comments {
   display: flex;
   margin-top: 13px;
-  min-height: 68px;
+  max-height: 68px;
   align-items: center;
   border-top: 1px solid #efefef;
   flex-direction: row;
@@ -146,7 +147,7 @@
   cursor: pointer;
   padding: 8px;
   position: relative;
-  top: -4px;
+  top: -14px;
 }
 
 .openHeartSprite {

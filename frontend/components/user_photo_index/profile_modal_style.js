@@ -16,7 +16,7 @@ module.exports = {
     overflow                : 'hidden',
     outline                 : 'none',
     maxWidth                : '935px',
-    maxHeight : '600px',
+    // maxHeight : '600px',
     width: '100%',
       margin: '191.5px auto'
       // left: '-8px'
