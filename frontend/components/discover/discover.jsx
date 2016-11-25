@@ -4,6 +4,8 @@ import { withRouter } from 'react-router';
 
 import HeaderContainer from '../header/header_container';
 import UserPhotoIndex from '../user_photo_index/user_photo_index';
+import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_container';
+
 
 
 class Discover extends React.Component {
@@ -33,14 +35,9 @@ class Discover extends React.Component {
         <main>
           <div className="feed border-top">
             <article>
-                <div className="photos-container">
-                  {
-                    allPhotos.map((photo, idx) => {
-                      return (
-                        <img key={idx} className="square-box" src={photo.image_url} />
-                      );
-                    })
-                  }
+                <div className="all-photos">
+                  <UserPhotoIndexContainer profilePhotos={this.props.allPhotos}/>
+
                 </div>
 
             </article>
@@ -58,3 +55,25 @@ class Discover extends React.Component {
 // </Modal>
 
 export default withRouter(Discover);
+
+// {
+//   // allPhotos.map((photo, idx) => {
+//   //   if (photo.image_url){
+//   //     return (
+//   //       <a href={`#/profile/${photo.user.id}`}>
+//   //         <img key={idx} className="square-box" src={photo.image_url} />
+//   //       </a>
+//   //     );
+//   //   } else {
+//   //     return (<img key={-1} className="square-box dp-none"></img>);
+//   //   }
+//   // })
+//   // allPhotos.map((photo, idx) => {
+//   //     return (
+//   //        <img key={idx} className="square-box" src={photo.image_url} />
+//   //     );
+//   //   } else {
+//   //     return ( <div></div> );
+//   //   }
+//   // })
+// }
