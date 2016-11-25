@@ -84,7 +84,7 @@ class CapsuleInfo extends React.Component {
       descript = (
         <li className="fpid-comment">
           <a href={`#/profile/${this.props.photo.user.id}`}>
-            <h1 className="feed-sbt mr-5">
+            <h1 className="feed-sbt mr-5" onClick={this.props.onRequestClose}>
               {this.props.photo.user.username}
             </h1>
           </a>
@@ -122,7 +122,7 @@ class CapsuleInfo extends React.Component {
                     return (
                       <li key={idx} className="fpid-comment">
                         <a href={`#/profile/${comment.commentor_id}`}>
-                          <h1 className="feed-sbt mr-5">
+                          <h1 className="feed-sbt mr-5" onClick={this.props.onRequestClose}>
                             {comment.commentor}
                           </h1>
                         </a>

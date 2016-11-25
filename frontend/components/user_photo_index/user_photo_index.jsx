@@ -95,7 +95,7 @@ class UserPhotoIndex extends React.Component {
   //     }
 
   componentWillReceiveProps(newProps){
-    this.setState({photo: newProps.profilePhotos[this.state.photo.id]})
+    this.setState({photo: newProps.profilePhotos[this.state.photo.id]});
   }
 
   render(){
@@ -135,6 +135,7 @@ class UserPhotoIndex extends React.Component {
           className="profile-modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.onModalClose.bind(this)}>
+
           <div className="modal-container">
             <div className="mc-photo">
               <img src={this.state.src}/>
@@ -148,7 +149,8 @@ class UserPhotoIndex extends React.Component {
                 currentUser={this.props.currentUser}
                 createLike={this.props.createLike}
                 destroyLike={this.props.destroyLike}
-                photo={this.state.photo} />
+                photo={this.state.photo}
+                onRequestClose={this.onModalClose.bind(this)} />
             </div>
           </div>
         </Modal>
