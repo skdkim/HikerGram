@@ -16,6 +16,12 @@ On the backend, HikerGram uses the BCrypt library to generate password hashes wi
 
 ![image of login/signup form](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-25%20at%204.54.08%20PM.png)
 
+### How the Photos are Populated
+
+Every page that displays photos are populated using the same PhotosController. Originally I had the profile page pull their images from the UsersController but decided that it would be more organized if I pull all photos from one place. The only challenge here was to let the controller know which route the current page was on and this was accomplished through sending down the pathname in root.jsx. 
+
+The controller then decided which photos to send back up and then the frontend would display all photos that were sent back up. I could have done this photos screening logic in multiple places. It could have been done in the frontend in the container, or the component. It could have been done in the json view. I chose the controller as the place for this logic because I needed to take away work from the frontend as much as I could. I knew the user's computer would be busy loading photos so when it felt right to me that the server delt with this workload versus anywhere else.
+
 ### Feed Page
 
 The feed page loads all the photos users the current user is following plus their own photos depending on the order in which any given user uploaded their photo. Most recent photos will appear at the top. On this page the user can do all interactions with a given photo plus navigate to the photo owner's profile page via their icon.
