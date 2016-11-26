@@ -14,7 +14,7 @@ HikerGram is a fullstack web application clone of Instagram. HikerGram utilizes 
 
 On the backend, HikerGram uses the BCrypt library to generate password hashes with salts to make user passwords safe from rainbow table attacks. On HikerGram a user can use the Guest Login to experience the full features of this webapp fully stocked with photos, user relationships, and photo likes.
 
-![image of login/signup form](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-11%20at%2011.04.08%20AM.png)
+![image of login/signup form](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-25%20at%204.54.08%20PM.png)
 
 ### Feed Page
 
