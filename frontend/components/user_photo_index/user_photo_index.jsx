@@ -1,15 +1,9 @@
 import React from 'react';
-import MasonryInfiniteScroller from 'react-masonry-infinite';
-import Masonry from 'react-masonry-component';
 import Modal from 'react-modal';
 
 import ProfileModalStyle from './profile_modal_style';
 import CapsuleHeader from '../feed/capsule_header';
 import CapsuleInfo from '../feed/capsule_info';
-
-let masonryOptions = {
-  transitionDuration: 0
-};
 
 class UserPhotoIndex extends React.Component {
   constructor(props){
@@ -104,6 +98,51 @@ class UserPhotoIndex extends React.Component {
   render(){
     let descript;
     const photoss = Object.keys(this.props.profilePhotos).map(key => this.props.profilePhotos[key]);
+    let modal;
+    if(this.props.route === "profile"){
+      modal = <Modal
+                style={ProfileModalStyle}
+                className="profile-modal"
+                isOpen={this.state.modalOpen}
+                onRequestClose={this.onModalClose.bind(this)}>
+
+                <div className="modal-container">
+                  <div className="mc-photo">
+                    <img src={this.state.src}/>
+                  </div>
+
+                  <div className="mc-info">
+                    <CapsuleHeader
+                      user={this.state.photo.user}
+                      onRequestClose={this.onModalClose.bind(this)}/>
+                    <CapsuleInfo
+                      createComment={this.props.createComment}
+                      destroyComment={this.props.destroyComment}
+                      currentUser={this.props.currentUser}
+                      createLike={this.props.createLike}
+                      destroyLike={this.props.destroyLike}
+                      photo={this.state.photo}
+                      onRequestClose={this.onModalClose.bind(this)} />
+                  </div>
+                </div>
+              </Modal>;
+    } else {
+      modal = <Modal
+                style={ProfileModalStyle}
+                className="profile-modal"
+                isOpen={this.state.modalOpen}
+                onRequestClose={this.onModalClose.bind(this)}>
+
+                <div className="modal-container">
+                  <div className="mc-photo">
+                      <CapsuleHeader
+                        user={this.state.photo.user}
+                        onRequestClose={this.onModalClose.bind(this)}/>
+                      <img src={this.state.src}/>
+                  </div>
+                </div>
+              </Modal>;
+    }
 
     return (
       <div className="photos-container">
@@ -128,7 +167,7 @@ class UserPhotoIndex extends React.Component {
                 <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
               );
             } else {
-              return (<img key={-1} className="square-box dp-none"></img>);
+              return (<img key={idx} className="square-box dp-none"></img>);
             }
           })
         }
@@ -143,20 +182,7 @@ class UserPhotoIndex extends React.Component {
             <div className="mc-photo">
               <img src={this.state.src}/>
             </div>
-
-            <div className="mc-info">
-              <CapsuleHeader
-                user={this.state.photo.user}
-                onRequestClose={this.onModalClose.bind(this)}/>
-              <CapsuleInfo
-                createComment={this.props.createComment}
-                destroyComment={this.props.destroyComment}
-                currentUser={this.props.currentUser}
-                createLike={this.props.createLike}
-                destroyLike={this.props.destroyLike}
-                photo={this.state.photo}
-                onRequestClose={this.onModalClose.bind(this)} />
-            </div>
+            { modal }
           </div>
         </Modal>
 

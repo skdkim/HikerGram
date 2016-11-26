@@ -25,12 +25,14 @@ class Header extends React.Component {
           <div className="top-header">
             <div className="tp-container">
               <div className="top-logo">
-                <a href="/">
-                  <img id="logo-link" src="http://res.cloudinary.com/skdkim/image/upload/v1478396749/hikergram_assets/instagramsprites.png"/>
-                </a>
-                <a href="/" id="hikerGram-text">
-                  HikerGram
-                </a>
+                <span title="Feed">
+                  <a href="/">
+                      <img id="logo-link" src="http://res.cloudinary.com/skdkim/image/upload/v1478396749/hikergram_assets/instagramsprites.png"/>
+                  </a>
+                  <a href="/" id="hikerGram-text">
+                    HikerGram
+                  </a>
+                </span>
               </div>
 
               <div>
@@ -40,14 +42,20 @@ class Header extends React.Component {
 
               <div>
                 <nav>
-                  <a id="discover-link" >
-                    <img onClick={this.handleDiscover.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/discover-icon_g8qioz.png"/>
+                  <a id="discover-link">
+                    <span title="Discover">
+                      <img onClick={this.handleDiscover.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/discover-icon_g8qioz.png"/>
+                    </span>
                   </a>
                   <a id="profile-link" >
-                    <img onClick={this.handleProfile.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/profile-icon_w41e7q.png"/>
+                    <span title="Profile">
+                      <img onClick={this.handleProfile.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/profile-icon_w41e7q.png"/>
+                    </span>
                   </a>
                   <a id="logout-link" >
-                    <img onClick={this.handleLogout.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/logout-icon_zh94cc.png"/>
+                    <span title="Log Out">
+                      <img onClick={this.handleLogout.bind(this)} className="small-icon" src="http://res.cloudinary.com/skdkim/image/upload/v1478143104/hikergram_assets/logout-icon_zh94cc.png"/>
+                    </span>
                   </a>
                 </nav>
               </div>

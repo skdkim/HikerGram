@@ -73,7 +73,7 @@ class Profile extends React.Component {
                   </div>
                 </div>
                 <div className="all-photos">
-                  <UserPhotoIndexContainer profilePhotos={this.props.photos}/>
+                  <UserPhotoIndexContainer profilePhotos={this.props.photos} route={"profile"}/>
                 </div>
               </article>
             </div>

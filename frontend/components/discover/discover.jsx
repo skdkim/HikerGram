@@ -6,8 +6,6 @@ import HeaderContainer from '../header/header_container';
 import UserPhotoIndex from '../user_photo_index/user_photo_index';
 import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_container';
 
-
-
 class Discover extends React.Component {
   constructor(props){
     super(props);
@@ -36,7 +34,7 @@ class Discover extends React.Component {
           <div className="feed border-top">
             <article>
                 <div className="all-photos">
-                  <UserPhotoIndexContainer profilePhotos={this.props.allPhotos}/>
+                  <UserPhotoIndexContainer profilePhotos={this.props.allPhotos} route={"discover"}/>
 
                 </div>
 
