@@ -103,7 +103,7 @@ class CapsuleInfo extends React.Component {
           <div className="flex-up">
             <div className="fpi-likes">
               <span className="fpil-text">
-                <span className="feed-sbt">{this.state.likesCount}</span>
+                <span className="feed-sbt">{this.props.photo.photoLikes}</span>
                 <span className="feed-sbt nbt"> likes</span>
               </span>
             </div>
