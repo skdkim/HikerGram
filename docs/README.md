@@ -11,9 +11,9 @@
 - [X] New account creation, login, and guest/demo login
 - [X] Images
 - [X] Likes
-- [ ] Commenting on images
+- [X] Commenting on images
 - [X] Following & Photo feed
-- [ ] A production README
+- [X] A production README
 
 
 <h2>Design Docs</h2>
