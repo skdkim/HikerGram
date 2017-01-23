@@ -67,29 +67,34 @@ class Auth extends React.Component {
           <div className="sidePhotos">
 
           </div>
-          <div className="authContainer">
-            <div className="auth-form">
-              <h3 className="form-welcome-title">HikerGram</h3>
-              <form onSubmit={this.handleSubmit.bind(this)}>
-                <div className="inputs">
-                  <label className="username-login"><input className="auth-inputs" onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
-                  <label className="password-login"><input className="auth-inputs" onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
-                </div>
-                {this.renderErrors()}
+          <div className="rs">
+            <div className="rsCont">
+              <div className="auth-form">
+                <h3 className="form-welcome-title">HikerGram</h3>
+                <form onSubmit={this.handleSubmit.bind(this)}>
+                  <div className="inputs">
+                    <label className="username-login"><input className="auth-inputs" onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
+                    <label className="password-login"><input className="auth-inputs" onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
+                  </div>
+                  {this.renderErrors()}
 
-                <div className="all-buttons">
-                  <div className="station-buttons">
-                    <button className="login" onClick={() => this.type = "login"}>Log In</button>
-                    <button className="signup" onClick={() => this.type = "signup"}>Sign Up</button>
+                  <div className="all-buttons">
+                    <div className="station-buttons">
+                      <button className="login" onClick={() => this.type = "login"}>Log In</button>
+                      <button className="signup" onClick={() => this.type = "signup"}>Sign Up</button>
+                    </div>
+                    <div className="guest-button">
+                      <button className="guest" onClick={() => this.type = "guest"}>Guest Login</button>
+                    </div>
                   </div>
-                  <div className="guest-button">
-                    <button className="guest" onClick={() => this.type = "guest"}>Guest Login</button>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
-            <div className="auth-form">
-              <h3>Don't have an account?</h3>
+            <div className="rsCont">
+              <div className="auth-form">
+                <h3>Don't have an account?</h3>
+              </div>
+
             </div>
           </div>
         </div>
