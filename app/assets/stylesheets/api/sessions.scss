@@ -142,6 +142,25 @@ padding: 10px 0;
   text-align: center;
 }
 
+.errorsContainer {
+  color: #ed4956;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 10px 40px;
+  text-align: center;
+
+  .errors {
+    position: relative;
+    text-decoration: initial;
+    max-height: 69px;
+
+    li {
+      max-height: 23px;
+      list-style-type: none;
+    }
+  }
+}
+
 .buttonContainer {
 margin: 4px 40px 14px;
 display: block;
@@ -227,21 +246,6 @@ width: 100%;
 :-ms-input-placeholder {
    color: rgb(31, 28, 28);
 }
-
-
-
-ul.errors {
-  position: relative;
-  text-decoration: initial;
-  // top: -4px;
-  max-height: 69px;
-  left: 44px;
-
-  li {
-    max-height: 23px;
-  }
-}
-
 
 // for madoka styling
 @import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);

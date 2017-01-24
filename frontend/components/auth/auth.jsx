@@ -50,13 +50,15 @@ class Auth extends React.Component {
 
   renderErrors() {
     return(
-      <ul className="errors">
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+      <div className="errorsContainer">
+        <ul className="errors">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 
@@ -78,7 +80,6 @@ class Auth extends React.Component {
                   <div className="inputs">
                     <label className="password-login"><input className="auth-inputs" onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
                   </div>
-                  {this.renderErrors()}
 
                   <div className="all-buttons">
                     <div className="buttonContainer">
@@ -91,6 +92,9 @@ class Auth extends React.Component {
                       <button className="guest login" onClick={() => this.type = "guest"}>Guest Login</button>
                     </div>
                   </div>
+
+                  {this.renderErrors()}
+
                 </form>
               </div>
             </div>
