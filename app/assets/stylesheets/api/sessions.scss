@@ -53,18 +53,12 @@ to {background-position:  0 -400px;}
   position: relative;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 1.5dppx)
-{
-  .sidePhotos {
-    background-image: url(http://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones@2x.png/f82c2ede4ccb.png);
-  }
-}
 
 .sidePhotos {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  background-image: url(//instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/38825c9d5aa2.png);
+  background-image: url(http://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones.png/38825c9d5aa2.png);
   background-position: 0 0;
   background-size: 454px 618px;
   -ms-flex-preferred-size: 454px;
@@ -434,4 +428,12 @@ font-weight: 600;
 .input--filled .input__label-content--madoka {
 	-webkit-transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
 	transform: scale3d(0.81, 0.81, 1) translate3d(0, 4em, 0);
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 1.5dppx)
+{
+  .sidePhotos {
+    background-image: url(http://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones@2x.png/f82c2ede4ccb.png);
+  }
 }
