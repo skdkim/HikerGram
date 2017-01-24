@@ -4,7 +4,10 @@ import { withRouter } from 'react-router';
 class Auth extends React.Component {
   constructor(props){
     super(props);
-    this.state = {username: "", password: ""};
+    this.state = {username: "",
+                  password: "",
+                  dpLogin: "",
+                  dpSignup: "dp-none"};
     this.nullState = {username: "", password: ""};
   }
 
@@ -48,6 +51,17 @@ class Auth extends React.Component {
     this.setState(this.nullState);
   }
 
+  handleFormToggle(e) {
+    e.preventDefault();
+    console.log(e.target.className.indexOf("signup") !== -1);
+    if (e.target.className.indexOf("login") !== -1){
+      this.setState({ dpLogin : "dp-none", dpSignup : ""});
+    } else {
+      this.setState({ dpLogin : "", dpSignup : "dp-none"});
+    }
+    // this.setState({})
+  }
+
   renderErrors() {
     return(
       <div className="errorsContainer">
@@ -83,13 +97,13 @@ class Auth extends React.Component {
 
                   <div className="all-buttons">
                     <div className="buttonContainer">
-                      <button className="login" onClick={() => this.type = "login"}>Log In</button>
+                      <button className={"login " + this.state.dpLogin} onClick={() => this.type = "login"}>Log In</button>
                     </div>
                     <div className="buttonContainer">
-                      <button className="signup dp-none" onClick={() => this.type = "signup"}>Sign Up</button>
+                      <button className={"signup " + this.state.dpSignup} onClick={() => this.type = "signup"}>Sign Up</button>
                     </div>
                     <div className="buttonContainer">
-                      <button className="guest login" onClick={() => this.type = "guest"}>Guest Login</button>
+                      <button className={"guest login " + this.state.dpLogin} onClick={() => this.type = "guest"}>Guest Login</button>
                     </div>
                   </div>
 
@@ -100,10 +114,10 @@ class Auth extends React.Component {
             </div>
             <div className="rsCont">
               <div className="toggleSplash">
-                <p className="login" >Don't have an account?</p>
-                <a className="login link" >Sign Up</a>
-                <p className="signup dp-none" >Have an account?</p>
-                <a className="signup dp-none link" >Log in</a>
+                <p className={"login " + this.state.dpLogin} >Don't have an account?</p>
+                <a className={"login link " + this.state.dpLogin} onClick={this.handleFormToggle.bind(this)} >Sign Up</a>
+                <p className={"signup " + this.state.dpSignup} >Have an account?</p>
+                <a className={"signup link " + this.state.dpSignup} onClick={this.handleFormToggle.bind(this)} >Log in</a>
               </div>
 
             </div>
