@@ -5,6 +5,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 .page-wrap {
@@ -124,8 +125,11 @@ padding: 10px 0;
   flex-direction: column;
 }
 
-.auth-form{
-
+.toggleSplash {
+  color: #262626;
+  font-size: 14px;
+  margin: 15px;
+  text-align: center;
 }
 
 .username-login {
@@ -138,11 +142,10 @@ padding: 10px 0;
   text-align: center;
 }
 
-.station-buttons {
-  // display: flex;
-  // text-align: center;
-  // position: relative;
-  // justify-content: center;
+.buttonContainer {
+margin: 4px 40px 14px;
+display: block;
+position: relative;
 }
 
 .guest-button {
@@ -153,24 +156,33 @@ padding: 10px 0;
 }
 
 button {
-  background: rgba(214, 190, 111, 0.44);
-  cursor: pointer;
-  line-height: 29px;
-  padding: 0 11px;
-  font-size: 16px;
-  margin-top: 5px;
-  margin: 5px 5px;
+font-size: 16px;
+line-height: 29px;
+padding: 0 11px;
+cursor: pointer;
+background: #3897f0;
+  border-color: #3897f0;
+  color: #fff;
   border-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
-  font-weight: 600;
-  outline: none;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 200px;
-  -webkit-appearance: none;
+border-style: solid;
+border-width: 1px;
+font-weight: 600;
+outline: none;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+width: 100%;
+-webkit-appearance: none;
 }
+
+.link {
+    color: #3897f0;
+
+    &:hover {
+      cursor: pointer;
+    }
+}
+
 
 .form-welcome-title {
   display: block;
@@ -179,17 +191,25 @@ button {
   margin: 0;
   opacity: .95;
   padding-top: 10px;
-  // -webkit-text-stroke: 1px black;
-  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  color: #d6be6f;
+  /* text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+  color: #000000;
 }
 
-
-
 .inputs {
-  display: block;
+  margin: 0 40px 6px;
   position: relative;
-  // top: 40px;
+
+  .auth-inputs {
+    background: 0 0;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #262626;
+      font-size: 14px;
+      padding: 9px 8px 7px;
+      -webkit-appearance: none;
+      width: 100%;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -208,18 +228,7 @@ button {
    color: rgb(31, 28, 28);
 }
 
- input.auth-inputs {
-   background: rgba(255, 255, 255, 0.44);
-   border: 3px solid #525254;
-   border-radius: 3px;
-   box-sizing: border-box;
-   color: #15151b;
-   font-size: 14px;
-   padding: 9px 8px 7px;
-   -webkit-appearance: none;
-   width: 90%;
-   margin-top: 5px;
- }
+
 
 ul.errors {
   position: relative;

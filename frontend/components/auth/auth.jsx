@@ -74,25 +74,32 @@ class Auth extends React.Component {
                 <form onSubmit={this.handleSubmit.bind(this)}>
                   <div className="inputs">
                     <label className="username-login"><input className="auth-inputs" onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
+                  </div>
+                  <div className="inputs">
                     <label className="password-login"><input className="auth-inputs" onChange={this.handlePassword.bind(this)} type="password" value={this.state.password} placeholder={"Password"}/></label>
                   </div>
                   {this.renderErrors()}
 
                   <div className="all-buttons">
-                    <div className="station-buttons">
+                    <div className="buttonContainer">
                       <button className="login" onClick={() => this.type = "login"}>Log In</button>
-                      <button className="signup" onClick={() => this.type = "signup"}>Sign Up</button>
                     </div>
-                    <div className="guest-button">
-                      <button className="guest" onClick={() => this.type = "guest"}>Guest Login</button>
+                    <div className="buttonContainer">
+                      <button className="signup dp-none" onClick={() => this.type = "signup"}>Sign Up</button>
+                    </div>
+                    <div className="buttonContainer">
+                      <button className="guest login" onClick={() => this.type = "guest"}>Guest Login</button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
             <div className="rsCont">
-              <div className="auth-form">
-                <h3>Don't have an account?</h3>
+              <div className="toggleSplash">
+                <p className="login" >Don't have an account?</p>
+                <a className="login link" >Sign Up</a>
+                <p className="signup dp-none" >Have an account?</p>
+                <a className="signup dp-none link" >Log in</a>
               </div>
 
             </div>
