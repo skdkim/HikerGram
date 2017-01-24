@@ -202,6 +202,14 @@ width: 100%;
     }
 }
 
+.signupMsg {
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0 40px 10px;
+  text-align: center;
+  color: #999;
+font-weight: 600;
+}
 
 .form-welcome-title {
   display: block;
@@ -209,9 +217,8 @@ width: 100%;
   font-size: 50px;
   margin: 0;
   opacity: .95;
-  padding-top: 10px;
-  /* text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
   color: #000000;
+  margin: 22px auto 8px;
 }
 
 .inputs {
@@ -231,20 +238,41 @@ width: 100%;
   }
 }
 
+
 ::-webkit-input-placeholder {
-   color: rgb(31, 28, 28);
+  color:#999;
+  font-weight:300;
+  opacity:1;
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   color: rgb(31, 28, 28);
+:-moz-placeholder {
+  color:#999;
+  font-weight:300;
+  opacity:1;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   color: rgb(31, 28, 28);
+::-moz-placeholder {
+  color:#999;
+  font-weight:300;
+  opacity:1;
 }
 
 :-ms-input-placeholder {
-   color: rgb(31, 28, 28);
+  color:#999;
+  font-weight:300;
+  opacity:1;
+}
+
+::placeholder {
+  color:#999;
+  font-weight:300;
+  opacity:1;
+}
+
+::-ms-clear{
+  display:none;
+  height:0;
+  width:0
 }
 
 // for madoka styling

@@ -88,6 +88,10 @@ class Auth extends React.Component {
               <div className="auth-form">
                 <h3 className="form-welcome-title">HikerGram</h3>
                 <form onSubmit={this.handleSubmit.bind(this)}>
+                  <h2 className={"signup signupMsg " + this.state.dpSignup}>Sign up to see photos and videos from your friends</h2>
+                  <div className={"signup inputs " + this.state.dpSignup}>
+                      <label className="username-login"><input className="auth-inputs" onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Full Name"}/></label>
+                    </div>
                   <div className="inputs">
                     <label className="username-login"><input className="auth-inputs" onChange={this.handleUsername.bind(this)} value={this.state.username} placeholder={"Username"}/></label>
                   </div>
