@@ -7,7 +7,8 @@ class Auth extends React.Component {
     this.state = {username: "",
                   password: "",
                   dpLogin: "",
-                  dpSignup: "dp-none"};
+                  dpSignup: "dp-none",
+                  hideErrors: ""};
     this.nullState = {username: "", password: ""};
   }
 
@@ -36,6 +37,7 @@ class Auth extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+    this.setState({hideErrors : ""});
     if (this.type === "login"){
       this.props.login(this.state);
     } else if (this.type === "guest"){
@@ -53,19 +55,17 @@ class Auth extends React.Component {
 
   handleFormToggle(e) {
     e.preventDefault();
-    console.log(e.target.className.indexOf("signup") !== -1);
     if (e.target.className.indexOf("login") !== -1){
-      this.setState({ dpLogin : "dp-none", dpSignup : ""});
+      this.setState({ dpLogin : "dp-none", dpSignup : "", hideErrors : "dp-none"});
     } else {
-      this.setState({ dpLogin : "", dpSignup : "dp-none"});
+      this.setState({ dpLogin : "", dpSignup : "dp-none", hideErrors : "dp-none"});
     }
-    // this.setState({})
   }
 
   renderErrors() {
     return(
       <div className="errorsContainer">
-        <ul className="errors">
+        <ul className={"errors " + this.state.hideErrors}>
           {this.props.errors.map((error, i) => (
             <li key={`error-${i}`}>
               {error}
