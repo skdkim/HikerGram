@@ -33,7 +33,6 @@ class Profile extends React.Component {
   }
 
   render(){
-    // debugger
     if (this.props.user.followers && this.props.photos){
       let button = <button onClick={this.handleFollowing.bind(this)} className="followingStyle">Following</button>;
       if (this.props.user.id === this.props.currentUser.id){
@@ -55,7 +54,9 @@ class Profile extends React.Component {
                   <div className="profile-top-info">
                     <div className="user-nav bm20">
                       <h1 className="username">{this.props.user.username}</h1>
-                      {button}
+                      <div className="followContainer">
+                        {button}
+                      </div>
                     </div>
                     <div className="user-data bm20">
                       <h1 className="data-num username">{this.props.user.photos.length}</h1>
