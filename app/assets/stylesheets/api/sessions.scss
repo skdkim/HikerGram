@@ -8,22 +8,47 @@
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
-.page-wrap {
-  min-height: 100%;
-  /* equal to footer height */
-	margin-bottom: 0;
-}
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-.footer, .page-wrap:after {
-  /* .push must be the same height as footer */
-	height: 18px;
-}
+// .page-wrap {
+//   min-height: 100%;
+//   /* equal to footer height */
+// 	margin-bottom: 0;
+// }
+// .page-wrap:after {
+//   content: "";
+//   display: block;
+// }
+
 .footer {
-  background: rgba(80, 41, 41, 0.44);
+  background-color: #fafafa;
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  // order: 4;
+  padding: 0 20px;
+  display: flex;
+  overflow: hidden;
+
+  .nav {
+    display: inherit;
+    max-width: 935px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 38px 0;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 30%;
+    text-transform: uppercase;
+    width: 100%;
+  }
 }
+
+
 
 @-webkit-keyframes scrollBgGridLinks {
 from {background-position: 0 0;}
@@ -51,6 +76,7 @@ to {background-position:  0 -400px;}
   padding: 0;
   margin: 0;
   position: relative;
+  flex-direction: column;
 }
 
 

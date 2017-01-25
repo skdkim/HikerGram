@@ -150,6 +150,14 @@ class Auth extends React.Component {
             </div>
           </div>
         </div>
+        <div className="footer">
+          <div className="nav">
+            <a href="http://www.davidkim.tech">Portfolio</a>
+            <a href="https://github.com/skdkim/hikergram">Github</a>
+            <a href="http://www.davidkim.tech/images/DavidKimResume.pdf">Resume</a>
+            <a href="https://www.linkedin.com/in/sungkwangdavidkim">LinkedIn</a>
+          </div>
+        </div>
       </div>
     );
   }
