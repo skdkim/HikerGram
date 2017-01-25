@@ -96,6 +96,15 @@ class UserPhotoIndex extends React.Component {
   //     heart = <span onClick={this.unLike.bind(this)} className="redHeartSprite">like</span>;
   //     }
 
+  _handleMouseEnter(e){
+    e.preventDefault();
+    console.log(e.target);
+  }
+
+  _handleMouseLeave(){
+    console.log("mouse left!");
+  }
+
   componentWillReceiveProps(newProps){
     // debugger
     if (this.state.modalOpen){
@@ -173,8 +182,15 @@ class UserPhotoIndex extends React.Component {
             if (photo.image_url){
               return (
                 <div className="square-box" key={idx}>
-                  <div className="overlay square-box"></div>
-                  <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
+                  <div className="overlay square-box">
+                    <div className="photoInfo">
+                      <p>hello</p>
+                      <p>hi1</p>
+                      <p>hi2</p>
+                      <p>hi3</p>
+                    </div>
+                  </div>
+                  <img onMouseEnter={this._handleMouseEnter} onMouseLeave={this._handleMouseLeave} onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
                 </div>
               );
             } else {

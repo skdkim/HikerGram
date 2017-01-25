@@ -114,9 +114,14 @@ article {
   }
 }
 
+.photoInfo {
+  display: flex;
+  color: white;
+}
+
 .overlay {
   position: absolute;
-  background: black;
+  background-color: rgba(0,0,0,.3);
 
  &:hover {
   bottom: 0;
@@ -124,6 +129,8 @@ article {
   -ms-flex-pack: center;
   justify-content: center;
   right: 0;
+  // opacity: .5;
+  z-index: 1;
   }
 }
 
