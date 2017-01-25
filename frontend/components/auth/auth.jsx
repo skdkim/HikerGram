@@ -16,6 +16,25 @@ class Auth extends React.Component {
     this.redirectIfLoggedIn();
   }
 
+  componentDidMount(){
+    let interval = setInterval(() => {
+      let vo = document.getElementsByClassName("v-o")[0];
+      let ei = document.getElementsByClassName("ease-in")[0];
+
+      vo.classList.remove("v-o");
+      ei.classList.add("v-o");
+      ei.classList.remove("ease-in");
+
+      if (ei.nextSibling){
+        console.log("inside");
+        ei.nextSibling.classList.add("ease-in");
+      } else {
+        console.log("else");
+        document.getElementsByClassName("p1")[0].classList.add("ease-in");
+      }
+    }, 3000);
+  }
+
   redirectIfLoggedIn(){
     if(this.props.loggedIn){
       this.props.router.push("/");
@@ -81,7 +100,13 @@ class Auth extends React.Component {
       <div className="splash">
         <div className="main">
           <div className="sidePhotos">
-
+            <div className="innerPhotos">
+              <div className="photo p1 ease-in"></div>
+              <div className="photo p2"></div>
+              <div className="photo p3"></div>
+              <div className="photo p4"></div>
+              <div className="photo p5 v-o"></div>
+            </div>
           </div>
           <div className="rs">
             <div className="rsCont">
