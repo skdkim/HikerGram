@@ -27,6 +27,14 @@ class UserPhotoIndex extends React.Component {
     this.currentUserId = props.currentUser.id;
   }
 
+  // componentDidMount(){
+  //   let photo = document.getElementsByClassName("square-box")[0];
+  //   console.log(photo);
+  //   photo.onmouseover = (() => {
+  //     console.log("hello");
+  //   });
+  // }
+
   _handleClick(photo){
     // debugger
     return e => {
@@ -164,7 +172,10 @@ class UserPhotoIndex extends React.Component {
             }
             if (photo.image_url){
               return (
-                <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
+                <div className="square-box" key={idx}>
+                  <div className="overlay square-box"></div>
+                  <img onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
+                </div>
               );
             } else {
               return (<img key={idx} className="square-box dp-none"></img>);
