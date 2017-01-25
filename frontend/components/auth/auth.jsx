@@ -16,7 +16,7 @@ class Auth extends React.Component {
     this.redirectIfLoggedIn();
   }
 
-  componentDidMount(){
+  componentWillMount(){
     let interval = setInterval(() => {
       let vo = document.getElementsByClassName("v-o")[0];
       let ei = document.getElementsByClassName("ease-in")[0];
@@ -26,10 +26,8 @@ class Auth extends React.Component {
       ei.classList.remove("ease-in");
 
       if (ei.nextSibling){
-        console.log("inside");
         ei.nextSibling.classList.add("ease-in");
       } else {
-        console.log("else");
         document.getElementsByClassName("p1")[0].classList.add("ease-in");
       }
     }, 3000);
