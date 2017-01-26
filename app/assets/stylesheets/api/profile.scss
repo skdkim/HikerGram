@@ -92,7 +92,8 @@ article {
       object-fit: cover;
 
       &:hover {
-        opacity: .5;
+        // opacity: .5;
+        cursor: pointer;
       }
     }
 
@@ -110,31 +111,28 @@ article {
   height: 100%;
   position: relative;
   &:hover {
-    cursor: pointer;
+    // cursor: pointer;
   }
 }
 
 .photoInfo {
   display: flex;
   color: white;
+  width: 100%;
+  margin: 0;
 }
 
 .overlay {
   position: absolute;
   background-color: rgba(0,0,0,.3);
-
- &:hover {
-  bottom: 0;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  right: 0;
-  // opacity: .5;
-  z-index: 1;
-  }
 }
 
-
+.show {
+  z-index: 1;
+}
 
 // .profile-modal {
 //   width: 100%;
