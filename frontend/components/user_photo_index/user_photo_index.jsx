@@ -196,10 +196,15 @@ class UserPhotoIndex extends React.Component {
                   <div  onMouseLeave={this._handleMouseLeave} onClick={this._handleClick(photo)} className="overlay square-box">
                     <div className="photoInfo">
                       <div className="photoStats">
-                        <span>{this.state.likesCount}</span>
-                        <span className="whiteHeartSprite">like</span>
-                        <span>{this.state.commentss.length}</span>
-                        <span className="commentSprite">like</span>
+                        <div className="photoStats">
+                          <span className="whiteHeartSprite">like</span>
+                          <span> {this.state.likesCount}</span>
+                        </div>
+
+                        <div className="photoStats">
+                          <span className="commentSprite">like</span>
+                          <span> {this.state.commentss.length}</span>
+                        </div>
                       </div>
                     </div>
                   </div>

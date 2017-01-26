@@ -106,6 +106,14 @@ article {
 div.photoStats {
   display: flex;
   height: 8%;
+  margin: auto;
+  width: 38%;
+  align-items: center;
+  align-content: space-between;
+
+  span {
+    margin-right: 4px;
+  }
 }
 
 .square-box {
