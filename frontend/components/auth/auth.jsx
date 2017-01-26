@@ -1,6 +1,23 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
+let interval = () => {
+  let vo = document.getElementsByClassName("v-o")[0];
+  let ei = document.getElementsByClassName("ease-in")[0];
+
+  vo.classList.remove("v-o");
+  ei.classList.add("v-o");
+  ei.classList.remove("ease-in");
+
+  if (ei.nextSibling){
+    ei.nextSibling.classList.add("ease-in");
+  } else {
+    document.getElementsByClassName("p1")[0].classList.add("ease-in");
+  }
+};
+
+let flips = null;
+
 class Auth extends React.Component {
   constructor(props){
     super(props);
@@ -10,31 +27,22 @@ class Auth extends React.Component {
                   dpSignup: "dp-none",
                   hideErrors: ""};
     this.nullState = {username: "", password: ""};
+
   }
 
   componentDidUpdate(){
     this.redirectIfLoggedIn();
   }
 
-  componentWillMount(){
-    let interval = setInterval(() => {
-      let vo = document.getElementsByClassName("v-o")[0];
-      let ei = document.getElementsByClassName("ease-in")[0];
-
-      vo.classList.remove("v-o");
-      ei.classList.add("v-o");
-      ei.classList.remove("ease-in");
-
-      if (ei.nextSibling){
-        ei.nextSibling.classList.add("ease-in");
-      } else {
-        document.getElementsByClassName("p1")[0].classList.add("ease-in");
-      }
+  componentDidMount(){
+    flips = setInterval(() => {
+      interval();
     }, 3000);
   }
 
   redirectIfLoggedIn(){
     if(this.props.loggedIn){
+      clearInterval(flips);
       this.props.router.push("/");
     }
   }
