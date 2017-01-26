@@ -36,8 +36,13 @@ class UserPhotoIndex extends React.Component {
   // }
 
   _handleClick(photo){
+
     // debugger
     return e => {
+      if (document.getElementsByClassName("show")[0]){
+        document.getElementsByClassName("show")[0].classList.remove("show");
+      }
+
       e.preventDefault();
       this.setState({
         modalOpen: true,
@@ -50,9 +55,6 @@ class UserPhotoIndex extends React.Component {
         photo: photo,
         commentss: Object.keys(photo.comments).map(key => photo.comments[key])
       });
-      // this.commentss = Object.keys(photo.comments).map(key => photo.comments[key]);
-
-      // debugger
     };
   }
 
@@ -103,8 +105,9 @@ class UserPhotoIndex extends React.Component {
 
   _handleMouseLeave(e){
     e.preventDefault();
-    document.getElementsByClassName("show")[0].classList.remove("show");
-  }
+    if (document.getElementsByClassName("show")[0]){
+      document.getElementsByClassName("show")[0].classList.remove("show");
+    }  }
 
   componentWillReceiveProps(newProps){
     if (this.state.modalOpen){
@@ -182,12 +185,14 @@ class UserPhotoIndex extends React.Component {
             if (photo.image_url){
               return (
                 <div className="square-box" key={idx}>
-                  <div  onMouseLeave={this._handleMouseLeave} className="overlay square-box">
+                  <div  onMouseLeave={this._handleMouseLeave} onClick={this._handleClick(photo)} className="overlay square-box">
                     <div className="photoInfo">
-                      <p>hello</p>
-                      <p>"&#9825"</p>
-                      <p>hi2</p>
-                      <p>hi3</p>
+                      <div className="photoStats">
+                        <p>{console.log(photo)}</p>
+                        <span className="whiteHeartSprite">like</span>
+                        <p>hi3</p>
+                        <span className="commentSprite">like</span>
+                      </div>
                     </div>
                   </div>
                   <img onMouseEnter={this._handleMouseEnter} onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
