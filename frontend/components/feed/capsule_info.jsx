@@ -32,7 +32,6 @@ class CapsuleInfo extends React.Component {
   // , likesCount: this.state.likesCount++
 
   toggleLike(e){
-    // console.log(this.props.photo);
     e.preventDefault();
     if (this.state.heartClass === "openHeartSprite"){
       this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
@@ -96,7 +95,6 @@ class CapsuleInfo extends React.Component {
       descript = (<div></div>);
     }
 
-
     if (this.props.photo.comments){
       let commentss = Object.keys(this.props.photo.comments).map(key => this.props.photo.comments[key]);
       return (
@@ -104,7 +102,7 @@ class CapsuleInfo extends React.Component {
           <div className="flex-up">
             <div className="fpi-likes">
               <span className="fpil-text">
-                <span className="feed-sbt">{this.state.likesCount}</span>
+                <span className="feed-sbt">{this.props.photo.photoLikes}</span>
                 <span className="feed-sbt nbt"> likes</span>
               </span>
             </div>

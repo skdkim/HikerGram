@@ -37,13 +37,13 @@ class UserPhotoIndex extends React.Component {
 
   _handleClick(photo){
 
-    // debugger
     return e => {
       if (document.getElementsByClassName("show")[0]){
         document.getElementsByClassName("show")[0].classList.remove("show");
       }
 
       e.preventDefault();
+      // debugger
       this.setState({
         modalOpen: true,
         src: photo.image_url,
@@ -51,7 +51,7 @@ class UserPhotoIndex extends React.Component {
         currentUserLikes: photo.currentUserLikes,
         photoId: photo.id,
         heartClass: photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
-        likesCount: photo.photoLikes,
+        likesCount: 100,
         photo: photo,
         commentss: Object.keys(photo.comments).map(key => photo.comments[key])
       });
@@ -64,7 +64,7 @@ class UserPhotoIndex extends React.Component {
 
   toggleLike(e){
     // debugger
-    // e.preventDefault();
+    e.preventDefault();
     if (this.state.heartClass === "openHeartSprite"){
       this.props.createLike({photo_id: this.state.photo.id, user_id: this.props.currentUser.id});
       this.setState({heartClass: "redHeartSprite", likesCount: this.state.likesCount + 1});

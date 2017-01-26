@@ -39,8 +39,8 @@ const UserReducer = (oldState = _nullUser, action) => {
     // debugger
       newState = merge({}, oldState);
       thePhoto = newState.photos.filter((photo)=>photo.id === action.like.photo_id)[0]
-      thePhoto.likesCount++;
-      thePhoto.currentUserLikes = true;
+      // thePhoto.likesCount++;
+      // thePhoto.currentUserLikes = true;
       // newState.photoLikes++;
       // debugger
       return newState;
@@ -49,8 +49,8 @@ const UserReducer = (oldState = _nullUser, action) => {
 
       newState = merge({}, oldState);
       thePhoto = newState.photos.filter((photo)=>photo.id === action.like.photo_id)[0]
-      thePhoto.currentUserLikes = false;
-      thePhoto.likesCount--;
+      // thePhoto.currentUserLikes = false;
+      // thePhoto.likesCount--;
       // newState.photoLikes--;
       // debugger
       return newState;
