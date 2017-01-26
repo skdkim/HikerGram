@@ -7,15 +7,24 @@ class CapsulePhoto extends React.Component {
 
   // giveLike(e) {
   //   e.preventDefault();
-  //   this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
   // }
 
   // onDoubleClick={this.giveLike.bind(this)}
 
+  handleDoubleClick(e){
+    e.preventDefault();
+    // console.log(this);
+    // console.log("double clicked!");
+    // console.log(this.props);
+
+    this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
+
+  }
+
   render(){
     return (
       <div className="feed-photo-container">
-        <img className="feed-photo" src={`${this.props.photo.image_url}`}/>
+        <img onDoubleClick={this.handleDoubleClick.bind(this)} className="feed-photo" src={`${this.props.photo.image_url}`}/>
       </div>
     );
   }
