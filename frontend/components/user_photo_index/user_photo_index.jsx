@@ -98,9 +98,17 @@ class UserPhotoIndex extends React.Component {
   //     heart = <span onClick={this.unLike.bind(this)} className="redHeartSprite">like</span>;
   //     }
 
-  _handleMouseEnter(e){
-    e.preventDefault();
-    e.target.previousSibling.classList.add("show");
+  _handleMouseEnter(photo){
+
+    return e => {
+      e.preventDefault();
+      e.target.previousSibling.classList.add("show");
+
+      this.setState({
+        likesCount: photo.photoLikes,
+        commentss: Object.keys(photo.comments).map(key => photo.comments[key])
+      });
+    };
   }
 
   _handleMouseLeave(e){
@@ -188,14 +196,14 @@ class UserPhotoIndex extends React.Component {
                   <div  onMouseLeave={this._handleMouseLeave} onClick={this._handleClick(photo)} className="overlay square-box">
                     <div className="photoInfo">
                       <div className="photoStats">
-                        <p>{console.log(photo)}</p>
+                        <span>{this.state.likesCount}</span>
                         <span className="whiteHeartSprite">like</span>
-                        <p>hi3</p>
+                        <span>{this.state.commentss.length}</span>
                         <span className="commentSprite">like</span>
                       </div>
                     </div>
                   </div>
-                  <img onMouseEnter={this._handleMouseEnter} onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
+                  <img onMouseEnter={this._handleMouseEnter(photo)} onClick={this._handleClick(photo)} key={idx} value={photo.description} className="square-box" src={photo.image_url} />
                 </div>
               );
             } else {
