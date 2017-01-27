@@ -27,7 +27,6 @@ class Auth extends React.Component {
                   dpSignup: "dp-none",
                   hideErrors: ""};
     this.nullState = {username: "", password: ""};
-
   }
 
   componentDidUpdate(){

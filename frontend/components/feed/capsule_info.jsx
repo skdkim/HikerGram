@@ -15,21 +15,8 @@ class CapsuleInfo extends React.Component {
   }
 
   componentWillReceiveProps(newProps){
-    // debugger
+    this.setState({heartClass: newProps.photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite"});
   }
-  // giveLike(e) {
-  //   e.preventDefault();
-  //   this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
-  //   this.setState({heartClass: "redHeartSprite"});
-  // }
-  //
-  // unLike(e){
-  //   e.preventDefault();
-  //   this.props.destroyLike(this.props.photo.id);
-  //   this.setState({heartClass: "openHeartSprite"});
-  // }
-
-  // , likesCount: this.state.likesCount++
 
   toggleLike(e){
     e.preventDefault();
@@ -41,16 +28,6 @@ class CapsuleInfo extends React.Component {
       this.setState({heartClass: "openHeartSprite", likesCount: this.state.likesCount - 1});
     }
   }
-
-  // if (this.props.photo.currentUserLikes){
-  //   this.setState({heartClass: "redHeartSprite"});
-  // } else {
-  //   this.setState({heartClass: "openHeartSprite"});
-  // }
-  // let heart = <span onClick={this.giveLike.bind(this)} className="openHeartSprite">like</span>;
-  //   if(this.props.photo.currentUserLikes){
-  //     heart = <span onClick={this.unLike.bind(this)} className="redHeartSprite">like</span>;
-  //     }
 
   handleCommentChange(e){
     e.preventDefault();
@@ -66,19 +43,11 @@ class CapsuleInfo extends React.Component {
   }
 
   handleDeleteComment(comment){
-    // debugger
     this.props.destroyComment(comment.comment_id);
   }
 
-
   render(){
-    // debugger
-
     let descript;
-    // let deleteButton;
-    // if (this.props.photo.user.id === this.props.currentUser.id){
-    //   deleteButton = (<button onClick={this.handleDeleteComment.bind(this, comment)} className="delete-comment">X</button>);
-    // }
 
     if (this.props.photo.description){
       descript = (

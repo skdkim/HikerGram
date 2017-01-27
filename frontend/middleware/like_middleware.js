@@ -8,11 +8,9 @@ import { createLike, destroyLike, } from '../util/like_api_util';
 
 export default store => next => action => {
   const createSuccess = like => {
-    // debugger
     store.dispatch(addLike(like));
   };
   const destroySuccess = like => {
-    // debugger
     store.dispatch(removeLike(like));
   };
 

@@ -5,20 +5,13 @@ class CapsulePhoto extends React.Component {
     super(props);
   }
 
-  // giveLike(e) {
-  //   e.preventDefault();
-  // }
-
-  // onDoubleClick={this.giveLike.bind(this)}
-
   handleDoubleClick(e){
     e.preventDefault();
-    // console.log(this);
-    // console.log("double clicked!");
-    // console.log(this.props);
+    console.log("double clicked!");
 
-    this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
-
+    if (!this.props.photo.currentUserLikes){
+      this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
+    }
   }
 
   render(){
