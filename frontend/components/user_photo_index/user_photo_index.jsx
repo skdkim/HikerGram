@@ -123,6 +123,14 @@ class UserPhotoIndex extends React.Component {
     }
   }
 
+  handleDoubleClick(e){
+    e.preventDefault();
+
+    if (!this.state.currentUserLikes){
+      this.props.createLike({photo_id: this.state.photoId, user_id: this.state.currentUserId});
+    }
+  }
+
   render(){
     let descript;
     const photoss = Object.keys(this.props.profilePhotos).map(key => this.props.profilePhotos[key]);
@@ -135,7 +143,7 @@ class UserPhotoIndex extends React.Component {
                 onRequestClose={this.onModalClose.bind(this)}>
 
                 <div className="modal-container">
-                  <div className="mc-photo">
+                  <div className="mc-photo" onDoubleClick={this.handleDoubleClick.bind(this)}>
                     <img src={this.state.src}/>
                   </div>
 
