@@ -118,8 +118,13 @@ class UserPhotoIndex extends React.Component {
 
   handleDoubleClick(e){
     e.preventDefault();
+    e.persist();
     if (!this.state.photo.currentUserLikes){
       this.props.createLike({photo_id: this.state.photoId, user_id: this.state.currentUserId});
+      e.target.nextSibling.classList.remove("dp-none");
+      setTimeout(() => {
+        e.target.nextSibling.classList.add("dp-none");
+      }, 1000);
     }
   }
 
@@ -135,8 +140,11 @@ class UserPhotoIndex extends React.Component {
                 onRequestClose={this.onModalClose.bind(this)}>
 
                 <div className="modal-container">
-                  <div className="mc-photo" onDoubleClick={this.handleDoubleClick.bind(this)}>
-                    <img src={this.state.src}/>
+                  <div className="mc-photo" >
+                    <img onDoubleClick={this.handleDoubleClick.bind(this)} src={this.state.src}/>
+                    <div className="animationHolder dp-none">
+                      <span className="animateHeart animationHeart md"></span>
+                    </div>
                   </div>
 
                   <div className="mc-info">
