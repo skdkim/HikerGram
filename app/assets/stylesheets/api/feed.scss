@@ -47,6 +47,11 @@
   transform: scale(0);
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
 .md {
   left: -164px;
   position: relative;
