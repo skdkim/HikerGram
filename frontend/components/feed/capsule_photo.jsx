@@ -7,7 +7,7 @@ class CapsulePhoto extends React.Component {
 
   handleDoubleClick(e){
     e.preventDefault();
-    
+
     if (!this.props.photo.currentUserLikes){
       this.props.createLike({photo_id: this.props.photo.id, user_id: this.props.currentUser.id});
     }

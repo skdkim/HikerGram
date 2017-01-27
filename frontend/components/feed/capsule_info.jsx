@@ -122,6 +122,3 @@ class CapsuleInfo extends React.Component {
 }
 
 export default CapsuleInfo;
-
-
-// <button onClick={this.handleDeleteComment.bind(this, comment)} className="delete-comment">X</button>

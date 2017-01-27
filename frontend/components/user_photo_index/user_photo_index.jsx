@@ -63,7 +63,6 @@ class UserPhotoIndex extends React.Component {
   }
 
   toggleLike(e){
-    // debugger
     e.preventDefault();
     if (this.state.heartClass === "openHeartSprite"){
       this.props.createLike({photo_id: this.state.photo.id, user_id: this.props.currentUser.id});
@@ -72,7 +71,6 @@ class UserPhotoIndex extends React.Component {
       this.props.destroyLike(this.state.photo.id);
       this.setState({heartClass: "openHeartSprite", likesCount: this.state.likesCount - 1});
     }
-    // debugger
   }
 
   handleDeleteComment(comment){
@@ -92,11 +90,6 @@ class UserPhotoIndex extends React.Component {
     this.props.createComment({comment_text: this.state.comment, photo_id: this.state.photo.id, user_id: this.props.currentUser.id});
     this.setState({comment: ""});
   }
-
-  // let heart = <span onClick={this.giveLike.bind(this)} className="openHeartSprite">like</span>;
-  //   if(this.state.currentUserLikes){
-  //     heart = <span onClick={this.unLike.bind(this)} className="redHeartSprite">like</span>;
-  //     }
 
   _handleMouseEnter(photo){
 
@@ -125,8 +118,7 @@ class UserPhotoIndex extends React.Component {
 
   handleDoubleClick(e){
     e.preventDefault();
-
-    if (!this.state.currentUserLikes){
+    if (!this.state.photo.currentUserLikes){
       this.props.createLike({photo_id: this.state.photoId, user_id: this.state.currentUserId});
     }
   }
