@@ -14,7 +14,7 @@ HikerGram is a fullstack web application clone of Instagram. HikerGram utilizes 
 
 On the backend, HikerGram uses the BCrypt library to generate password hashes with salts to make user passwords safe from rainbow table attacks. On HikerGram a user can use the Guest Login to experience the full features of this webapp fully stocked with photos, user relationships, and photo likes.
 
-![image of login/signup form](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-25%20at%204.54.08%20PM.png)
+![image of login/signup form](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/auth.png)
 
 ### How the Photos are Populated
 
@@ -32,7 +32,15 @@ The feed page loads all the photos users the current user is following plus thei
 
 A user can like/unlike photos via clicking on the heart icon at the bottom of an image. When the heart is red the current user likes the photo and when it's white the current user has not liked the photo yet. When any user likes a photo the number of likes for that photo will increase live.
 
+![like heart animation](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/likeAnimation.png)
+
+To like/unlike a photo simply click on the red/white heart. The fastest way to like a photo while browsing is the double click it.
+
 A user can also comment on any photo and delete their own comments. If the photo belongs to the current user, they have access to delete any comment on the photo.
+
+![image overlay](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/imageOverlay.png)
+
+When photos are in their minimized form, hover over the block to see quick information about how many likes and comments are on the specific photo.
 
 ### User Interaction
 
@@ -48,7 +56,7 @@ The user profile page displays all of a user's photos in a grid format. All phot
 ### Discover Page
 
 The discover page displays all photos that the current user in grid format.
-In future renders of HikerGram the discover page will display the owners of all photos and will be able to expand on click.
+All images are clickable and will expand to show you the full image. To get more details head over to the user's profile page to see all of their photos!
 
 ![image of discover page](https://github.com/skdkim/HikerGram/blob/master/docs/prm_photos/Screen%20Shot%202016-11-11%20at%2011.07.34%20AM.png)
 
