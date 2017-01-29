@@ -543,14 +543,14 @@ font-weight: 600;
     max-width: 100%;
   }
 
-  // .profile-top {
-  //   margin: 0 7% 7% 7%;
-  // }
+  .profile-top {
+    padding: 2%;
+  }
 
   .profile-image {
     height: 100%;
   }
-
+  //
   .profile-img-container {
     min-width: 16%;
     width: 100%;
@@ -562,8 +562,29 @@ font-weight: 600;
       margin-left: 15px;
     }
   }
+  //
+  // article {
+  //   margin: 0 30px 30px;
+  // }
 
-  article {
-    margin: 0 30px 30px;
+  // .user-data {
+  //   position: relative;
+  //   left: -55px;
+  //   top: 10px;
+  // }
+  //
+  // .user-description {
+  //   left: -55px;
+  //   position: relative;
+  // }
+
+}
+
+@media (max-width: 934px){
+  .photos-container div:nth-of-type(3n) {
+    margin-right: auto;
+  }
+  .photos-container div {
+    margin: 0 auto 28px;
   }
 }
