@@ -517,3 +517,53 @@ font-weight: 600;
     background-image: url(http://instagramstatic-a.akamaihd.net/h1/images/homepage/home-phones@2x.png/f82c2ede4ccb.png);
   }
 }
+
+@media (max-width: 600px) {
+  .sidePhotos {
+    display: none;
+  }
+
+  nav {
+    margin-left: 0;
+  }
+
+  #logo-link {
+    display: none;
+  }
+
+  a#hikerGram-text {
+    top: -1px;
+  }
+
+  .tp-container {
+    padding: 23px 10px;
+  }
+
+  .feed-photo {
+    max-width: 100%;
+  }
+
+  // .profile-top {
+  //   margin: 0 7% 7% 7%;
+  // }
+
+  .profile-image {
+    height: 100%;
+  }
+
+  .profile-img-container {
+    min-width: 16%;
+    width: 100%;
+    height: 100%;
+  }
+
+  div.user-nav {
+    .username {
+      margin-left: 15px;
+    }
+  }
+
+  article {
+    margin: 0 30px 30px;
+  }
+}
