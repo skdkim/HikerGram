@@ -18,7 +18,7 @@ module.exports = {
     maxWidth                : '935px',
     // maxHeight : '600px',
     // width: '100%',
-      margin: '191.5px auto',
-      left: '-8px'
+      margin: '191.5px auto'
+      // left: '-8px'
   }
 };
