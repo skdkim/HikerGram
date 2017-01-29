@@ -7,36 +7,36 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(username: "skdkim", password: "123123sdfsdf",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478205508/profile_images/Sung_Kim.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478205508/profile_images/Sung_Kim.jpg",
   description: "Computer programmer who loves to hike.", firstname: "David Kim" );
 User.create(username: "philh.lee", password: "ilovehiking",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478300307/profile_images/14156482_623083317861802_1633365826_a.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478300307/profile_images/14156482_623083317861802_1633365826_a.jpg",
   description: "I love hiking, and my friends", firstname: "Phil Lee");
 User.create(username: "beargrylls", password: "neverstopbelieving",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478300525/profile_images/13712202_1625669191078198_1755338711_a.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478300525/profile_images/13712202_1625669191078198_1755338711_a.jpg",
   description: "Host of NBC Running Wild, ITV Survival School, Ch4 The Island, China Survivor Games & Discovery Man Vs Wild. UK Chief Scout.",
   firstname: "Bear Grylls");
 User.create(username: "missholldoll", password: "pnwalways",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478300602/profile_images/14156509_319548278398025_411231014_a.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478300602/profile_images/14156509_319548278398025_411231014_a.jpg",
   description: "Nature doesn't need us. We need nature. Outdoor | Travel | Photography Missholldoll@gmail.com",
   firstname: "Holly Johnson");
 User.create(username: "johnmuir", password: "hiking4life",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478193569/profile_images/johnmuirprofile.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478193569/profile_images/johnmuirprofile.jpg",
   description: "The mountains are calling and I must go.", firstname: "John Muir");
 User.create(username: "elon.musk", password: "livinglife",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478327887/profile_images/11273054_1444992415800527_1323603731_a.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478327887/profile_images/11273054_1444992415800527_1323603731_a.jpg",
   description: "hear my stories humans of earth", firstname: "Elon Musk");
 User.create(username: "expedLewis", password: "lewisandclark",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478301729/profile_images/6859745292_d913897de4_b.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478301729/profile_images/6859745292_d913897de4_b.jpg",
   description: "Watch me on my journey to the west with my buddy Clark", firstname: "Meriwether Lewis");
 User.create(username: "withaHachet", password: "justonehatchet",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478301941/profile_images/1355255094.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478301941/profile_images/1355255094.jpg",
   description: "I have one hatchet and one camera, join me on my journey.", firstname: "Brian Robeson");
 User.create(username: "StephHikes", password: "greatestgoat",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478302072/profile_images/related-32.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478302072/profile_images/related-32.jpg",
   description: "Guess what.. I hike! You should too.", firstname: "Steph Curry");
 User.create(username: "REI", password: "stopreturningstuff",
-  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_scale,w_600/v1478302234/profile_images/13744221_139284843166032_957842464_a.jpg",
+  image_url: "http://res.cloudinary.com/skdkim/image/upload/c_fill,h_150,w_150/v1478302234/profile_images/13744221_139284843166032_957842464_a.jpg",
   description: "A member-owned co-op since 1938. We believe a life outdoors is a life well lived.",
   firstname: "REI");
 
