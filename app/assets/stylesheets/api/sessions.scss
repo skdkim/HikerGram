@@ -577,14 +577,28 @@ font-weight: 600;
   //   left: -55px;
   //   position: relative;
   // }
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    // max-width: 50vh;
+    max-height: 90vh;
+  }
 }
 
 @media (max-width: 934px){
   .modal-container {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
-    max-height: inherit;
+    // max-width: 50vh;
+    max-height: 90vh;
+  }
+
+  .fpi-description {
+    max-height: 65px;
+  }
+
+  .mc-photo img {
+    max-height: 70vh;
   }
 
   .mc-info {
@@ -600,5 +614,10 @@ font-weight: 600;
 
   div .photoStats {
     margin: auto;
+  }
+
+  .md {
+    left: 0;
+    top: -110px;
   }
 }
