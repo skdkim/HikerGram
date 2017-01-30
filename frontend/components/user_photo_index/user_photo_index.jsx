@@ -51,7 +51,7 @@ class UserPhotoIndex extends React.Component {
         currentUserLikes: photo.currentUserLikes,
         photoId: photo.id,
         heartClass: photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
-        likesCount: 100,
+        likesCount: photo.likesCount,
         photo: photo,
         commentss: Object.keys(photo.comments).map(key => photo.comments[key])
       });
