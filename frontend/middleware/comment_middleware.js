@@ -11,17 +11,14 @@ export default store => next => action => {
     store.dispatch(addComment(comment));
   };
   const destroySuccess = comment => {
-    // debugger
     store.dispatch(removeComment(comment));
   };
 
   switch(action.type){
     case CREATE_COMMENT:
-    // debugger
       createComment(action.comment, createSuccess);
       return next(action);
     case DESTROY_COMMENT:
-    // debugger
       destroyComment(action.id, destroySuccess);
       return next(action);
     default:

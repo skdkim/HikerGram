@@ -2,7 +2,6 @@ import React from 'react';
 
 class CapsuleHeader extends React.Component {
   constructor(props){
-    // debugger
     super(props);
   }
 

@@ -6,5 +6,4 @@ const App = (props) => (
     </main>
 );
 
-// <footer className="footer">This is the footer.</footer>
 export default App;

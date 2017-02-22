@@ -20,7 +20,6 @@ const UserReducer = (oldState = _nullUser, action) => {
   Object.freeze(oldState);
   let newState = merge({}, oldState);
   let thePhoto;
-  // let newState;
   switch(action.type){
     case RECEIVE_USER_DETAIL:
       newState = action.user;
@@ -36,44 +35,15 @@ const UserReducer = (oldState = _nullUser, action) => {
       newState.follower_count--;
       return newState;
     case ADD_LIKE:
-    // debugger
       newState = merge({}, oldState);
       thePhoto = newState.photos.filter((photo)=>photo.id === action.like.photo_id)[0]
-      // thePhoto.likesCount++;
-      // thePhoto.currentUserLikes = true;
-      // newState.photoLikes++;
-      // debugger
+
       return newState;
     case REMOVE_LIKE:
-    // debugger
-
       newState = merge({}, oldState);
       thePhoto = newState.photos.filter((photo)=>photo.id === action.like.photo_id)[0]
-      // thePhoto.currentUserLikes = false;
-      // thePhoto.likesCount--;
-      // newState.photoLikes--;
-      // debugger
+
       return newState;
-    // case ADD_COMMENT:
-    // // debugger
-    //   // newState = _.merge({}, oldState);
-    //   thePhoto = newState.photos.filter((photo)=>photo.id === action.comment.photo_id)[0]
-    //   thePhoto.comments[action.comment.comment_id] = action.comment;
-    //   // newState.likes_count++;
-    //   // newState.currentUserLikes = true;
-    //   // newState.photoLikes++;
-    //   // debugger
-    //   return newState;
-    // case REMOVE_COMMENT:
-    // // debugger
-    //   // newState = _.merge({}, oldState);
-    //   thePhoto = newState.photos.filter((photo)=>photo.id === action.comment.photo_id)[0]
-    //   delete thePhoto.comments[action.comment.comment_id];
-    //   // newState.likes_count--;
-    //   // newState.currentUserLikes = false;
-    //   // newState.photoLikes--;
-    //   // debugger
-    //   return newState;
     default:
       return oldState;
   }

@@ -39,11 +39,6 @@ const Root = (props) => {
   };
 
   const fetchAllPhotos = (nextState) => {
-    // doesn't look like I needed this line of code below...
-    // const photos = props.store.getState().photos;
-
-    // debugger
-    // props.store.dispatch(requestAllPhotos());
     if (nextState.location.pathname === "/discover"){
       props.store.dispatch(requestAllPhotos({pageType: "discover"}));
     } else if (nextState.location.pathname === "/profile"){
@@ -54,11 +49,6 @@ const Root = (props) => {
       props.store.dispatch(requestAllPhotos({pageType: "otherUser", user_id: parseInt(nextState.location.pathname.match(/[0-9]+/g)[0]) }));
     }
   };
-
-  // const fetchAllFollows = () => {
-  //   const follows = props.store.getState().follows;
-  //   props.store.dispatch(requestAllFollows());
-  // };
 
   const feedGateKeeper = (nextState, replace) => {
     _ensureLoggedIn(nextState, replace);
@@ -72,7 +62,6 @@ const Root = (props) => {
   };
 
   const profileGateKeeper = (nextState, replace) => {
-    // debugger
     _ensureLoggedIn(nextState, replace);
     fetchAllPhotos(nextState);
     fetchUserInfo(nextState);

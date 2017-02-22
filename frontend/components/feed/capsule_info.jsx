@@ -2,7 +2,6 @@ import React from 'react';
 
 class CapsuleInfo extends React.Component {
   constructor(props){
-    // debugger
     super(props);
     this.state = {
       heartClass: this.props.photo.currentUserLikes ? "redHeartSprite" : "openHeartSprite",
@@ -81,12 +80,10 @@ class CapsuleInfo extends React.Component {
                 {
                   commentss.map((comment, idx) => {
                     if (comment.currentUsersComment || comment.photoOwner === this.props.currentUser.id){
-                      // debugger
                       this.deleteButtonClass =  "delete-comment";
                     } else {
                       this.deleteButtonClass = "dp-none";
                     }
-                    // debugger
                     return (
                       <li key={idx} className="fpid-comment">
                         <a href={`#/profile/${comment.commentor_id}`}>

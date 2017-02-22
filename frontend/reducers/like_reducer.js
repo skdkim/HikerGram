@@ -1,9 +1,5 @@
 import { ADD_LIKE, REMOVE_LIKE } from '../actions/like_actions';
 
-// const _nullLike = Object.freeze({
-//
-// })
-
 const LikeReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState = _.merge({}, oldState);

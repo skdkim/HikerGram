@@ -8,7 +8,6 @@ export default (store) => next => action => {
   const successCallback = user => (
     store.dispatch(receiveUserDetail(user))
   );
-  // const errorCallback = xhr => store.dispatch(receiveErrors(xhr.responseJSON));
 
   switch(action.type) {
     case FETCH_USER_DETAIL:

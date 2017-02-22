@@ -8,7 +8,6 @@ import UserPhotoIndexContainer from '../user_photo_index/user_photo_index_contai
 
 class Profile extends React.Component {
   constructor(props){
-    // debugger
     super(props);
     this.state = {
       follow: ""
@@ -20,8 +19,6 @@ class Profile extends React.Component {
     this.props.router.push("/landing");
   }
 
-// this is the edit profile icon
-// <img className="small-icon settings-button" src="http://res.cloudinary.com/skdkim/image/upload/v1478197868/hikergram_assets/settings.png"/>
   handleFollowing(e){
     e.preventDefault();
     this.props.destroyFollow(this.props.user.id);

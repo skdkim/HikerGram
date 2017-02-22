@@ -4,7 +4,6 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    # debugger
     if params[:pageType] === "feed"
       array = current_user.followees.map do |followee|
         followee.id

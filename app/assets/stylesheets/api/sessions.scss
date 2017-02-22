@@ -8,21 +8,10 @@
   font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
-// .page-wrap {
-//   min-height: 100%;
-//   /* equal to footer height */
-// 	margin-bottom: 0;
-// }
-// .page-wrap:after {
-//   content: "";
-//   display: block;
-// }
-
 .footer {
   background-color: #fafafa;
   -webkit-box-ordinal-group: 5;
   -ms-flex-order: 4;
-  // order: 4;
   padding: 0 20px;
   display: flex;
   overflow: hidden;
@@ -48,8 +37,6 @@
   }
 }
 
-
-
 @-webkit-keyframes scrollBgGridLinks {
 from {background-position: 0 0;}
 to {background-position: 0 -400px;}
@@ -64,11 +51,6 @@ to {background-position:  0 -400px;}
   background-size: cover;
   justify-content: center;
   background-color: #fafafa;
-  // animation: scrollBgGridLinks 35s linear;
-  // -webkit-animation: scrollBgGridLinks 35s linear;
-  // animation-fill-mode: forwards;
-  // -webkit-animation-fill-mode: forwards;
-  // -moz-animation-fill-mode: forwards;
   height: 100%;
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0);
@@ -172,7 +154,6 @@ to {background-position:  0 -400px;}
 form {
   display: flex;
   flex-direction: column;
-  /* height: 100%; */
   justify-content: space-around;
   margin: 0;
 }
@@ -249,23 +230,23 @@ position: relative;
 }
 
 button {
-font-size: 16px;
-line-height: 29px;
-padding: 0 11px;
-cursor: pointer;
-background: #3897f0;
+  font-size: 16px;
+  line-height: 29px;
+  padding: 0 11px;
+  cursor: pointer;
+  background: #3897f0;
   border-color: #3897f0;
   color: #fff;
   border-radius: 3px;
-border-style: solid;
-border-width: 1px;
-font-weight: 500;
-outline: none;
-overflow: hidden;
-text-overflow: ellipsis;
-white-space: nowrap;
-width: 100%;
--webkit-appearance: none;
+  border-style: solid;
+  border-width: 1px;
+  font-weight: 500;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  -webkit-appearance: none;
 }
 
 .link {
@@ -550,7 +531,6 @@ font-weight: 600;
   .profile-image {
     height: 100%;
   }
-  //
   .profile-img-container {
     min-width: 16%;
     width: 100%;
@@ -562,25 +542,10 @@ font-weight: 600;
       margin-left: 15px;
     }
   }
-  //
-  // article {
-  //   margin: 0 30px 30px;
-  // }
 
-  // .user-data {
-  //   position: relative;
-  //   left: -55px;
-  //   top: 10px;
-  // }
-  //
-  // .user-description {
-  //   left: -55px;
-  //   position: relative;
-  // }
   .modal-container {
     display: flex;
     flex-direction: column;
-    // max-width: 50vh;
     max-height: 90vh;
   }
 }
@@ -589,7 +554,6 @@ font-weight: 600;
   .modal-container {
     display: flex;
     flex-direction: column;
-    // max-width: 50vh;
     max-height: 90vh;
   }
 

@@ -7,7 +7,6 @@ import CapsuleInfo from '../feed/capsule_info';
 
 class UserPhotoIndex extends React.Component {
   constructor(props){
-    // debugger
     super(props);
     this.state = {
       modalOpen: false,
@@ -27,14 +26,6 @@ class UserPhotoIndex extends React.Component {
     this.currentUserId = props.currentUser.id;
   }
 
-  // componentDidMount(){
-  //   let photo = document.getElementsByClassName("square-box")[0];
-  //   console.log(photo);
-  //   photo.onmouseover = (() => {
-  //     console.log("hello");
-  //   });
-  // }
-
   _handleClick(photo){
 
     return e => {
@@ -43,7 +34,6 @@ class UserPhotoIndex extends React.Component {
       }
 
       e.preventDefault();
-      // debugger
       this.setState({
         modalOpen: true,
         src: photo.image_url,
@@ -74,7 +64,6 @@ class UserPhotoIndex extends React.Component {
   }
 
   handleDeleteComment(comment){
-    // debugger
     this.props.destroyComment(comment.comment_id);
   }
 
@@ -86,7 +75,6 @@ class UserPhotoIndex extends React.Component {
 
   handleCommentEnter(e){
     e.preventDefault();
-    // debugger
     this.props.createComment({comment_text: this.state.comment, photo_id: this.state.photo.id, user_id: this.props.currentUser.id});
     this.setState({comment: ""});
   }
