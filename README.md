@@ -2,11 +2,11 @@
 
 ---
 
-[HikerGram live] (http://www.hikergram.com)
+[HikerGram live](http://www.hikergram.com)
 
 HikerGram is a fullstack web application clone of Instagram. HikerGram utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend. Enjoy for yourself using the Demo account, a community of outdoor enthusiasts documenting their lives through photography.
 
-##Features & Implementation
+## Features & Implementation
 
 ---
 
@@ -63,8 +63,8 @@ All images are clickable and will expand to show you the full image. To get more
 ## Future Features
 
 ---
-###Infinite Scroll
+### Infinite Scroll
 HikerGram features over 100 photos and therefore strains the browser on initial load. Creating infinite scroll for all of HikerGram's pages will be a great step towards better UX design.
 
-###Functional SearchBar
+### Functional SearchBar
 All of HikerGram's users are featured on the discover page but it is still diffcult for a user to find a friend, especially if they have millions of friends and the particular search target hasn't uploaded a photo in a long time. Being able to search by username will allow user's a portal into all other user's profile pages regardless of how active any individual is.
