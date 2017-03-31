@@ -4,6 +4,8 @@
 
 [HikerGram live](http://www.hikergram.com)
 
+Check out my full [portfolio](http://www.davidkim.tech/)!
+
 HikerGram is a fullstack web application clone of Instagram. HikerGram utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend. Enjoy for yourself using the Demo account, a community of outdoor enthusiasts documenting their lives through photography.
 
 ## Features & Implementation
