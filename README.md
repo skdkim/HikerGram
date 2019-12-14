@@ -2,7 +2,7 @@
 
 ---
 
-[HikerGram live](http://www.hikergram.com)
+[Website has been retired. Going to any live sites referring to hikergram is not my project]
 
 Check out my full [portfolio](http://www.davidkim.tech/)!
 
